@@ -7,24 +7,23 @@
 <body>
 
 <header class="page-header">
-  <div class="page-header__logo">
-    <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Cat Energy Logo">
+  <a class="page-header__logo" href="index.html">
+    <img class="page-header__logo-image logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Cat Energy Logo">
     <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Cat Energy">
-  </div>
+  </a>
 
   <nav class="main-nav">
-    <button class="main-nav__toggle " type="button">Открыть меню</button>
-    <button class="main-nav__close visually-hidden" type="button">Закрыть меню</button>
+    <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--active">
-          <a>Главная</a>
+          <a href="index.html">Главная</a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">Каталог продукции</a>
+          <a href="catalog.html">Каталог продукции</a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">Подбор программы</a>
+          <a>Подбор программы</a>
         </li>
       </ul>
     </div>
@@ -70,11 +69,11 @@
       <h2 class="extra__title title">Владелец кота</h2>
       <div class="form__line">
         <label class="form__label" for="form-owner-mail">Email:<sup>*</sup></label>
-        <input class="form__text" type="email" id="form-owner-mail" name="form-owner-mail" value="" placeholder="kuklachev@gmail.com" required>
+        <input class="form__text form__text--email" type="email" id="form-owner-mail" name="form-owner-mail" value="" placeholder="kuklachev@gmail.com" required>
       </div>
       <div class="form__line">
         <label class="form__label" for="form-owner-phone">Телефон:<sup>*</sup></label>
-        <input class="form__text" type="text" id="form-owner-phone" name="form-owner-phone" value="" placeholder="8(960)900-60-90" required>
+        <input class="form__text form__text--phone" type="text" id="form-owner-phone" name="form-owner-phone" value="" placeholder="8(960)900-60-90" required>
       </div>
     </section>
 
@@ -87,22 +86,28 @@
 
     <section class="form__additional">
       <h2 class="form__title title">Дополнительно</h2>
-      <input class="form__checkbox" type="checkbox" name="form-sugar-substitute" id="form-sugar-substitute" checked>
-      <label class="form__label" for="form-sugar-substitute">Сахарозаменитель</label>
-      <input class="form__checkbox" type="checkbox" name="form-water" id="form-water">
-      <label class="form__label" for="form-water">Питьевая вода</label>
-      <input class="form__checkbox" type="checkbox" name="form-milk" id="form-milk">
-      <label class="form__label" for="form-milk">Молоко</label>
-      <input class="form__checkbox" type="checkbox" name="form-vitamins" id="form-vitamins">
-      <label class="form__label" for="form-vitamins">Витамины</label>
+      <div class="form__line">
+        <input class="form__checkbox" type="checkbox" name="form-sugar-substitute" id="form-sugar-substitute" checked>
+        <label class="form__label" for="form-sugar-substitute">Сахарозаменитель</label>
+      </div>
+      <div class="form__line">
+        <input class="form__checkbox" type="checkbox" name="form-water" id="form-water">
+        <label class="form__label" for="form-water">Питьевая вода</label>
+      </div>
+      <div class="form__line">
+        <input class="form__checkbox" type="checkbox" name="form-milk" id="form-milk">
+        <label class="form__label" for="form-milk">Молоко</label>
+      </div>
+      <div class="form__line">
+        <input class="form__checkbox" type="checkbox" name="form-vitamins" id="form-vitamins">
+        <label class="form__label" for="form-vitamins">Витамины</label>
+      </div>
     </section>
 
-    <button class="button button--green" type="submit">Отправить заявку</button>
+    <button class="button" type="submit">Отправить заявку</button>
 
     <span class="form__"><sup>*</sup> - обязательные поля</span>
   </form>
-
-  title
 
 </main>
 

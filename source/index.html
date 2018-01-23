@@ -7,24 +7,23 @@
   <body>
 
   <header class="page-header">
-    <div class="page-header__logo">
-      <img class="page-header__logo-image" src="ihttp://placehold.it/33x38" width="33" height="38" alt="Cat Energy Logo">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image logo-image" src="ihttp://placehold.it/33x38" width="33" height="38" alt="Cat Energy Logo">
       <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Cat Energy">
-    </div>
+    </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle " type="button">Открыть меню</button>
-      <button class="main-nav__close visually-hidden" type="button">Закрыть меню</button>
+      <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a>Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Каталог продукции</a>
+            <a href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Подбор программы</a>
+            <a href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -38,7 +37,7 @@
       <h2 class="intro__title">Функциональное питание для котов</h2>
       <p class="intro__moto">Занялся собой? Займись котом!</p>
       <img class="intro__image" src="http://placehold.it/280x270" width="280" height="270" alt="Cat energy - Курица">
-      <a class="intro__choose button button--green" href="#">Подобрать программу</a>
+      <a class="intro__choose button" href="#">Подобрать программу</a>
     </section>
 
     <section class="categories">
@@ -61,16 +60,16 @@
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--compound">
-          <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
+          Функциональное питание содержит только полезные питательные вещества.
         </li>
         <li class="advantages__item advantages__item--form">
-          <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
         </li>
         <li class="advantages__item advantages__item--schedule">
-          <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          Замените один-два приема обычной еды на наше функциональное питание.
         </li>
         <li class="advantages__item advantages__item--duration">
-          <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
         </li>
       </ul>
     </section>
@@ -93,16 +92,16 @@
       <div class="before-after__compare compare-slider">
         <input class="hidden" type="radio" id="compare-before" name="before-after" checked>
         <input class="hidden" type="radio" id="compare-after" name="before-after">
-        <div class="before-after__controls compare-slider__controls">
-          <label class="before-after__control compare-slider__control" for="compare-before">Было</label>
-          <div class="before-after__indication compare-slider__indication"></div>
-          <label class="before-after__control compare-slider__control" for="compare-after">Стало</label>
-        </div>
         <div class="before-after__inner compare-slider__inner">
           <div class="before-after__slides compare-slider__slides">
             <img class="before-after__image compare-slider__image" src="http://placehold.it/320x260" width="320" height="260" alt="Было">
             <img class="before-after__image compare-slider__image" src="http://placehold.it/320x260" width="320" height="260" alt="Стало">
           </div>
+        </div>
+        <div class="before-after__controls compare-slider__controls">
+          <label class="before-after__control compare-slider__control" for="compare-before">Было</label>
+          <div class="before-after__indication compare-slider__indication"></div>
+          <label class="before-after__control compare-slider__control" for="compare-after">Стало</label>
         </div>
       </div>
     </section>
