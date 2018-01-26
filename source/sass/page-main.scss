@@ -5,13 +5,15 @@
 .page-main__header {
   @include offset-padding;
   padding-top: 14px;
-  padding-bottom: 27px;
+  padding-bottom: 28px;
   margin: 0;
 
   @include font-decorative-regular;
   font-size: 36px;
   line-height: 60px;
-  letter-spacing: 0.001em;
 
-  border-bottom: 1px solid $color-border-light;
+
+  &--separated {
+    border-bottom: 1px solid $color-border-light;
+  }
 }

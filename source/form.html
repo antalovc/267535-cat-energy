@@ -38,40 +38,42 @@
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <b class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</b>
+
         <section class="form__cat">
           <h2 class="visually-hidden">Кот</h2>
           <div class="form__line">
-            <label class="form__label" for="form-cat-name">Имя<sup>*</sup></label>
+            <label class="form__label" for="form-cat-name">Имя:<sup>*</sup></label>
             <input class="form__text" type="text" id="form-cat-name" name="form-cat-name" value="" placeholder="Барсик" required>
           </div>
           <div class="form__line">
-            <label class="form__label" for="form-cat-weight">Вес (кг)<sup>*</sup></label>
+            <label class="form__label" for="form-cat-weight">Вес (кг):<sup>*</sup></label>
             <input class="form__text" type="number" id="form-cat-weight" name="form-cat-weight" value="" placeholder="7" required>
           </div>
           <div class="form__line">
             <label class="form__label" for="form-cat-age">Возраст (лет):</label>
             <input class="form__text" type="number" id="form-cat-age" name="form-cat-age" value="" placeholder="7">
           </div>
-          <div class="form__course">
-            <div class="form__line">
-              <input class="form__radio" type="radio" id="form-course-loss" name="form-course" checked>
-              <label class="form__label" for="form-course-loss">Похудение</label>
-            </div>
-            <div class="form__line">
-              <input class="form__radio" type="radio" id="form-course-get" name="form-course">
-              <label class="form__label" for="form-course-get">Набор массы</label>
-            </div>
-            <div class="form__line">
-              <input class="form__radio" type="radio" id="form-course-advice" name="form-course">
-              <label class="form__label" for="form-course-advice">Не знаю (нужен ваш совет)</label>
-            </div>
+        </section>
+
+        <section class="form__course">
+          <div class="form__line">
+            <input class="form__radio" type="radio" id="form-course-loss" name="form-course" checked>
+            <label class="form__label" for="form-course-loss">Похудение</label>
+          </div>
+          <div class="form__line">
+            <input class="form__radio" type="radio" id="form-course-get" name="form-course">
+            <label class="form__label" for="form-course-get">Набор массы</label>
+          </div>
+          <div class="form__line">
+            <input class="form__radio" type="radio" id="form-course-advice" name="form-course">
+            <label class="form__label" for="form-course-advice">Не знаю (нужен ваш совет)</label>
           </div>
         </section>
 
         <section class="form__owner">
-          <h2 class="extra__title title">Владелец кота</h2>
+          <h2 class="form__title title">Контактные данные (владельца кота)</h2>
           <div class="form__line">
-            <label class="form__label" for="form-owner-mail">Email:<sup>*</sup></label>
+            <label class="form__label" for="form-owner-mail">E-mail:<sup>*</sup></label>
             <input class="form__text form__text--email" type="email" id="form-owner-mail" name="form-owner-mail" value="" placeholder="kuklachev@gmail.com" required>
           </div>
           <div class="form__line">
@@ -81,10 +83,11 @@
         </section>
 
         <section class="form__comment">
-          <h2 class="extra__title title">Комментарий</h2>
-          <textarea id="form__textarea" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <h2 class="form__title title">Комментарий</h2>
+          <div class="form__line">
+            <textarea class="form__textarea" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </section>
-
 
         <section class="form__additional">
           <h2 class="form__title title">Дополнительно</h2>
@@ -106,15 +109,17 @@
           </div>
         </section>
 
-        <button class="button" type="submit">Отправить заявку</button>
+        <div class="form__submit">
+          <button class=" button" type="submit">Отправить заявку</button>
+        </div>
 
-        <span class="form__"><sup>*</sup> - обязательные поля</span>
+        <span class="form__comment"><sup>*</sup> - Обязательные поля</span>
       </form>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <div class="contacts__info">
+        <div class="contacts__info  contacts__info--dark">
           <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
         </div>

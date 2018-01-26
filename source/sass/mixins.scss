@@ -43,11 +43,8 @@
 }
 
 @mixin offset-padding {
-  padding: 0 $size-offset;
-}
-
-@mixin offset-margin {
-  margin: 0 $size-offset;
+  padding-left: $size-offset;
+  padding-right: $size-offset;
 }
 
 @mixin offset-relative {
@@ -97,4 +94,25 @@
   font-size: 36px;
   line-height: 60px;
   letter-spacing: 0.001em;
+}
+
+@mixin text-input {
+  padding: 11px 18px;
+
+  @include font-decorative-regular;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  background-color: rgba(203, 203, 203, 0.5);
+  border: 1px solid color-border-stats;
+  @include main-color-scheme;
+}
+
+@mixin text-input-label {
+  @include font-decorative-regular;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
