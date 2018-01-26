@@ -1,5 +1,5 @@
-.social {
-}
+/* .social {
+} */
 
 .social__list {
   @include list-reset;
@@ -21,6 +21,6 @@
   opacity: 0.3;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }

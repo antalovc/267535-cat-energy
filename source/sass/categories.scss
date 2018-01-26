@@ -19,7 +19,7 @@
   @include font-simple;
 
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -27,8 +27,8 @@
   position: relative;
 
   padding-left: 71px;
-  margin-top: 0px;
-  bottom: 0px;
+  margin-top: 0;
+  bottom: 0;
   margin-bottom: 30px;
 
   @include font-decorative-regular;
@@ -38,7 +38,7 @@
 }
 
 .categories__description {
-  margin-top: 0px;
+  margin-top: 0;
   padding-bottom: 22px;
   border-bottom: 1px solid $color-border-dark;
   margin-bottom: 20px;

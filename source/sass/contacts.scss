@@ -15,6 +15,7 @@
   padding-bottom: 12px;
 
   @include main-color-scheme;
+
   &--dark {
     @include secondary-color-scheme;
   }
@@ -31,8 +32,4 @@
   @include font-simple;
   font-size: 14px;
   line-height: 20px;
-}
-
-.contacts__map {
-
 }

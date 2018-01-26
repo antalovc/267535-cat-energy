@@ -6,6 +6,7 @@
 
 .form__description {
   display: block;
+
   @include offset-padding;
   @include font-decorative-regular;
   font-size: 14px;
@@ -75,11 +76,13 @@
 
 .form__owner .form__line:last-child,
 .form__comment .form__line {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .form__comment {
   @include offset-padding;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
 .form__additional {
@@ -98,9 +101,4 @@
 
 .form__submit button {
   flex: 1;
-}
-
-.form__comment {
-  margin-bottom: 35px;
-  text-align: center;
 }

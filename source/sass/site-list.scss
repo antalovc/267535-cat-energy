@@ -17,6 +17,7 @@
   text-transform: uppercase;
 
   text-align: center;
+
   @include main-color-scheme;
   border-bottom: 1px solid $color-border-light;
 }
