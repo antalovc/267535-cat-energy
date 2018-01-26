@@ -15,6 +15,9 @@
   padding-bottom: 12px;
 
   @include main-color-scheme;
+  &--dark {
+    @include secondary-color-scheme;
+  }
 }
 
 .contacts__title {

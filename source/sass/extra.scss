@@ -1,0 +1,42 @@
+.extra {
+  @include offset-padding;
+}
+
+.extra__title {
+  margin: 0;
+  @include font-decorative-regular;
+  font-size: 24px;
+  line-height: 24px;
+  padding-top: 30px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $color-border-dark;
+}
+
+.extra__list {
+  @include list-reset;
+  @include font-simple;
+}
+
+.extra__item {
+  padding-top: 12px;
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid $color-border-dark;
+}
+
+.extra__name {
+  margin: 0px;
+  margin-bottom: 13px;
+
+  @include font-decorative-regular;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.extra__description {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 12px;
+}

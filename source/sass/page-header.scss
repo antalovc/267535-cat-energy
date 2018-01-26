@@ -6,6 +6,8 @@
   align-items: center;
   @include offset-padding;
 
+  z-index: 10;
+
   @include main-color-scheme;
   border-bottom: 1px solid $color-border-light;
 }
