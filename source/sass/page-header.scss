@@ -1,0 +1,27 @@
+.page-header {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include offset-padding;
+
+  @include main-color-scheme;
+  border-bottom: 1px solid $color-border-light;
+}
+
+.page-header__logo-image-text {
+  display: flex;
+}
+
+.page-header__logo {
+  display: flex;
+}
+
+.page-header__logo-image {
+  margin-top: 11px;
+}
+
+.page-header__logo-title {
+  margin: 24px 0 24px 57px;
+}

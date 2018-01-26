@@ -1,0 +1,32 @@
+.page-footer {
+  @include secondary-color-scheme;
+}
+
+.page-footer__contacts {
+}
+
+.page-footer__about {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+
+  @include offset-padding;
+}
+
+.page-footer__logo {
+  padding-top: 37px;
+  padding-bottom: 27px;
+
+  border-bottom: 1px solid $color-border-light;
+}
+
+.page-footer__social {
+  border-bottom: 1px solid $color-border-light;
+
+}
+
+.page-footer__copyright {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

@@ -1,0 +1,44 @@
+.compare-slider {
+
+}
+
+.compare-slider input[type=radio] {
+  display: none;
+}
+
+.compare-slider__inner {
+  overflow: hidden;
+}
+
+.compare-slider__slides {
+  width: 200%;
+  /* transition: transform 0.8s ease; */
+}
+
+.compare-slider__image {
+  float: left;
+}
+
+.compare-slider__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compare-slider__control {
+  @include font-decorative-regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.compare-slider__indication {
+  width: 84px;
+  height: 14px;
+
+  margin: 0 16px;
+
+  @include main-color-scheme;
+  border: 1px solid $color-border-stats;
+  border-radius: 7px;
+}

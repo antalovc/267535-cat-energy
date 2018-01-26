@@ -1,0 +1,36 @@
+.main-nav {
+  border-bottom: 1px solid $color-border-light;
+}
+
+.main-nav__toggle {
+  display: block;
+  width: 24px;
+  height: 18px;
+
+  text-decoration: none;
+  font-size: 0;
+
+  border: 0;
+  background: #ffffff url("../img/icon-mobile-menu.svg") no-repeat center;
+  opacity: 1;
+
+  &:hover {
+    background: #ffffff url("../img/icon-close.svg") no-repeat center;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover + .main-nav__list {
+    display: flex;
+  }
+}
+
+.main-nav__list {
+  position: absolute;
+  top: 67px;
+  left: 0;
+  right: 0;
+
+  display: none;
+}

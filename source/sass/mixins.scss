@@ -1,0 +1,95 @@
+
+@mixin main-color-scheme {
+  color: $color-dark;
+  background-color: $color-light;
+}
+
+@mixin secondary-color-scheme {
+  color: $color-dark;
+  background-color: $color-middle;
+}
+
+@mixin ternary-color-scheme {
+  color: $color-light;
+  background-color: $color-accent;
+}
+
+@mixin font-decorative-regular {
+  font-family: $font-decorative;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@mixin font-decorative-medium {
+  font-family: $font-decorative;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+@mixin font-simple {
+  font-family: $font-simple;
+  font-weight: 400;
+  letter-spacing: 0.001em;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+@mixin offset-padding {
+  padding: 0 $size-offset;
+}
+
+@mixin offset-relative {
+  right: $size-offset;
+  left: $size-offset;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin button {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  @include font-decorative-regular;
+  @include ternary-color-scheme;
+
+  &--secondary {
+    @include secondary-color-scheme;
+  }
+}
+
+@mixin title2 {
+  margin-top: 0;
+  bottom: 0;
+
+  @include font-decorative-regular;
+  font-size: 36px;
+  line-height: 60px;
+  letter-spacing: 0.001em;
+}
