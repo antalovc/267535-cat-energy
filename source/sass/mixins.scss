@@ -35,11 +35,11 @@
 }
 
 @mixin list-reset {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 
   list-style: none;
-  font-size: 0;
 }
 
 @mixin offset-padding {
@@ -65,30 +65,8 @@
   overflow: hidden;
 }
 
-@mixin button {
-  display: block;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  font-size: 14px;
-  line-height: 18px;
-  vertical-align: top;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-
-  @include font-decorative-regular;
-  @include ternary-color-scheme;
-
-  &--secondary {
-    @include secondary-color-scheme;
-  }
-}
-
 @mixin title2 {
   margin-top: 0;
-  bottom: 0;
 
   @include font-decorative-regular;
   font-size: 36px;

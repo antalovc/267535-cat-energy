@@ -27,5 +27,22 @@ body {
 }
 
 .button {
-  @include button;
+  display: block;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  @include font-decorative-regular;
+  @include ternary-color-scheme;
+
+  &--secondary {
+    @include secondary-color-scheme;
+  }
 }

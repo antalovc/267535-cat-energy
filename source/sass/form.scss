@@ -34,7 +34,7 @@
 }
 
 .form__text {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .form__cat {
@@ -90,7 +90,7 @@
 }
 
 .form__textarea {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .form__submit {
@@ -100,5 +100,5 @@
 }
 
 .form__submit button {
-  flex: 1;
+  flex-grow: 1;
 }
