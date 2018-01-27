@@ -1,0 +1,35 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include offset-padding;
+  padding-top: 15px;
+  padding-bottom: 12px;
+
+  @include main-color-scheme;
+
+  &--dark {
+    @include secondary-color-scheme;
+  }
+}
+
+.contacts__title {
+  @include font-decorative-regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  @include font-simple;
+  font-size: 14px;
+  line-height: 20px;
+}

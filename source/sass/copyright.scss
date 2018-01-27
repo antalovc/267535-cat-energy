@@ -1,0 +1,9 @@
+.copyright {
+  @include font-simple;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.copyright__link {
+  text-decoration: none;
+}

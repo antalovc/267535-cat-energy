@@ -1,0 +1,30 @@
+.site-list {
+  flex-direction: column;
+  align-items: stretch;
+
+  @include list-reset;
+}
+
+.site-list__item {
+  @include offset-padding;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+  @include font-decorative-medium;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  @include main-color-scheme;
+  border-bottom: 1px solid $color-border-light;
+}
+
+.site-list__item a {
+  display: block;
+
+  padding: 8px 0;
+  text-decoration: none;
+}

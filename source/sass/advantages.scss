@@ -1,0 +1,26 @@
+.advantages {
+  @include offset-padding;
+  margin-bottom: 45px;
+}
+
+.advantages__title {
+  @include title2;
+  margin-bottom: 30px;
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+.advantages__item {
+  position: relative;
+
+  padding-left: 80px;
+  margin-bottom: 26px;
+
+  @include font-simple;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

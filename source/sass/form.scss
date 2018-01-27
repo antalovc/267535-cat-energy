@@ -1,0 +1,104 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form__description {
+  display: block;
+
+  @include offset-padding;
+  @include font-decorative-regular;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form input,
+.form textarea {
+  @include text-input;
+}
+
+.form label {
+  @include text-input-label;
+}
+
+.form__line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form__label {
+  margin-right: 20px;
+}
+
+.form__text {
+  flex: 1;
+}
+
+.form__cat {
+  @include offset-padding;
+  padding-top: 36px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid $color-border-light2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form__course {
+  @include offset-padding;
+  padding-top: 24px;
+  padding-bottom: 3px;
+
+  border-bottom: 1px solid $color-border-light2;
+}
+
+.form__course .form__line {
+  margin-bottom: 22px;
+}
+
+.form__title {
+  margin: 0;
+  margin-top: 28px;
+  margin-bottom: 34px;
+
+  @include font-decorative-regular;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.form__owner {
+  @include offset-padding;
+}
+
+.form__owner .form__line:last-child,
+.form__comment .form__line {
+  margin-bottom: 0;
+}
+
+.form__comment {
+  @include offset-padding;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.form__additional {
+  @include offset-padding;
+}
+
+.form__textarea {
+  flex: 1;
+}
+
+.form__submit {
+  @include offset-padding;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.form__submit button {
+  flex: 1;
+}

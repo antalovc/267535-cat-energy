@@ -1,0 +1,72 @@
+.before-after {
+  @include secondary-color-scheme;
+
+  padding-top: 17px;
+  padding-bottom: 37px;
+}
+
+.before-after__title {
+  @include title2;
+  @include offset-padding;
+  margin-bottom: 24px;
+}
+
+.before-after__description {
+  @include offset-padding;
+  margin-bottom: 24px;
+}
+
+.before-after__stats-list {
+  display: flex;
+  justify-content: space-between;
+
+  @include list-reset;
+  @include offset-padding;
+}
+
+.before-after__stats-item {
+  position: relative;
+  width: 122px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  box-sizing: content-box;
+  margin-bottom: 20px;
+
+  @include font-decorative-regular;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+
+  border: 1px solid $color-border-stats;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.before-after__stats-description {
+  position: absolute;
+
+  @include font-simple;
+  font-size: 12px;
+  line-height: 12px;
+
+  top: 50%;
+  left: 50%;
+  text-transform: lowercase;
+}
+
+.before-after__costs {
+  @include offset-padding;
+  margin-bottom: 32px;
+
+  @include font-decorative-regular;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.001em;
+}
+
+.before-after__inner {
+  margin-bottom: 33px;
+}
