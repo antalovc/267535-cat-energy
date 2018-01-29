@@ -1,17 +1,24 @@
+@mixin color-theme ($fg-color, $bg-color) {
+  color: $fg-color;
+  background-color: $bg-color;
+}
 
 @mixin main-color-scheme {
-  color: $color-dark;
-  background-color: $color-light;
+  @include color-theme($color-dark, $color-light);
 }
 
 @mixin secondary-color-scheme {
-  color: $color-dark;
-  background-color: $color-middle;
+  @include color-theme($color-dark, $color-middle);
 }
 
 @mixin ternary-color-scheme {
-  color: $color-light;
-  background-color: $color-accent;
+  @include color-theme($color-light, $color-accent);
+}
+
+@mixin font-sizing($font-size, $line-height, $letter-spacing:0.01em) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
 }
 
 @mixin font-decorative-regular {
@@ -69,18 +76,14 @@
   margin-top: 0;
 
   @include font-decorative-regular;
-  font-size: 36px;
-  line-height: 60px;
-  letter-spacing: 0.001em;
+  @include font-sizing(36px, 60px, 0.001em);
 }
 
 @mixin text-input {
   padding: 11px 18px;
 
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0.01em;
+  @include font-sizing(16px, 18px, 0.01em);
   text-transform: uppercase;
 
   background-color: rgba(203, 203, 203, 0.5);
@@ -91,7 +94,6 @@
 
 @mixin text-input-label {
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 18px;
+  @include font-sizing(16px, 18px);
   text-transform: uppercase;
 }

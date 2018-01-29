@@ -23,13 +23,11 @@
 
 .contacts__title {
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 20px;
+  @include font-sizing(16px, 20px);
   text-transform: uppercase;
 }
 
 .contacts__text {
   @include font-simple;
-  font-size: 14px;
-  line-height: 20px;
+  @include font-sizing(14px, 20px);
 }

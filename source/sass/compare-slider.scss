@@ -26,8 +26,7 @@
 
 .compare-slider__control {
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 20px;
+  @include font-sizing(16px, 20px);
   text-transform: uppercase;
 }
 

@@ -11,9 +11,7 @@
   padding-top: 15px;
 
   @include font-decorative-medium;
-  font-size: 20px;
-  line-height: 20px;
-  letter-spacing: 0.01em;
+  @include font-sizing(20px, 20px, 0.01em);
   text-transform: uppercase;
 
   text-align: center;

@@ -9,8 +9,7 @@
   margin: 0;
 
   @include font-decorative-regular;
-  font-size: 36px;
-  line-height: 60px;
+  @include font-sizing(36px, 60px);
 
 
   &--separated {
