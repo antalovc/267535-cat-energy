@@ -14,14 +14,14 @@
   padding-top: 15px;
   padding-bottom: 12px;
 
-  @include main-color-scheme;
+  @include primary-color-scheme;
 
   &--dark {
     @include secondary-color-scheme;
   }
 }
 
-.contacts__title {
+.contacts__moto {
   @include font-decorative-regular;
   @include font-sizing(16px, 20px);
   text-transform: uppercase;

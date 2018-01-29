@@ -13,13 +13,27 @@
 }
 
 body {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
-  box-sizing: content-box;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
 
   @include font-simple;
+}
+
+.container {
+  width: $width-mobile - 2 * $size-offset-mobile;
+  margin: 0 auto;
+}
+
+@media (min-width: $width-tablet) {
+  .container {
+    width: $width-tablet - 2 * $size-offset-tablet;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .container {
+    width: $width-desktop - 2 * $size-offset-desktop;
+  }
 }
 
 .visually-hidden {

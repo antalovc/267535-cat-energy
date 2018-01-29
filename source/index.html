@@ -9,7 +9,7 @@
 
   <body>
 
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo">
         <img class="page-header__logo-image logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
         <img class="page-header__logo-title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
@@ -35,17 +35,19 @@
       <h1 class="visually-hidden">Cat Energy - функциональное питание для котов</h1>
 
       <section class="intro">
-        <div class="intro__content">
-          <h2 class="intro__title">Функциональное питание для котов</h2>
-          <p class="intro__moto">Занялся собой? Займись котом!</p>
-          <a class="intro__choose button" href="#">Подобрать программу</a>
-        </div>
-        <div class="intro__picture">
-          <img class="intro__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Cat energy - Курица">
+        <div class="intro__container container">
+          <div class="intro__content">
+            <h2 class="intro__title">Функциональное питание для котов</h2>
+            <p class="intro__moto">Занялся собой? Займись котом!</p>
+            <a class="intro__button button" href="#">Подобрать программу</a>
+          </div>
+          <div class="intro__picture">
+            <img class="intro__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Cat energy - Курица">
+          </div>
         </div>
       </section>
 
-      <section class="categories">
+      <section class="categories container">
         <h2 class="visually-hidden">Категории продуктов</h2>
         <ul class="categories__list">
           <li class="categories__item">
@@ -61,7 +63,7 @@
         </ul>
       </section>
 
-      <section class="advantages">
+      <section class="advantages container">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--compound">
@@ -80,50 +82,56 @@
       </section>
 
       <section class="before-after">
-        <h2 class="before-after__title">Живой пример</h2>
-        <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="before-after__stats-list">
-          <li class="before-after__stats-item">
-            <b>5 кг
-              <span class="before-after__stats-description">Снижение веса</span>
-            </b>
-          </li>
-          <li class="before-after__stats-item">
-            <b>60 дней
-              <span class="before-after__stats-description">Затрачено времени</span>
-            </b>
-          </li>
-        </ul>
-        <p class="before-after__costs">Затраты на питание: 15000 руб.</p>
-
-        <div class="before-after__compare compare-slider">
-          <input type="radio" id="compare-before" name="before-after" checked>
-          <input type="radio" id="compare-after" name="before-after">
-          <div class="before-after__inner compare-slider__inner">
-            <div class="before-after__slides compare-slider__slides">
-              <img class="before-after__image compare-slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
-              <img class="before-after__image compare-slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
+        <div class="before-after__container container">
+          <div class="before-after__info">
+            <h2 class="before-after__title">Живой пример</h2>
+            <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="before-after__stats">
+              <ul class="before-after__stats-list">
+                <li class="before-after__stats-item">
+                  <b>5 кг
+                    <span class="before-after__stats-description">Снижение веса</span>
+                  </b>
+                </li>
+                <li class="before-after__stats-item">
+                  <b>60 дней
+                    <span class="before-after__stats-description">Затрачено времени</span>
+                  </b>
+                </li>
+              </ul>
+              <p class="before-after__stats-price">Затраты на питание: 15000 руб.</p>
             </div>
           </div>
-          <div class="before-after__controls compare-slider__controls">
-            <label class="before-after__control compare-slider__control" for="compare-before">Было</label>
-            <div class="before-after__indication compare-slider__indication"></div>
-            <label class="before-after__control compare-slider__control" for="compare-after">Стало</label>
+
+          <div class="before-after__compare compare-slider">
+            <input type="radio" id="compare-before" name="before-after" checked>
+            <input type="radio" id="compare-after" name="before-after">
+            <div class="before-after__inner compare-slider__inner">
+              <div class="before-after__slides compare-slider__slides">
+                <img class="before-after__image compare-slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
+                <img class="before-after__image compare-slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
+              </div>
+            </div>
+            <div class="before-after__controls compare-slider__controls">
+              <label class="before-after__control compare-slider__control" for="compare-before">Было</label>
+              <div class="before-after__indication compare-slider__indication"></div>
+              <label class="before-after__control compare-slider__control" for="compare-after">Стало</label>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__info container">
+          <b class="contacts__moto">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
+        </div>
+        <img class="contacts__map" src="img/map_tmp.png" width="320" height="362" alt="Карта">
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <div class="contacts__info">
-          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
-        </div>
-        <img class="contacts__map" src="img/map_tmp.png" width="320" height="362" alt="Карта">
-      </div>
-
-      <div class="page-footer__about">
+      <div class="page-footer__container container">
         <div class="page-footer__logo">
           <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
         </div>

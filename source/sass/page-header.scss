@@ -1,24 +1,19 @@
 .page-header {
-  position: relative;
-
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @include offset-padding;
+  flex-direction: column;
+  align-items: stretch;
 
   z-index: 10;
 
-  @include main-color-scheme;
+  @include primary-color-scheme;
   border-bottom: 1px solid $color-border-light;
-}
-
-.page-header__logo-image-text {
-  display: flex;
 }
 
 .page-header__logo {
   display: flex;
+  padding-left: $size-offset-mobile;
+
+  border-bottom: 1px solid $color-border-light;
 }
 
 .page-header__logo-image {
@@ -27,4 +22,38 @@
 
 .page-header__logo-title {
   margin: 24px 0 24px 57px;
+}
+
+@media (min-width: $width-tablet) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    padding-left: $size-offset-tablet;
+
+    border-bottom: none;
+  }
+
+  .page-header__logo-title {
+    margin: 24px 0 24px 21px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    padding-left: $size-offset-desktop;
+
+    border-bottom: none;
+  }
+
+  .page-header__logo-title {
+    margin: 24px 0 24px 13px;
+  }
 }

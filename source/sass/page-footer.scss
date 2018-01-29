@@ -2,7 +2,7 @@
   @include secondary-color-scheme;
 }
 
-.page-footer__about {
+.page-footer__container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -11,18 +11,46 @@
   @include offset-padding;
 }
 
+.page-footer__container > * {
+  border-bottom: 1px solid $color-border-light;
+}
+
+.page-footer__container > *:last-child {
+  border-bottom: none;
+}
+
 .page-footer__logo {
   padding-top: 37px;
   padding-bottom: 27px;
 
-  border-bottom: 1px solid $color-border-light;
 }
 
 .page-footer__social {
-  border-bottom: 1px solid $color-border-light;
 }
 
 .page-footer__copyright {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+@media (min-width: $width-tablet) {
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__container > * {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__container > * {
+    border-bottom: none;
+  }
 }

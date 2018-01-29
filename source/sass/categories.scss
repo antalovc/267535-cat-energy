@@ -11,9 +11,10 @@
 
 .categories__item {
   @include secondary-color-scheme;
-  @include offset-padding;
   padding-top: 30px;
   padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 20px;
 
   @include font-simple;
@@ -49,3 +50,18 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@media (min-width: $width-desktop) {
+  .categories__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .categories__item {
+    width: 466px;
+    margin-bottom: 0;
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+

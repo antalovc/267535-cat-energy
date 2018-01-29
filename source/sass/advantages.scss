@@ -9,6 +9,9 @@
 }
 
 .advantages__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   @include list-reset;
 }
 
@@ -22,5 +25,27 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .advantages__item {
+    width: 354px;
+    padding-left: 0px;
+
+    /* tmp */
+    height: 230px;
+    background-color: gray;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .advantages__item {
+    width: 245px;
+    padding-left: 0px;
+
+    /* tmp */
+    height: 230px;
+    background-color: gray;
   }
 }

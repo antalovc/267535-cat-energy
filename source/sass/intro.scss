@@ -1,10 +1,12 @@
 .intro {
+  @include font-decorative-regular;
+}
+
+.intro__container {
   display: flex;
   flex-direction: column;
 
   margin-bottom: 65px;
-
-  @include font-decorative-regular;
   text-align: center;
 }
 
@@ -39,9 +41,29 @@
   text-transform: uppercase;
 }
 
-.intro__choose {
+.intro__button {
   position: absolute;
   margin-top: 439px;
+}
 
-  @include offset-relative;
+@media (min-width: $width-tablet) {
+  .intro__content {
+    align-items: flex-start;
+    flex-shrink: 0;
+    max-width: 427px;
+    margin-left: 90px;
+
+    @include primary-color-scheme;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .intro__content {
+    justify-content: flex-start;
+    flex-shrink: 0;
+    max-width: 570px;
+    margin-left: 120px;
+
+    @include primary-color-scheme;
+  }
 }
