@@ -7,14 +7,13 @@
 .form__description {
   display: block;
 
-  @include offset-padding;
   @include font-decorative-regular;
   @include font-sizing(14px, 18px);
   text-transform: uppercase;
 }
 
-.form input,
-.form textarea {
+.form__textinput,
+.form__textarea {
   @include text-input;
 }
 
@@ -32,26 +31,28 @@
   margin-right: 20px;
 }
 
-.form__text {
+.form__textinput {
   flex-grow: 1;
 }
 
 .form__cat {
-  @include offset-padding;
+  display: flex;
+  flex-direction: column;
   padding-top: 36px;
   padding-bottom: 9px;
-  border-bottom: 1px solid $color-border-light2;
+}
 
+.form__cat-data {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
 .form__course {
-  @include offset-padding;
   padding-top: 24px;
   padding-bottom: 3px;
 
+  border-top: 1px solid $color-border-light2;
   border-bottom: 1px solid $color-border-light2;
 }
 
@@ -69,34 +70,99 @@
 }
 
 .form__owner {
-  @include offset-padding;
-}
-
-.form__owner .form__line:last-child,
-.form__comment .form__line {
-  margin-bottom: 0;
-}
-
-.form__comment {
-  @include offset-padding;
-  margin-bottom: 35px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__additional {
-  @include offset-padding;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__comment {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__textarea {
-  flex-grow: 1;
+  align-self: stretch;
 }
 
 .form__submit {
-  @include offset-padding;
   display: flex;
-  padding-bottom: 20px;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.form__submit button {
+.form__submit-button {
   flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.form__remark {
+  align-self: center;
+}
+
+@media (min-width: $width-tablet) {
+  .form__course {
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid $color-border-light2;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .form__course {
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid $color-border-light2;
+  }
+}
+
+
+@media (min-width: $width-tablet) {
+  .form__additional {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__additional .form__line,
+  .form__submit-button,
+  .form__remark {
+    width: 285px;
+  }
+
+  .form__submit {
+    flex-direction: row;
+  }
+
+  .form__submit-button {
+    width: 285px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .form__cat {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__cat .form__cat-data,
+  .form__cat .form__course,
+  .form__submit-button,
+  .form__remark  {
+    width: 570px;
+  }
+
+  .form__owner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__owner .form__line {
+    width: 570px;
+  }
 }

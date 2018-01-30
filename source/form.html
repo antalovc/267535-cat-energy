@@ -17,80 +17,78 @@
 
       <nav class="main-nav">
         <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active" >
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item>
-              <a" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a>Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active" >
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a>Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__header">Подбор программы</h1>
+      <h1 class="page-main__header container">Подбор программы</h1>
 
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="form container" action="https://echo.htmlacademy.ru" method="post">
         <b class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</b>
 
+        <h2 class="visually-hidden">Данные кота</h2>
         <section class="form__cat">
-          <h2 class="visually-hidden">Кот</h2>
-          <div class="form__line">
-            <label class="form__label" for="form-cat-name">Имя:<sup>*</sup></label>
-            <input class="form__text" type="text" id="form-cat-name" name="form-cat-name" value="" placeholder="Барсик" required>
+          <div class="form__cat-data">
+            <div class="form__line">
+              <label class="form__label" for="form-cat-name">Имя:<sup>*</sup></label>
+              <input class="form__textinput" type="text" id="form-cat-name" name="form-cat-name" value="" placeholder="Барсик" required>
+            </div>
+            <div class="form__line">
+              <label class="form__label" for="form-cat-weight">Вес (кг):<sup>*</sup></label>
+              <input class="form__textinput" type="number" id="form-cat-weight" name="form-cat-weight" value="" placeholder="7" required>
+            </div>
+            <div class="form__line">
+              <label class="form__label" for="form-cat-age">Возраст (лет):</label>
+              <input class="form__textinput" type="number" id="form-cat-age" name="form-cat-age" value="" placeholder="7">
+            </div>
           </div>
-          <div class="form__line">
-            <label class="form__label" for="form-cat-weight">Вес (кг):<sup>*</sup></label>
-            <input class="form__text" type="number" id="form-cat-weight" name="form-cat-weight" value="" placeholder="7" required>
-          </div>
-          <div class="form__line">
-            <label class="form__label" for="form-cat-age">Возраст (лет):</label>
-            <input class="form__text" type="number" id="form-cat-age" name="form-cat-age" value="" placeholder="7">
-          </div>
+
+          <section class="form__course">
+            <div class="form__line">
+              <input class="form__radio" type="radio" id="form-course-loss" name="form-course" checked>
+              <label class="form__label" for="form-course-loss">Похудение</label>
+            </div>
+            <div class="form__line">
+              <input class="form__radio" type="radio" id="form-course-get" name="form-course">
+              <label class="form__label" for="form-course-get">Набор массы</label>
+            </div>
+            <div class="form__line">
+              <input class="form__radio" type="radio" id="form-course-advice" name="form-course">
+              <label class="form__label" for="form-course-advice">Не знаю (нужен ваш совет)</label>
+            </div>
+          </section>
         </section>
 
-        <section class="form__course">
-          <div class="form__line">
-            <input class="form__radio" type="radio" id="form-course-loss" name="form-course" checked>
-            <label class="form__label" for="form-course-loss">Похудение</label>
-          </div>
-          <div class="form__line">
-            <input class="form__radio" type="radio" id="form-course-get" name="form-course">
-            <label class="form__label" for="form-course-get">Набор массы</label>
-          </div>
-          <div class="form__line">
-            <input class="form__radio" type="radio" id="form-course-advice" name="form-course">
-            <label class="form__label" for="form-course-advice">Не знаю (нужен ваш совет)</label>
-          </div>
-        </section>
-
+        <h2 class="form__title title">Контактные данные (владельца кота)</h2>
         <section class="form__owner">
-          <h2 class="form__title title">Контактные данные (владельца кота)</h2>
           <div class="form__line">
             <label class="form__label" for="form-owner-mail">E-mail:<sup>*</sup></label>
-            <input class="form__text form__text--email" type="email" id="form-owner-mail" name="form-owner-mail" value="" placeholder="kuklachev@gmail.com" required>
+            <input class="form__textinput form__textinput--email" type="email" id="form-owner-mail" name="form-owner-mail" value="" placeholder="kuklachev@gmail.com" required>
           </div>
           <div class="form__line">
             <label class="form__label" for="form-owner-phone">Телефон:<sup>*</sup></label>
-            <input class="form__text form__text--phone" type="text" id="form-owner-phone" name="form-owner-phone" value="" placeholder="8(960)900-60-90" required>
+            <input class="form__textinput form__textinput--phone" type="text" id="form-owner-phone" name="form-owner-phone" value="" placeholder="8(960)900-60-90" required>
           </div>
         </section>
 
+        <h2 class="form__title title">Комментарий</h2>
         <section class="form__comment">
-          <h2 class="form__title title">Комментарий</h2>
-          <div class="form__line">
-            <textarea class="form__textarea" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </div>
+          <textarea class="form__textarea" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
         </section>
 
+        <h2 class="form__title title">Дополнительно</h2>
         <section class="form__additional">
-          <h2 class="form__title title">Дополнительно</h2>
           <div class="form__line">
             <input class="form__checkbox" type="checkbox" name="form-sugar-substitute" id="form-sugar-substitute" checked>
             <label class="form__label" for="form-sugar-substitute">Сахарозаменитель</label>
@@ -110,10 +108,10 @@
         </section>
 
         <div class="form__submit">
-          <button class=" button" type="submit">Отправить заявку</button>
+          <button class="form__submit-button button" type="submit">Отправить заявку</button>
+          <span class="form__remark"><sup>*</sup> - Обязательные поля</span>
         </div>
 
-        <span class="form__comment"><sup>*</sup> - Обязательные поля</span>
       </form>
 
       <section class="contacts">
