@@ -1,5 +1,6 @@
 .extra {
   @include offset-padding;
+  margin-bottom: 35px;
 }
 
 .extra__title {
@@ -12,9 +13,17 @@
   border-bottom: 1px solid $color-border-dark;
 }
 
+.extra__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .extra__list {
   @include list-reset;
   @include font-simple;
+
+  margin-bottom: 40px;
 }
 
 .extra__item {
@@ -38,4 +47,21 @@
   justify-content: space-between;
 
   padding-bottom: 12px;
+}
+
+.extra-bonus {
+  width: 280px;
+  margin: 37px auto;
+}
+
+@media (min-width: $width-tablet) {
+  .extra__item {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .extra__item {
+  }
 }

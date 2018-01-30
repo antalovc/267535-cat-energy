@@ -3,10 +3,8 @@
 }
 
 .page-main__header {
-  @include offset-padding;
   padding-top: 14px;
   padding-bottom: 28px;
-  margin: 0;
 
   @include font-decorative-regular;
   @include font-sizing(36px, 60px);

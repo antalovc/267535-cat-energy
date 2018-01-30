@@ -7,6 +7,7 @@
   align-items: center;
 
   background: $color-accent url("../img/gift-photo-mobile@1x.jpg") center;
+  background-size: cover;
 }
 
 .bonus__text {
@@ -18,4 +19,18 @@
 
   font-size: 16px;
   text-align: center;
+}
+
+@media (min-width: $width-tablet) {
+  .bonus {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .bonus {
+    width: 245px;
+    height: 290px;
+  }
 }
