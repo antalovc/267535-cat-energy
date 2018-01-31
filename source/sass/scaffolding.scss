@@ -60,16 +60,20 @@ body {
   }
 }
 
-.backline {
+.backline-title {
   position: relative;
+
+  @include font-decorative-regular;
+  @include font-sizing(24px, 24px);
+  padding-top: 30px;
+  padding-bottom: 32px;
 }
 
-.backline::after {
+.backline-title::before {
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
-  z-index: -1;
   height: 7px;
   margin-top: -4px;
   background-color: $color-accent;

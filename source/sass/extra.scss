@@ -1,16 +1,5 @@
 .extra {
-  @include offset-padding;
   margin-bottom: 35px;
-}
-
-.extra__title {
-  margin: 0;
-
-  @include font-decorative-regular;
-  @include font-sizing(24px, 24px);
-  padding-top: 30px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid $color-border-dark;
 }
 
 .extra__wrapper {
@@ -24,9 +13,12 @@
   @include font-simple;
 
   margin-bottom: 40px;
+  border-top: 1px solid $color-border-dark;
 }
 
 .extra__item {
+  display: flex;
+  flex-direction: column;
   padding-top: 12px;
   padding-bottom: 17px;
 
@@ -58,10 +50,50 @@
   .extra__item {
     padding-left: 38px;
     padding-right: 38px;
+
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .extra__description {
+    margin-left: auto;
+    flex-wrap: wrap;
+  }
+
+  .extra__price {
+    min-width: 95px;
+    text-align: right;
+  }
+
+  .extra__order {
+    width: 100%;
   }
 }
 
 @media (min-width: $width-desktop) {
   .extra__item {
+    padding-left: 0;
+    padding-right: 0;
+
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .extra__name {
+    flex-grow: 1;
+  }
+
+  .extra__description {
+    width: 285px;
+    flex-wrap: wrap;
+  }
+
+  .extra__order {
+    width: 245px;
+    margin-left: 40px;
+
+    flex-grow: 0;
   }
 }

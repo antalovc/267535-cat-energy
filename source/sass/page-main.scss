@@ -8,24 +8,4 @@
 
   @include font-decorative-regular;
   @include font-sizing(36px, 60px);
-
-  &--separated {
-    border-bottom: 1px solid $color-border-light;
-  }
-}
-
-@media (min-width: $width-tablet) {
-  .page-main__header {
-    &--separated {
-      border-bottom: none;
-    }
-  }
-}
-
-@media (min-width: $width-desktop) {
-  .page-main__header {
-    &--separated {
-      border-bottom: none;
-    }
-  }
 }
