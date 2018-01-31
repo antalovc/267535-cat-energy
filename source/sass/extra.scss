@@ -66,12 +66,17 @@
     text-align: right;
   }
 
-  .extra__order {
+  .extra__order--extra {
     width: 100%;
   }
 }
 
 @media (min-width: $width-desktop) {
+  .extra__list {
+    flex-grow: 1;
+    margin-right: 80px;
+  }
+
   .extra__item {
     padding-left: 0;
     padding-right: 0;
@@ -90,10 +95,14 @@
     flex-wrap: wrap;
   }
 
-  .extra__order {
+  .extra__order--extra {
     width: 245px;
     margin-left: 40px;
 
     flex-grow: 0;
+  }
+
+  .extra__wrapper {
+    flex-direction: row;
   }
 }
