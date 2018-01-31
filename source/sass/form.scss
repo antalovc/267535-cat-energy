@@ -42,7 +42,7 @@
   padding-bottom: 9px;
 }
 
-.form__cat-data {
+.form__cat .form__data {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -90,12 +90,12 @@
 
 .form__submit {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.form__submit-button {
-  flex-grow: 1;
+.form__submit .form__button {
   margin-bottom: 20px;
 }
 
@@ -149,10 +149,10 @@
     justify-content: space-between;
   }
 
-  .form__cat .form__cat-data,
+  .form__cat .form__data,
   .form__cat .form__course,
-  .form__submit-button,
-  .form__remark  {
+  .form__submit .form__button,
+  .form__remark {
     width: 570px;
   }
 

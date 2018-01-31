@@ -62,20 +62,6 @@
     padding-left: $size-offset-desktop;
     padding-right: $size-offset-desktop;
   }
-
-}
-
-@mixin visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 @mixin title2 {
@@ -103,3 +89,25 @@
   @include font-sizing(16px, 18px);
   text-transform: uppercase;
 }
+
+@mixin container {
+  display: block;
+  margin: 0 auto;
+  padding-right: $size-offset-mobile;
+  padding-left: $size-offset-mobile;
+  width: $width-mobile - 2 * $size-margin-mobile - 2 * $size-offset-mobile;
+
+  @media (min-width: $width-tablet) {
+    padding-right: $size-offset-tablet;
+    padding-left: $size-offset-tablet;
+    width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-right: $size-offset-desktop;
+    padding-left: $size-offset-desktop;
+    width: $width-desktop - 2 * $size-margin-desktop - 2 * $size-offset-desktop;
+  }
+}
+
+

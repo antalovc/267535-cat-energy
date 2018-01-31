@@ -15,11 +15,11 @@
   border-bottom: 1px solid $color-border-light;
 }
 
-.page-header__logo-image {
+.page-header__logo .page-header__image {
   margin-top: 11px;
 }
 
-.page-header__logo-title {
+.page-header__logo .page-header__title {
   margin: 24px 0 24px 57px;
 }
 
@@ -27,15 +27,15 @@
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .page-header__logo {
-    padding-left: $size-offset-tablet;
 
     border-bottom: none;
   }
 
-  .page-header__logo-title {
+  .page-header__logo {
+    border-bottom: none;
+  }
+
+  .page-header__logo .page-header__title {
     margin: 24px 0 24px 21px;
   }
 }
@@ -44,15 +44,15 @@
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .page-header__logo {
-    padding-left: $size-offset-desktop;
 
     border-bottom: none;
   }
 
-  .page-header__logo-title {
+  .page-header__logo {
+    border-bottom: none;
+  }
+
+  .page-header__logo .page-header__title {
     margin: 24px 0 24px 13px;
   }
 }

@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
   @include list-reset;
 }
 
@@ -31,7 +32,7 @@
 @media (min-width: $width-tablet) {
   .advantages__item {
     width: 354px;
-    padding-left: 0px;
+    padding-left: 0;
 
     /* tmp */
     height: 230px;
@@ -42,7 +43,7 @@
 @media (min-width: $width-desktop) {
   .advantages__item {
     width: 245px;
-    padding-left: 0px;
+    padding-left: 0;
 
     /* tmp */
     height: 230px;

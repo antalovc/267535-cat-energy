@@ -1,8 +1,8 @@
 .social {
-  @include list-reset;
-
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @include list-reset;
 }
 
 .social__item {

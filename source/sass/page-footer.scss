@@ -11,21 +11,14 @@
   @include offset-padding;
 }
 
-.page-footer__container > * {
-  border-bottom: 1px solid $color-border-light;
-}
-
-.page-footer__container > *:last-child {
-  border-bottom: none;
-}
-
 .page-footer__logo {
   padding-top: 37px;
   padding-bottom: 27px;
-
+  border-bottom: 1px solid $color-border-light;
 }
 
 .page-footer__social {
+  border-bottom: 1px solid $color-border-light;
 }
 
 .page-footer__copyright {
@@ -39,7 +32,8 @@
     justify-content: space-between;
   }
 
-  .page-footer__container > * {
+  .page-footer__logo,
+  .page-footer__social {
     border-bottom: none;
   }
 }
@@ -50,7 +44,8 @@
     justify-content: space-between;
   }
 
-  .page-footer__container > * {
+  .page-footer__logo,
+  .page-footer__social {
     border-bottom: none;
   }
 }

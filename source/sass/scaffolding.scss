@@ -20,24 +20,23 @@ body {
 }
 
 .container {
-  width: $width-mobile - 2 * $size-offset-mobile;
-  margin: 0 auto;
+  @include container;
 }
 
-@media (min-width: $width-tablet) {
-  .container {
-    width: $width-tablet - 2 * $size-offset-tablet;
-  }
-}
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
 
-@media (min-width: $width-desktop) {
-  .container {
-    width: $width-desktop - 2 * $size-offset-desktop;
-  }
-}
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-.visually-hidden {
-  @include visually-hidden;
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -59,4 +58,20 @@ body {
   &--secondary {
     @include secondary-color-scheme;
   }
+}
+
+.backline {
+  position: relative;
+}
+
+.backline::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 7px;
+  margin-top: -4px;
+  background-color: $color-accent;
+  content: "";
 }

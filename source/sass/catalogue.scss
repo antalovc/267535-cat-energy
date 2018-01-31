@@ -57,10 +57,6 @@
   }
 }
 
-.catalogue__image {
-
-}
-
 .catalogue__text {
   margin: 0;
   margin-bottom: 20px;
@@ -76,7 +72,7 @@
   align-items: stretch;
 }
 
-.catalogue__stats-line {
+.catalogue__stats .catalogue__line {
   display: flex;
   justify-content: space-between;
 

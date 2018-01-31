@@ -1,18 +1,30 @@
 .before-after {
-  @include secondary-color-scheme;
+  display: flex;
+  flex-direction: column;
 }
 
-.before-after__container {
+.before-after__wrapper {
   display: flex;
   flex-direction: column;
   align-times: stretch;
-  padding-top: 17px;
   padding-bottom: 37px;
+}
+
+.before-after__title-wrapper {
+  @include secondary-color-scheme;
+}
+
+.before-after__info-wrapper {
+  @include secondary-color-scheme;
+}
+
+.before-after__compare-wrapper {
+  @include secondary-color-scheme;
 }
 
 .before-after__title {
   @include title2;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 .before-after__description {
@@ -25,14 +37,14 @@
   align-items: stretch;
 }
 
-.before-after__stats-list {
+.before-after__stats .before-after__list {
   display: flex;
   justify-content: space-between;
 
   @include list-reset;
 }
 
-.before-after__stats-item {
+.before-after__stats .before-after__item {
   position: relative;
   width: 122px;
   padding-top: 14px;
@@ -49,7 +61,7 @@
   text-transform: uppercase;
 }
 
-.before-after__stats-description {
+.before-after__stats .before-after__description {
   position: absolute;
 
   @include font-simple;
@@ -60,7 +72,7 @@
   text-transform: lowercase;
 }
 
-.before-after__stats-price {
+.before-after__stats .before-after__price {
   align-self: center;
   margin-bottom: 32px;
 
@@ -79,25 +91,52 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .before-after__title-wrapper {
+    @include primary-color-scheme;
+  }
+
+  .before-after__info-wrapper {
+    @include primary-color-scheme;
+  }
 }
 
 @media (min-width: $width-desktop) {
-  .before-after__container {
+  .before-after__wrapper {
     flex-direction: row;
     justify-content: space-between;
+
+    @include secondary-color-scheme;
+    @include container;
+    display: flex;
   }
 
   .before-after__info {
-    flex-basis: 455px;
+    width: 455px;
   }
 
   .before-after__compare {
-    flex-basis: 570px;
+    width: 610px;
   }
 
   .before-after__stats {
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .before-after__wrapper-wrapper {
+    @include secondary-color-scheme;
+  }
+
+  .before-after__info-wrapper {
+    @include secondary-color-scheme;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .before-after__info,
+  .before-after__compare {
+    @include container;
   }
 }
 

@@ -11,8 +11,8 @@
 
     <header class="page-header container">
       <a class="page-header__logo">
-        <img class="page-header__logo-image logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
-        <img class="page-header__logo-title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+        <img class="page-header__image logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
+        <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
       </a>
 
       <nav class="main-nav">
@@ -82,40 +82,49 @@
       </section>
 
       <section class="before-after">
-        <div class="before-after__container container">
-          <div class="before-after__info">
-            <h2 class="before-after__title">Живой пример</h2>
-            <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-            <div class="before-after__stats">
-              <ul class="before-after__stats-list">
-                <li class="before-after__stats-item">
-                  <b>5 кг
-                    <span class="before-after__stats-description">Снижение веса</span>
-                  </b>
-                </li>
-                <li class="before-after__stats-item">
-                  <b>60 дней
-                    <span class="before-after__stats-description">Затрачено времени</span>
-                  </b>
-                </li>
-              </ul>
-              <p class="before-after__stats-price">Затраты на питание: 15000 руб.</p>
-            </div>
-          </div>
+        <div class="before-after__title-wrapper">
+          <h2 class=" before-after__title container">Живой пример</h2>
+        </div>
 
-          <div class="before-after__compare compare-slider">
-            <input type="radio" id="compare-before" name="before-after" checked>
-            <input type="radio" id="compare-after" name="before-after">
-            <div class="before-after__inner compare-slider__inner">
-              <div class="before-after__slides compare-slider__slides">
-                <img class="before-after__image compare-slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
-                <img class="before-after__image compare-slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
+        <div class="before-after__wrapper-wrapper">
+          <div class="before-after__wrapper">
+            <div class="before-after__info-wrapper">
+              <div class="before-after__info">
+                <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+                <div class="before-after__stats">
+                  <ul class="before-after__list">
+                    <li class="before-after__item">
+                      <b>5 кг
+                        <span class="before-after__description">Снижение веса</span>
+                      </b>
+                    </li>
+                    <li class="before-after__item">
+                      <b>60 дней
+                        <span class="before-after__description">Затрачено времени</span>
+                      </b>
+                    </li>
+                  </ul>
+                  <p class="before-after__price">Затраты на питание: 15000 руб.</p>
+                </div>
               </div>
             </div>
-            <div class="before-after__controls compare-slider__controls">
-              <label class="before-after__control compare-slider__control" for="compare-before">Было</label>
-              <div class="before-after__indication compare-slider__indication"></div>
-              <label class="before-after__control compare-slider__control" for="compare-after">Стало</label>
+
+            <div class="before-after__compare-wrapper">
+              <div class="before-after__compare compare-slider">
+                <input type="radio" id="compare-before" name="before-after" checked>
+                <input type="radio" id="compare-after" name="before-after">
+                <div class="before-after__inner compare-slider__inner">
+                  <div class="before-after__slides compare-slider__slides">
+                    <img class="before-after__image compare-slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
+                    <img class="before-after__image compare-slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
+                  </div>
+                </div>
+                <div class="before-after__controls compare-slider__controls">
+                  <label class="before-after__control compare-slider__control" for="compare-before">Было</label>
+                  <div class="before-after__indication compare-slider__indication"></div>
+                  <label class="before-after__control compare-slider__control" for="compare-after">Стало</label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +135,7 @@
           <b class="contacts__moto">Приглашаем к сотрудничеству дилеров!</b>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
         </div>
-        <img class="contacts__map" src="img/map_tmp.png" width="320" height="362" alt="Карта">
+        <div class="contacts__map">Карта</div>
       </section>
     </main>
 
