@@ -110,4 +110,14 @@
   }
 }
 
+@mixin container-form-tablet {
+  @include container;
+
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    padding-right: $size-offset-tablet + $form-offset-tablet;
+    padding-left: $size-offset-tablet + $form-offset-tablet;
+    width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet - 2 * $form-offset-tablet;
+  }
+}
+
 

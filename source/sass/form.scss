@@ -27,6 +27,10 @@
   margin-bottom: 15px;
 }
 
+.form__line:last-child {
+  margin-bottom: 0px;
+}
+
 .form__label {
   margin-right: 20px;
 }
@@ -42,22 +46,26 @@
   padding-bottom: 9px;
 }
 
-.form__cat .form__data {
+.form__data {
+  margin-bottom: 15px;
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
 .form__course {
-  padding-top: 24px;
-  padding-bottom: 3px;
-
   border-top: 1px solid $color-border-light2;
   border-bottom: 1px solid $color-border-light2;
 }
 
 .form__course .form__line {
   margin-bottom: 22px;
+}
+
+.form__wrapper {
+  padding-top: 24px;
+  padding-bottom: 10px;
 }
 
 .form__title {
@@ -69,17 +77,17 @@
   @include font-sizing(24px, 24px);
 }
 
-.form__owner {
+.form__owner .form__content {
   display: flex;
   flex-direction: column;
 }
 
-.form__additional {
+.form__additional .form__content {
   display: flex;
   flex-direction: column;
 }
 
-.form__comment {
+.form__comment .container-form-tablet {
   display: flex;
   flex-direction: column;
 }
@@ -104,24 +112,7 @@
 }
 
 @media (min-width: $width-tablet) {
-  .form__course {
-    padding-left: 25px;
-    padding-right: 25px;
-    border: 1px solid $color-border-light2;
-  }
-}
-
-@media (min-width: $width-desktop) {
-  .form__course {
-    padding-left: 25px;
-    padding-right: 25px;
-    border: 1px solid $color-border-light2;
-  }
-}
-
-
-@media (min-width: $width-tablet) {
-  .form__additional {
+  .form__additional .form__content {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -141,22 +132,40 @@
     width: 285px;
     margin-bottom: 0;
   }
+
+  .form__course {
+    border: none;
+  }
+
+  .form__wrapper {
+    padding-left: 25px;
+    border-left: 1px solid $color-border-light2;
+    border-top: 1px solid $color-border-light2;
+    border-bottom: 1px solid $color-border-light2;
+  }
 }
 
 @media (min-width: $width-desktop) {
   .form__cat {
     flex-direction: row;
     justify-content: space-between;
+
+    @include container-form-tablet;
+    display: flex;
   }
 
-  .form__cat .form__data,
-  .form__cat .form__course,
+  .form__data,
+  .form__wrapper,
   .form__submit .form__button,
   .form__remark {
     width: 570px;
   }
 
-  .form__owner {
+  .form__data {
+    margin-bottom: 0;
+  }
+
+  .form__owner .form__content {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -166,3 +175,15 @@
     width: 570px;
   }
 }
+
+@media (max-width: $width-desktop) {
+  .form__data,
+  .form__wrapper {
+    @include container-form-tablet;
+  }
+
+  .form__data {
+    margin-bottom: 15px;
+  }
+}
+

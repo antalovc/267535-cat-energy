@@ -23,6 +23,10 @@ body {
   @include container;
 }
 
+.container-form-tablet {
+  @include container-form-tablet;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
