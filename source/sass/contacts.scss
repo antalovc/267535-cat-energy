@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,6 +55,14 @@
 }
 
 @media (min-width: $width-desktop) {
+  .contacts__info {
+    position: absolute;
+    right: 50%;
+    top: 95px;
+
+    width: 570px;
+    min-height: 150px;
+  }
 
   .contacts__map {
     height: 400px;

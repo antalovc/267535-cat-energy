@@ -1,12 +1,14 @@
 .page-header {
+  @include primary-color-scheme;
+  border-bottom: 1px solid $color-border-light;
+}
+
+.page-header__container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 
   z-index: 10;
-
-  @include primary-color-scheme;
-  border-bottom: 1px solid $color-border-light;
 }
 
 .page-header__logo {
@@ -25,10 +27,12 @@
 
 @media (min-width: $width-tablet) {
   .page-header {
+    border-bottom: none;
+  }
+
+  .page-header__container {
     flex-direction: row;
     justify-content: space-between;
-
-    border-bottom: none;
   }
 
   .page-header__logo {
@@ -42,10 +46,12 @@
 
 @media (min-width: $width-desktop) {
   .page-header {
+    border-bottom: none;
+  }
+
+  .page-header__container {
     flex-direction: row;
     justify-content: space-between;
-
-    border-bottom: none;
   }
 
   .page-header__logo {
