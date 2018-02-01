@@ -1,6 +1,10 @@
 .page-header {
+  position: relative;
+
   @include primary-color-scheme;
   border-bottom: 1px solid $color-border-light;
+
+  z-index: 10;
 }
 
 .page-header__container {
@@ -47,6 +51,7 @@
 @media (min-width: $width-desktop) {
   .page-header {
     border-bottom: none;
+    background-color: transparent;
   }
 
   .page-header__container {

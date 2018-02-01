@@ -55,6 +55,7 @@
 }
 
 .form__course {
+  position: relative;
   border-top: 1px solid $color-border-light2;
   border-bottom: 1px solid $color-border-light2;
 }
@@ -64,6 +65,8 @@
 }
 
 .form__wrapper {
+  position: relative;
+  right: 0;
   padding-top: 24px;
   padding-bottom: 10px;
 }
@@ -134,11 +137,11 @@
   }
 
   .form__course {
+    align-self: center;
     border: none;
   }
 
-  .form__wrapper {
-    padding-left: 25px;
+  .form__border {
     border-left: 1px solid $color-border-light2;
     border-top: 1px solid $color-border-light2;
     border-bottom: 1px solid $color-border-light2;
@@ -173,6 +176,10 @@
 
   .form__owner .form__line {
     width: 570px;
+  }
+
+  .form__border {
+    border: 1px solid $color-border-light2;
   }
 }
 
