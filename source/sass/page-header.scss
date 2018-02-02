@@ -1,30 +1,69 @@
 .page-header {
   position: relative;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @include offset-padding;
+  @include primary-color-scheme;
+  border-bottom: 1px solid $color-border-light;
 
   z-index: 10;
-
-  @include main-color-scheme;
-  border-bottom: 1px solid $color-border-light;
 }
 
-.page-header__logo-image-text {
+.page-header__container {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  z-index: 10;
 }
 
 .page-header__logo {
   display: flex;
+
+  border-bottom: 1px solid $color-border-light;
 }
 
-.page-header__logo-image {
+.page-header__logo .page-header__image {
   margin-top: 11px;
 }
 
-.page-header__logo-title {
+.page-header__logo .page-header__title {
   margin: 24px 0 24px 57px;
+}
+
+@media (min-width: $width-tablet) {
+  .page-header {
+    border-bottom: none;
+  }
+
+  .page-header__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    border-bottom: none;
+  }
+
+  .page-header__logo .page-header__title {
+    margin: 24px 0 24px 21px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page-header {
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  .page-header__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    border-bottom: none;
+  }
+
+  .page-header__logo .page-header__title {
+    margin: 24px 0 24px 13px;
+  }
 }

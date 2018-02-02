@@ -1,8 +1,12 @@
 .main-nav {
-  border-bottom: 1px solid $color-border-light;
+  position: relative;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  margin-top: -42px;
+  right: $size-offset-mobile;
+
   display: block;
   width: 24px;
   height: 18px;
@@ -27,10 +31,28 @@
 }
 
 .main-nav__list {
-  position: absolute;
-  top: 67px;
-  left: 0;
-  right: 0;
-
   display: none;
+}
+
+@media (min-width: $width-tablet) {
+  .main-nav__toggle {
+    right: $size-offset-tablet;
+  }
+
+  .main-nav__list {
+    display: flex;
+    padding-tight: $size-offset-tablet;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .main-nav__toggle {
+    width: 570px;
+    right: $size-offset-desktop;
+  }
+
+  .main-nav__list {
+    display: flex;
+    padding-tight: $size-offset-desktop;
+  }
 }

@@ -1,11 +1,8 @@
-/* .social {
-} */
-
-.social__list {
-  @include list-reset;
-
+.social {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @include list-reset;
 }
 
 .social__item {

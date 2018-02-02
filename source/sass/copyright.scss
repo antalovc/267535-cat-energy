@@ -1,7 +1,6 @@
 .copyright {
   @include font-simple;
-  font-size: 16px;
-  line-height: 16px;
+  @include font-sizing(16px, 16px);
 }
 
 .copyright__link {

@@ -1,17 +1,24 @@
+@mixin color-theme ($fg-color, $bg-color) {
+  color: $fg-color;
+  background-color: $bg-color;
+}
 
-@mixin main-color-scheme {
-  color: $color-dark;
-  background-color: $color-light;
+@mixin primary-color-scheme {
+  @include color-theme($color-dark, $color-light);
 }
 
 @mixin secondary-color-scheme {
-  color: $color-dark;
-  background-color: $color-middle;
+  @include color-theme($color-dark, $color-middle);
 }
 
 @mixin ternary-color-scheme {
-  color: $color-light;
-  background-color: $color-accent;
+  @include color-theme($color-light, $color-accent);
+}
+
+@mixin font-sizing($font-size, $line-height, $letter-spacing:0.01em) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
 }
 
 @mixin font-decorative-regular {
@@ -35,85 +42,80 @@
 }
 
 @mixin list-reset {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 
   list-style: none;
-  font-size: 0;
 }
 
 @mixin offset-padding {
-  padding-left: $size-offset;
-  padding-right: $size-offset;
-}
+  padding-left: $size-offset-mobile;
+  padding-right: $size-offset-mobile;
 
-@mixin offset-relative {
-  right: $size-offset;
-  left: $size-offset;
-}
+  @media (min-width: $width-tablet) {
+    padding-left: $size-offset-tablet;
+    padding-right: $size-offset-tablet;
+  }
 
-@mixin visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@mixin button {
-  display: block;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  font-size: 14px;
-  line-height: 18px;
-  vertical-align: top;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-
-  @include font-decorative-regular;
-  @include ternary-color-scheme;
-
-  &--secondary {
-    @include secondary-color-scheme;
+  @media (min-width: $width-desktop) {
+    padding-left: $size-offset-desktop;
+    padding-right: $size-offset-desktop;
   }
 }
 
 @mixin title2 {
   margin-top: 0;
-  bottom: 0;
 
   @include font-decorative-regular;
-  font-size: 36px;
-  line-height: 60px;
-  letter-spacing: 0.001em;
+  @include font-sizing(36px, 60px, 0.001em);
 }
 
 @mixin text-input {
   padding: 11px 18px;
 
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0.01em;
+  @include font-sizing(16px, 18px, 0.01em);
   text-transform: uppercase;
 
   background-color: rgba(203, 203, 203, 0.5);
   border: 1px solid $color-border-stats;
 
-  @include main-color-scheme;
+  @include primary-color-scheme;
 }
 
 @mixin text-input-label {
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 18px;
+  @include font-sizing(16px, 18px);
   text-transform: uppercase;
+}
+
+@mixin container {
+  display: block;
+  margin: 0 auto;
+  padding-right: $size-offset-mobile;
+  padding-left: $size-offset-mobile;
+  width: $width-mobile - 2 * $size-margin-mobile - 2 * $size-offset-mobile;
+
+  @media (min-width: $width-tablet) {
+    padding-right: $size-offset-tablet;
+    padding-left: $size-offset-tablet;
+    width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-right: $size-offset-desktop;
+    padding-left: $size-offset-desktop;
+    width: $width-desktop - 2 * $size-margin-desktop - 2 * $size-offset-desktop;
+  }
+}
+
+@mixin container-form-tablet {
+  @include container;
+
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    padding-right: $size-offset-tablet + $form-offset-tablet;
+    padding-left: $size-offset-tablet + $form-offset-tablet;
+    width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet - 2 * $form-offset-tablet;
+  }
 }

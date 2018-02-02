@@ -1,9 +1,9 @@
 @import "variables";
 @import "mixins";
-@import "global";
+@import "scaffolding";
 @import "page-header";
-@import "main-nav";
 @import "site-list";
+@import "main-nav";
 @import "page-main";
 @import "intro";
 @import "categories";
@@ -13,7 +13,6 @@
 @import "catalogue";
 @import "extra";
 @import "bonus";
-@import "site-bonus";
 @import "form";
 @import "page-footer";
 @import "contacts";

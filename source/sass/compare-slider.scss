@@ -26,8 +26,7 @@
 
 .compare-slider__control {
   @include font-decorative-regular;
-  font-size: 16px;
-  line-height: 20px;
+  @include font-sizing(16px, 20px);
   text-transform: uppercase;
 }
 
@@ -37,7 +36,7 @@
 
   margin: 0 16px;
 
-  @include main-color-scheme;
+  @include primary-color-scheme;
   border: 1px solid $color-border-stats;
   border-radius: 7px;
 }

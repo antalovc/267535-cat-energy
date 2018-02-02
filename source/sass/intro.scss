@@ -1,24 +1,36 @@
 .intro {
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 65px;
+  justify-content: stretch;
 
   @include font-decorative-regular;
-  letter-spacing: 0.01em;
-  text-align: center;
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--content {
+    background-color: $color-accent;
+  }
+
+  &--picture {
+    height: 200px;
+  }
 }
 
 .intro__content {
   position: relative;
   min-height: 305px;
+  width: 280px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include ternary-color-scheme;
-  background: #5eaa2f url("../img/index-background-mobile@1x.jpg") center bottom no-repeat;
+  background: $color-accent url("../img/index-background-mobile@1x.jpg") center bottom no-repeat;
 }
 
 .intro__picture {
@@ -31,20 +43,105 @@
 }
 
 .intro__title {
-  font-size: 36px;
-  line-height: 36px;
+  @include font-sizing(36px, 36px, 0.01em);
 }
 
 .intro__moto {
-  font-size: 14px;
-  line-height: 14px;
+  @include font-sizing(14px, 14px, 0.01em);
 
   text-transform: uppercase;
 }
 
-.intro__choose {
+.intro__button {
   position: absolute;
   margin-top: 439px;
+  right: 0;
+  left: 0;
+}
 
-  @include offset-relative;
+@media (min-width: $width-tablet) {
+  .intro {
+    align-items: center;
+  }
+
+  .intro__content {
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 487px;
+
+    @include primary-color-scheme;
+    background: transparent;
+  }
+
+  .intro__container--content {
+    width: 487px;
+
+    z-index: 10;
+    background: transparent;
+  }
+
+  .intro__picture {
+    margin-top: -110px;
+  }
+
+  .intro__button {
+    position: static;
+    margin-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .intro {
+    margin-top: -80px;
+    margin-bottom: 50px;
+
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .intro__container {
+    width: auto;
+    flex-direction: row;
+    flex-grow: 1;
+
+    &--picture {
+      align-items: flex-start;
+      height: auto;
+      background-color: $color-accent;
+    }
+
+    &--content {
+      justify-content: flex-end;
+    }
+  }
+
+  .intro__content {
+    padding-left: 200px;
+    width: 560px;
+
+    justify-content: center;
+
+    background: $color-light;
+    flex-grow: 0;
+
+    @include primary-color-scheme;
+  }
+
+  .intro__picture {
+    height: 695px;
+    width: 680px;
+    margin-top: 0;
+    flex-grow: 1;
+
+    justify-content: center;
+    background: #5eaa2f url("../img/index-background-mobile@1x.jpg") left center no-repeat;
+    background-size: contain;
+  }
+
+  .intro__image {
+    position: relative;
+    margin-left: -650px;
+  }
 }

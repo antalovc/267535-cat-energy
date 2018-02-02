@@ -1,19 +1,11 @@
 .page-main {
-  @include main-color-scheme;
+  @include primary-color-scheme;
 }
 
 .page-main__header {
-  @include offset-padding;
   padding-top: 14px;
   padding-bottom: 28px;
-  margin: 0;
 
   @include font-decorative-regular;
-  font-size: 36px;
-  line-height: 60px;
-
-
-  &--separated {
-    border-bottom: 1px solid $color-border-light;
-  }
+  @include font-sizing(36px, 60px);
 }
