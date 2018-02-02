@@ -35,9 +35,6 @@
 }
 
 @media (min-width: $width-tablet) {
-  .main-nav {
-  }
-
   .main-nav__toggle {
     right: $size-offset-tablet;
   }
@@ -49,9 +46,6 @@
 }
 
 @media (min-width: $width-desktop) {
-  .main-nav {
-  }
-
   .main-nav__toggle {
     width: 570px;
     right: $size-offset-desktop;
