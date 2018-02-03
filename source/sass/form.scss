@@ -81,9 +81,6 @@
   }
 }
 
-.form__border {
-  width: 280px;
-}
 
 .form__title {
   margin: 0;
@@ -92,6 +89,11 @@
 
   @include font-decorative-regular;
   @include font-sizing(24px, 24px);
+}
+
+
+.form__course .form__content {
+  width: 280px;
 }
 
 .form__owner .form__content {
@@ -135,6 +137,10 @@
     justify-content: space-between;
   }
 
+  .form__course .form__content {
+    width: 628px;
+  }
+
   .form__additional .form__line,
   .form__submit-button,
   .form__remark {
@@ -170,10 +176,6 @@
       align-content: flex-end;
       border: none;
     }
-  }
-
-  .form__border {
-    width: 628px;
   }
 
 }
