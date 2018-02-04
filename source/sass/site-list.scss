@@ -7,9 +7,6 @@
 }
 
 .site-list__item {
-  @include offset-padding;
-  padding-bottom: 15px;
-  padding-top: 15px;
 
   @include font-decorative-medium;
   @include font-sizing(20px, 20px, 0.01em);
@@ -24,8 +21,16 @@
 .site-list__item a {
   display: block;
 
-  padding: 8px 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
   text-decoration: none;
+}
+
+
+@media (max-width: $width-tablet) {
+  @include container;
+  @include offset-padding;
 }
 
 @media (min-width: $width-tablet) {

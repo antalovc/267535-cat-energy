@@ -4,8 +4,9 @@
 
 .main-nav__toggle {
   position: absolute;
+  right: 50%;
   margin-top: -42px;
-  right: $size-offset-mobile;
+  margin-right: - ($width-mobile / 2 - $size-offset-mobile);
 
   display: block;
   width: 24px;
@@ -17,26 +18,15 @@
   border: 0;
   background: #ffffff url("../img/icon-mobile-menu.svg") no-repeat center;
   opacity: 1;
-
-  &:hover {
-    background: #ffffff url("../img/icon-close.svg") no-repeat center;
-
-    width: 18px;
-    height: 18px;
-  }
-
-  &:hover + .main-nav__list {
-    display: flex;
-  }
 }
 
 .main-nav__list {
-  display: none;
+  display: flex;
 }
 
 @media (min-width: $width-tablet) {
   .main-nav__toggle {
-    right: $size-offset-tablet;
+    display: none;
   }
 
   .main-nav__list {
@@ -47,12 +37,25 @@
 
 @media (min-width: $width-desktop) {
   .main-nav__toggle {
-    width: 570px;
-    right: $size-offset-desktop;
+    display: none;
   }
 
   .main-nav__list {
     display: flex;
     padding-tight: $size-offset-desktop;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    background: #ffffff url("../img/icon-close.svg") no-repeat center;
+  }
+
+  .main-nav--closed .main-nav__list {
+    display: none;
   }
 }

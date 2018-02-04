@@ -21,12 +21,14 @@
   border-bottom: 1px solid $color-border-light;
 }
 
-.page-header__logo .page-header__image {
-  margin-top: 11px;
-}
-
 .page-header__logo .page-header__title {
   margin: 24px 0 24px 57px;
+}
+
+@media (max-width: $width-tablet) {
+  .page-header__logo-container {
+    @include container;
+  }
 }
 
 @media (min-width: $width-tablet) {
@@ -35,12 +37,20 @@
   }
 
   .page-header__container {
+    @include container;
+
+    display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
   }
 
   .page-header__logo {
     border-bottom: none;
+  }
+
+  .page-header__logo-container {
+    width: 162px;
   }
 
   .page-header__logo .page-header__title {
