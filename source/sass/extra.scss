@@ -46,6 +46,10 @@
   margin: 37px auto;
 }
 
+.extra__title .container {
+  display: block;
+}
+
 @media (min-width: $width-tablet) {
   .extra__item {
     padding-left: 38px;

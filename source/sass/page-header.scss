@@ -2,7 +2,6 @@
   position: relative;
 
   @include primary-color-scheme;
-  border-bottom: 1px solid $color-border-light;
 
   z-index: 10;
 }
@@ -39,7 +38,6 @@
   .page-header__container {
     @include container;
 
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;

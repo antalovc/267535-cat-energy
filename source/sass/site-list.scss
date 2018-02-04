@@ -7,7 +7,6 @@
 }
 
 .site-list__item {
-
   @include font-decorative-medium;
   @include font-sizing(20px, 20px, 0.01em);
   text-transform: uppercase;

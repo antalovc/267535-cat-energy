@@ -106,6 +106,10 @@
   flex-direction: column;
 }
 
+.form .container-form-tablet {
+  display: block;
+}
+
 .form__comment .container-form-tablet {
   display: flex;
   flex-direction: column;
@@ -186,7 +190,6 @@
     justify-content: space-between;
 
     @include container-form-tablet;
-    display: flex;
   }
 
   .form__data,
