@@ -15,13 +15,20 @@
 }
 
 .page-header__logo {
+  padding: 14px 0 13px 0;
   display: flex;
 
   border-bottom: 1px solid $color-border-light;
 }
 
-.page-header__logo .page-header__title {
-  margin: 24px 0 24px 57px;
+.page-header__title {
+  margin-left: 57px;
+}
+
+.page-header__logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 0;
 }
 
 @media (max-width: $width-tablet) {

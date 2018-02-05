@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-times: stretch;
-  padding-bottom: 37px;
 }
 
 .before-after__title-wrapper {
@@ -19,16 +18,22 @@
 }
 
 .before-after__compare-wrapper {
+  padding-bottom: 36px;
+
   @include secondary-color-scheme;
 }
 
-.before-after__title {
-  @include title2;
-  padding-bottom: 24px;
+.before-after__compare {
+  width: $width-mobile;
+  margin: 0 auto;
 }
 
-.before-after__description {
-  margin-bottom: 24px;
+.before-after__title {
+  margin-top: 18px;
+  margin-bottom: 10px;
+
+  @include font-decorative-regular;
+  @include font-sizing(36px, 60px);
 }
 
 .before-after__stats {
@@ -37,14 +42,17 @@
   align-items: stretch;
 }
 
-.before-after__stats .before-after__list {
+.before-after__list {
+  width: 280px;
+
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @include list-reset;
 }
 
-.before-after__stats .before-after__item {
+.before-after__item {
   position: relative;
   width: 122px;
   padding-top: 14px;
@@ -53,7 +61,7 @@
   margin-bottom: 20px;
 
   @include font-decorative-regular;
-  @include font-sizing(24px, 24px);
+  @include font-sizing(24px, 24px, 0.001em);
   text-align: center;
 
   border: 1px solid $color-border-stats;
@@ -61,18 +69,29 @@
   text-transform: uppercase;
 }
 
+.before-after__description {
+  margin-bottom: 24px;
+}
+
 .before-after__stats .before-after__description {
   position: absolute;
+  max-width: 60px;
+  padding-left: 19px;
+  padding-right: 19px;
+  margin-top: 18px;
+  //margin-left: -75%;
 
   @include font-simple;
   @include font-sizing(12px, 12px);
 
   top: 50%;
-  left: 50%;
+  //left: 50%;
   text-transform: lowercase;
+
+  @include secondary-color-scheme;
 }
 
-.before-after__stats .before-after__price {
+.before-after__price {
   align-self: center;
   margin-bottom: 32px;
 
@@ -82,8 +101,8 @@
   text-transform: uppercase;
 }
 
-.before-after__inner {
-  margin-bottom: 33px;
+.before-after__slides {
+  margin-bottom: 28px;
 }
 
 @media (min-width: $width-tablet) {
@@ -98,6 +117,11 @@
 
   .before-after__info-wrapper {
     @include primary-color-scheme;
+  }
+
+  .before-after__compare {
+    width: $width-tablet;
+    margin: 0 auto;
   }
 }
 
@@ -133,8 +157,7 @@
 }
 
 @media (max-width: $width-desktop) {
-  .before-after__info,
-  .before-after__compare {
+  .before-after__info {
     @include container;
   }
 }

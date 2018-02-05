@@ -4,5 +4,14 @@
 }
 
 .copyright__link {
+  position: relative;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: $color-border-light2 url("../img/htmlacademy.svg") no-repeat center;
+  }
 }

@@ -1,6 +1,5 @@
 .categories {
   @include offset-padding;
-  margin-bottom: 17px;
 }
 
 .categories__list {
@@ -35,18 +34,27 @@
   @include font-decorative-regular;
   @include font-sizing(24px, 37px);
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $color-accent2;
+    border-radius: 50%;
+  }
 }
 
 .categories__description {
   margin-top: 0;
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   border-bottom: 1px solid $color-border-dark;
   margin-bottom: 20px;
 }
 
 .categories__link {
   @include font-decorative-regular;
-  @include font-sizing(16px, 16px);
+  @include font-sizing(16px, 16px, 0.001em);
   text-transform: uppercase;
   text-decoration: none;
 }

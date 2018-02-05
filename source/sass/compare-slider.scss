@@ -1,21 +1,13 @@
-/* .compare-slider {
-} */
-
-.compare-slider input[type="radio"] {
-  display: none;
-}
-
 .compare-slider__inner {
   overflow: hidden;
 }
 
 .compare-slider__slides {
-  width: 200%;
-  /* transition: transform 0.8s ease; */
+  position: relative;
 }
 
-.compare-slider__image {
-  float: left;
+.compare-slider__image--before {
+  position: absolute;
 }
 
 .compare-slider__controls {
@@ -31,10 +23,11 @@
 }
 
 .compare-slider__indication {
-  width: 84px;
-  height: 14px;
+  display: inline-block;
+  width: 83px;
+  height: 12px;
 
-  margin: 0 16px;
+  margin: 0 20px 0 17px;
 
   @include primary-color-scheme;
   border: 1px solid $color-border-stats;

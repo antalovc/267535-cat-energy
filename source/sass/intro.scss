@@ -16,7 +16,7 @@
   }
 
   &--picture {
-    height: 200px;
+    height: 197px;
   }
 }
 
@@ -43,18 +43,23 @@
 }
 
 .intro__title {
-  @include font-sizing(36px, 36px, 0.01em);
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 11px;
+
+  @include font-sizing(36px, 36px, 0.001em);
+  font-weight: 400;
 }
 
 .intro__moto {
-  @include font-sizing(14px, 14px, 0.01em);
+  @include font-sizing(14px, 14px, 0.001em);
 
   text-transform: uppercase;
 }
 
 .intro__button {
   position: absolute;
-  margin-top: 439px;
+  margin-top: 440px;
   right: 0;
   left: 0;
 }

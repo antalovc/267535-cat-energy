@@ -12,14 +12,14 @@
   @include list-reset;
   @include font-simple;
 
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   border-top: 1px solid $color-border-dark;
 }
 
 .extra__item {
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
+  padding-top: 13px;
   padding-bottom: 17px;
 
   border-bottom: 1px solid $color-border-dark;
@@ -27,7 +27,7 @@
 
 .extra__name {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   @include font-decorative-regular;
   @include font-sizing(16px, 16px);
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 }
 
 .extra-bonus {
@@ -46,8 +46,18 @@
   margin: 37px auto;
 }
 
+.extra__title {
+  margin-top: 28px;
+  margin-bottom: 34px;
+}
+
 .extra__title .container {
   display: block;
+  background-color: $color-light;
+}
+
+.extra__price {
+  text-transform: uppercase;
 }
 
 @media (min-width: $width-tablet) {

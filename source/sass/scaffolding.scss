@@ -69,17 +69,16 @@ body {
 
   @include font-decorative-regular;
   @include font-sizing(24px, 24px);
-  padding-top: 30px;
-  padding-bottom: 32px;
 }
 
-.backline-title::before {
+.backline-title::after {
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
-  height: 7px;
-  margin-top: -4px;
+  height: 3px;
+  margin-top: 2px;
   background-color: $color-accent;
   content: "";
+  z-index: -1;
 }

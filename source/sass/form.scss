@@ -6,6 +6,7 @@
 
 .form__description {
   display: block;
+  width: 240px;
 
   @include font-decorative-regular;
   @include font-sizing(14px, 18px);
@@ -17,6 +18,11 @@
   @include text-input;
 }
 
+
+.form__textarea {
+  padding-bottom: 11px;
+}
+
 .form label {
   @include text-input-label;
 }
@@ -24,7 +30,7 @@
 .form__line {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .form__line:last-child {
@@ -32,7 +38,7 @@
 }
 
 .form__label {
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .form__textinput {
@@ -42,12 +48,13 @@
 .form__cat {
   display: flex;
   flex-direction: column;
-  padding-top: 36px;
-  padding-bottom: 9px;
+
+  margin-top: 38px;
 }
 
 .form__data {
-  margin-bottom: 15px;
+  @include container-form-tablet;
+  margin-bottom: 23px;
 
   display: flex;
   flex-direction: column;
@@ -60,12 +67,13 @@
 }
 
 .form__course .form__line {
-  margin-bottom: 22px;
+  width: 280px;
+  margin-bottom: 24px;
 }
 
 .form__wrapper {
-  padding-top: 24px;
-  padding-bottom: 10px;
+  padding-top: 26px;
+  padding-bottom: 4px;
 
   display: flex;
   flex-direction: column;
@@ -81,7 +89,6 @@
   }
 }
 
-
 .form__title {
   margin: 0;
   margin-top: 28px;
@@ -91,6 +98,9 @@
   @include font-sizing(24px, 24px);
 }
 
+.form__title .container-form-tablet {
+  display: block;
+}
 
 .form__course .form__content {
   width: 280px;
@@ -106,14 +116,47 @@
   flex-direction: column;
 }
 
-.form .container-form-tablet {
-  display: block;
+.form__checkbox {
+  display: none;
 }
 
 .form__comment .container-form-tablet {
   display: flex;
   flex-direction: column;
 }
+
+.form__radio {
+  display: none;
+}
+
+.form__radio + .form__label {
+  position: relative;
+  padding-left: 46px;
+
+  &::before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $color-border-stats;
+    border-radius: 50%;
+  }
+}
+
+.form__checkbox + .form__label {
+  position: relative;
+  padding-left: 46px;
+
+  &::before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $color-border-stats;
+    border-radius: 50%;
+  }
+}
+
 
 .form__textarea {
   align-self: stretch;
@@ -181,7 +224,6 @@
       border: none;
     }
   }
-
 }
 
 @media (min-width: $width-desktop) {
@@ -212,7 +254,6 @@
     width: 570px;
   }
 
-
   .form__wrapper {
     flex-grow: 0;
 
@@ -221,15 +262,5 @@
     &--dummy {
       border: none;
     }
-  }
-}
-
-@media (max-width: $width-desktop) {
-  .form__data {
-    @include container-form-tablet;
-  }
-
-  .form__data {
-    margin-bottom: 15px;
   }
 }

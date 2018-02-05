@@ -9,7 +9,6 @@
 
 .contacts__info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   @include offset-padding;
@@ -24,12 +23,16 @@
 }
 
 .contacts__moto {
+  width: 140px;
+
   @include font-decorative-regular;
   @include font-sizing(16px, 20px);
   text-transform: uppercase;
 }
 
 .contacts__text {
+  width: 140px;
+
   @include font-simple;
   @include font-sizing(14px, 20px);
 }
