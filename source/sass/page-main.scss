@@ -6,6 +6,13 @@
   padding-top: 15px;
   padding-bottom: 26px;
 
-  @include font-decorative-regular;
-  @include font-sizing(36px, 60px);
+  @include title2;
+}
+
+
+@media (min-width: $width-tablet) {
+  .page-main__header {
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
 }

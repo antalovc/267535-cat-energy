@@ -57,18 +57,15 @@ body {
   cursor: pointer;
 
   @include font-decorative-regular;
-  @include ternary-color-scheme;
+  @include color-theme($color-light, $color-accent2);
 
   &--secondary {
     @include secondary-color-scheme;
   }
 }
 
-.backline-title {
+.backline {
   position: relative;
-
-  @include font-decorative-regular;
-  @include font-sizing(24px, 24px);
 
   z-index: 10;
 

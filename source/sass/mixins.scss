@@ -52,6 +52,15 @@
   }
 }
 
+@mixin title2-mini {
+  @include font-decorative-regular;
+  @include font-sizing(24px, 24px);
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(36px, 36px);
+  }
+}
+
 @mixin list-reset {
   margin-top: 0;
   margin-bottom: 0;
@@ -86,12 +95,22 @@
   border: 1px solid $color-border-stats;
 
   @include primary-color-scheme;
+
+  @media (min-width: $width-tablet) {
+    padding: 9px 0 11px 20px;
+
+    @include font-sizing(20px, 20px);
+  }
 }
 
 @mixin text-input-label {
   @include font-decorative-regular;
   @include font-sizing(16px, 18px);
   text-transform: uppercase;
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(20px, 20px);
+  }
 }
 
 @mixin container {
