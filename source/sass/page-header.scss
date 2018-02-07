@@ -44,22 +44,31 @@
 
   .page-header__container {
     @include container;
+    padding-top: 30px;
+    padding-bottom: 33px;
 
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .page-header__logo {
-    border-bottom: none;
-  }
-
   .page-header__logo-container {
     width: 162px;
   }
 
-  .page-header__logo .page-header__title {
-    margin: 24px 0 24px 21px;
+  .page-header__logo {
+    padding: 0;
+
+    border-bottom: none;
+  }
+
+  .page-header__image {
+    width: 80px;
+    height: 50px;
+  }
+
+  .page-header__title {
+    margin: 10px 0 10px 6px;
   }
 }
 
@@ -78,7 +87,7 @@
     border-bottom: none;
   }
 
-  .page-header__logo .page-header__title {
+  .page-header__title {
     margin: 24px 0 24px 13px;
   }
 }

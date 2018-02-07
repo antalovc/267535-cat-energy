@@ -42,7 +42,19 @@
     padding-right: 0;
     margin-right: 36px;
 
+    @include font-decorative-regular;
+    @include font-sizing(18px, 25px);
+
     border-bottom: none;
+
+    &--active {
+      border-bottom: 2px solid $color-accent2;
+    }
+  }
+
+  .site-list__item a {
+    padding-bottom:7px;
+    padding-top: 7px;
   }
 
   .site-list__item:last-child {

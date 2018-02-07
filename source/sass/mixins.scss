@@ -24,21 +24,32 @@
 @mixin font-decorative-regular {
   font-family: $font-decorative;
   font-weight: 400;
-  letter-spacing: 0.01em;
 }
 
 @mixin font-decorative-medium {
   font-family: $font-decorative;
   font-weight: 500;
-  letter-spacing: 0.01em;
 }
 
 @mixin font-simple {
   font-family: $font-simple;
   font-weight: 400;
   letter-spacing: 0.001em;
-  font-size: 14px;
-  line-height: 18px;
+
+  @include font-sizing(14px, 18px);
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(16px, 24px);
+  }
+}
+
+@mixin title2 {
+  @include font-decorative-regular;
+  @include font-sizing(36px, 60px);
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(60px, 60px);
+  }
 }
 
 @mixin list-reset {
@@ -62,9 +73,6 @@
     padding-left: $size-offset-desktop;
     padding-right: $size-offset-desktop;
   }
-}
-
-@mixin title2 {
 }
 
 @mixin text-input {
@@ -106,6 +114,7 @@
 }
 
 @mixin container-form-tablet {
+  @include primary-color-scheme;
   @include container;
 
   @media (min-width: $width-tablet) and (max-width: $width-desktop) {

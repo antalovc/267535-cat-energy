@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
 
-  @include offset-padding;
   padding-top: 15px;
   padding-bottom: 12px;
 
@@ -53,7 +52,29 @@
 
 @media (min-width: $width-tablet) {
   .contacts__map {
-    height: 400px;
+    height: 396px;
+  }
+
+  .contacts__info {
+    padding-top: 56px;
+    padding-bottom: 53px;
+
+    justify-content: space-between;
+  }
+
+  .contacts__moto {
+    width: 150px;
+    margin-left: 40px;
+
+    @include font-sizing(20px, 25px);
+  }
+
+  .contacts__text {
+    width: 160px;
+    margin-right: 40px;
+
+    @include font-sizing(16px, 20px);
+    text-align: right;
   }
 }
 

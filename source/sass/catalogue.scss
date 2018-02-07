@@ -4,6 +4,7 @@
   align-items: stretch;
 
   @include list-reset;
+  margin-top: 2px;
   border-top: 1px solid $color-border-light2;
 }
 

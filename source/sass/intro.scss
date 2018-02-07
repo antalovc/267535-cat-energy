@@ -45,15 +45,16 @@
 .intro__title {
   text-align: center;
   margin-top: 27px;
-  margin-bottom: 11px;
+  margin-bottom: 25px;
 
   @include font-sizing(36px, 36px, 0.001em);
   font-weight: 400;
 }
 
 .intro__moto {
-  @include font-sizing(14px, 14px, 0.001em);
+  margin-top: 0;
 
+  @include font-sizing(14px, 14px, 0.001em);
   text-transform: uppercase;
 }
 
@@ -69,31 +70,58 @@
     align-items: center;
   }
 
-  .intro__content {
-    align-items: flex-start;
-    flex-shrink: 0;
-    width: 487px;
-
-    @include primary-color-scheme;
-    background: transparent;
+  .intro__container--picture {
+    height: 532px;
   }
 
   .intro__container--content {
-    width: 487px;
+    width: 708px;
+    align-items: flex-start;
 
     z-index: 10;
     background: transparent;
   }
 
+  .intro__content {
+    width: 427px;
+    margin-left: 87px;
+
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    @include primary-color-scheme;
+    background: transparent;
+  }
+
+  .intro__title {
+    margin-bottom: 41px;
+
+    @include font-sizing(60px, 60px);
+    text-align: left;
+  }
+
+  .intro__moto {
+    margin-bottom: 44px;
+
+    @include font-sizing(20px, 20px);
+  }
+
   .intro__picture {
-    margin-top: -110px;
+    margin-top: -80px;
+  }
+
+  .intro__image {
+    width: $width-tablet - 2 * $size-offset-tablet;
+    height: 610px;
   }
 
   .intro__button {
     position: static;
     margin-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 3px;
+    padding: 15px 29px 17px 25px;
+
+    @include font-sizing(20px, 20px);
   }
 }
 
