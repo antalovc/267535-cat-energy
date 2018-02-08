@@ -275,7 +275,7 @@
     margin-bottom: 37px;
   }
 
-  .form__comment .form__textarea {
+  .form__textarea {
     margin-top: 42px;
     height: 152px;
 
@@ -345,11 +345,20 @@
 }
 
 @media (min-width: $width-desktop) {
+  .form__description {
+    margin-bottom: 66px;
+  }
+
   .form__cat {
+    @include container-form-tablet;
+    margin-bottom: 41px;
+
     flex-direction: row;
     justify-content: space-between;
+  }
 
-    @include container-form-tablet;
+  .form__course {
+    margin-bottom: 0;
   }
 
   .form__data,
@@ -362,7 +371,13 @@
     margin-bottom: 0;
   }
 
+  .form__owner {
+    margin-bottom: 39px;
+  }
+
   .form__owner .form__content {
+    margin-top: 76px;
+
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -370,6 +385,7 @@
 
   .form__owner .form__line {
     width: 570px;
+    margin-bottom: 0;
   }
 
   .form__wrapper {
@@ -380,5 +396,30 @@
     &--dummy {
       border: none;
     }
+  }
+
+  .form__title {
+    width: $width-desktop - 2 * $size-margin-desktop;
+    margin-bottom: 0;
+  }
+
+  .form__title span {
+    padding: 0 $size-offset-desktop;
+  }
+
+  .form__textarea {
+    margin-top: 76px;
+  }
+
+  .form__comment {
+    margin-bottom: 40px;
+  }
+
+  .form__additional .form__content {
+    margin-bottom: 19px;
+  }
+
+  .form__additional .form__line {
+    width: 250px;
   }
 }
