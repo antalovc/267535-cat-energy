@@ -196,6 +196,7 @@
 
   .before-after__info-wrapper {
     margin-bottom: 0;
+
     @include secondary-color-scheme;
   }
 
@@ -234,7 +235,6 @@
 
     text-align: left;
   }
-
 }
 
 @media (max-width: $width-desktop) {
