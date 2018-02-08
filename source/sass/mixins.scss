@@ -15,7 +15,7 @@
   @include color-theme($color-light, $color-accent);
 }
 
-@mixin font-sizing($font-size, $line-height, $letter-spacing:0.01em) {
+@mixin font-sizing($font-size, $line-height, $letter-spacing:0.001em) {
   font-size: $font-size;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
@@ -24,21 +24,41 @@
 @mixin font-decorative-regular {
   font-family: $font-decorative;
   font-weight: 400;
-  letter-spacing: 0.01em;
 }
 
 @mixin font-decorative-medium {
   font-family: $font-decorative;
   font-weight: 500;
-  letter-spacing: 0.01em;
 }
 
 @mixin font-simple {
   font-family: $font-simple;
   font-weight: 400;
   letter-spacing: 0.001em;
-  font-size: 14px;
-  line-height: 18px;
+
+  @include font-sizing(14px, 18px);
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(16px, 24px);
+  }
+}
+
+@mixin title2 {
+  @include font-decorative-regular;
+  @include font-sizing(36px, 60px);
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(60px, 60px);
+  }
+}
+
+@mixin title2-mini {
+  @include font-decorative-regular;
+  @include font-sizing(24px, 24px);
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(36px, 36px);
+  }
 }
 
 @mixin list-reset {
@@ -64,15 +84,8 @@
   }
 }
 
-@mixin title2 {
-  margin-top: 0;
-
-  @include font-decorative-regular;
-  @include font-sizing(36px, 60px, 0.001em);
-}
-
 @mixin text-input {
-  padding: 11px 18px;
+  padding: 12px 0 13px 12px;
 
   @include font-decorative-regular;
   @include font-sizing(16px, 18px, 0.01em);
@@ -82,16 +95,25 @@
   border: 1px solid $color-border-stats;
 
   @include primary-color-scheme;
+
+  @media (min-width: $width-tablet) {
+    padding: 9px 0 11px 20px;
+
+    @include font-sizing(20px, 20px);
+  }
 }
 
 @mixin text-input-label {
   @include font-decorative-regular;
   @include font-sizing(16px, 18px);
   text-transform: uppercase;
+
+  @media (min-width: $width-tablet) {
+    @include font-sizing(20px, 20px);
+  }
 }
 
 @mixin container {
-  display: block;
   margin: 0 auto;
   padding-right: $size-offset-mobile;
   padding-left: $size-offset-mobile;
@@ -111,6 +133,7 @@
 }
 
 @mixin container-form-tablet {
+  @include primary-color-scheme;
   @include container;
 
   @media (min-width: $width-tablet) and (max-width: $width-desktop) {

@@ -1,6 +1,6 @@
 .bonus {
   width: 280px;
-  height: 290px;
+  height: 289px;
 
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   margin: 0;
   margin-top: 190px;
 
-  font-size: 16px;
+  @include font-sizing(16px, 19px);
   text-align: center;
 }
 
@@ -25,6 +25,14 @@
   .bonus {
     width: 100%;
     height: 200px;
+
+    background-position-y: 60%;
+  }
+
+  .bonus__text {
+    margin-left: 310px;
+    margin-top: 71px;
+    text-align: left;
   }
 }
 
@@ -32,5 +40,12 @@
   .bonus {
     width: 245px;
     height: 290px;
+  }
+
+  .bonus__text {
+    margin-left: 0;
+    margin-top: 188px;
+
+    text-align: center;
   }
 }

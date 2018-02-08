@@ -1,6 +1,5 @@
 .social {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-size: 0;
 
   @include list-reset;
 }
@@ -14,10 +13,23 @@
 
   text-decoration: none;
 
-  background: #464646 url("../img/sprite.png") no-repeat center;
-  opacity: 0.3;
-
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &--vkontakte {
+    background: $color-border-light2 url("../img/icon-vk-mobile.svg") no-repeat center;
+  }
+
+  &--instagram {
+    background: $color-border-light2 url("../img/icon-insta-mobile.svg") no-repeat center;
+  }
+
+  &--facebook {
+    background: $color-border-light2 url("../img/icon-fb-mobile.svg") no-repeat center;
   }
 }

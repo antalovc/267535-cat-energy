@@ -9,33 +9,39 @@
 
   <body>
 
-    <header class="page-header container">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__image logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
-        <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
-      </a>
+    <header class="page-header">
+      <div class="page-header__container">
+        <a class="page-header__logo" href="index.html">
+          <div class="page-header__logo-container">
+            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
+            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+          </div>
+        </a>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active" >
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a>Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="main-nav main-nav--nojs">
+          <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item" >
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a>Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
       <h1 class="page-main__header container">Подбор программы</h1>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <b class="form__description container-form-tablet">Заполните анкету и мы подберем программу питания для вашего кота</b>
+        <div class="container-form-tablet">
+          <b class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</b>
+        </div>
 
         <section class="form__cat">
           <h2 class="visually-hidden">Данные кота</h2>
@@ -55,8 +61,9 @@
           </div>
 
           <div class="form__course">
+            <div class="form__wrapper form__wrapper--dummy"></div>
             <div class="form__wrapper">
-              <div class="form__border">
+              <div class="form__content">
                 <div class="form__line">
                   <input class="form__radio" type="radio" id="form-course-loss" name="form-course" checked>
                   <label class="form__label" for="form-course-loss">Похудение</label>
@@ -75,9 +82,11 @@
         </section>
 
         <section class="form__owner">
-          <h2 class="form__title backline-title">
-            <span class="container-form-tablet">Контактные данные (владельца кота)</span>
-          </h2>
+          <div class="backline">
+            <h2 class="form__title backline">
+              <span>Контактные данные (владельца кота)</span>
+            </h2>
+          </div>
           <div class="form__content container-form-tablet">
             <div class="form__line">
               <label class="form__label" for="form-owner-mail">E-mail:<sup>*</sup></label>
@@ -91,18 +100,22 @@
         </section>
 
         <section class="form__comment">
-          <h2 class="form__title backline-title">
-            <span class="container-form-tablet">Комментарий</span>
-          </h2>
+          <div class="backline">
+            <h2 class="form__title backline">
+              <span>Комментарий</span>
+            </h2>
+          </div>
           <div class="container-form-tablet">
             <textarea class="form__textarea" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </section>
 
         <section class="form__additional">
-          <h2 class="form__title backline-title">
-            <span class="container-form-tablet">Дополнительно</span>
-          </h2>
+          <div class="backline">
+            <h2 class="form__title backline">
+              <span>Дополнительно</span>
+            </h2>
+          </div>
           <div class="form__content container-form-tablet">
             <div class="form__line">
               <input class="form__checkbox" type="checkbox" name="form-sugar-substitute" id="form-sugar-substitute" checked>
@@ -125,15 +138,15 @@
 
         <div class="form__submit container-form-tablet">
           <button class="form__button button" type="submit">Отправить заявку</button>
-          <span class="form__remark"><sup>*</sup> - Обязательные поля</span>
+          <span class="form__remark"><sup>*</sup> — Обязательные поля</span>
         </div>
 
       </form>
 
       <section class="contacts">
         <div class="contacts__info container">
-          <b class="contacts__moto">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
+          <b class="contacts__moto">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+          <p class="contacts__text">ул. Большая Конюшенная, д.&nbsp;19/8, Санкт-Петербург</p>
         </div>
         <div class="contacts__map">Карта</div>
       </section>
@@ -163,5 +176,6 @@
       </div>
     </footer>
 
+    <script src="js/scripts.js"></script>
   </body>
 </html>

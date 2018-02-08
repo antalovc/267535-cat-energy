@@ -5,31 +5,39 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include secondary-color-scheme;
+
+  &--index {
+    @include primary-color-scheme;
+  }
 }
 
 .contacts__info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  @include offset-padding;
   padding-top: 15px;
   padding-bottom: 12px;
 
-  @include primary-color-scheme;
+  @include secondary-color-scheme;
 
-  &--dark {
-    @include secondary-color-scheme;
+  &--index {
+    @include primary-color-scheme;
   }
 }
 
 .contacts__moto {
+  width: 140px;
+
   @include font-decorative-regular;
   @include font-sizing(16px, 20px);
   text-transform: uppercase;
 }
 
 .contacts__text {
+  width: 140px;
+
   @include font-simple;
   @include font-sizing(14px, 20px);
 }
@@ -41,30 +49,71 @@
   font-size: 0;
   background: $color-light url("../img/map_tmp.png") no-repeat center;
   background-size: cover;
-
-  &--dark {
-    background: $color-middle url("../img/map_tmp.png") no-repeat center;
-  }
 }
 
 
 @media (min-width: $width-tablet) {
   .contacts__map {
-    height: 400px;
+    height: 396px;
+  }
+
+  .contacts__info {
+    padding-top: 56px;
+    padding-bottom: 53px;
+
+    justify-content: space-between;
+  }
+
+  .contacts__moto {
+    width: 150px;
+    margin-left: 40px;
+
+    @include font-sizing(20px, 25px);
+  }
+
+  .contacts__text {
+    width: 160px;
+    margin-right: 40px;
+
+    @include font-sizing(16px, 20px);
+    text-align: right;
   }
 }
 
 @media (min-width: $width-desktop) {
+  .contacts {
+    @include primary-color-scheme;
+
+    &--index {
+      @include primary-color-scheme;
+    }
+  }
+
   .contacts__info {
     position: absolute;
     right: 50%;
     top: 95px;
+    margin-right: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-top: 26px;
+    padding-bottom: 30px;
 
-    width: 570px;
+    width: 490px;
     min-height: 150px;
+
+    @include primary-color-scheme;
+
+    &--index {
+      @include primary-color-scheme;
+    }
   }
 
   .contacts__map {
     height: 400px;
+  }
+
+  .contacts__text {
+    text-align: left;
   }
 }

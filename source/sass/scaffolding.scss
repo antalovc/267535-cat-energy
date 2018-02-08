@@ -57,29 +57,27 @@ body {
   cursor: pointer;
 
   @include font-decorative-regular;
-  @include ternary-color-scheme;
+  @include color-theme($color-light, $color-accent2);
 
   &--secondary {
     @include secondary-color-scheme;
   }
 }
 
-.backline-title {
+.backline {
   position: relative;
 
-  @include font-decorative-regular;
-  @include font-sizing(24px, 24px);
-  padding-top: 30px;
-  padding-bottom: 32px;
-}
+  z-index: 10;
 
-.backline-title::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 7px;
-  margin-top: -4px;
-  background-color: $color-accent;
-  content: "";
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    margin-top: 2px;
+    background-color: $color-accent;
+    content: "";
+    z-index: -1;
+  }
 }

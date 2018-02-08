@@ -12,14 +12,14 @@
   @include list-reset;
   @include font-simple;
 
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   border-top: 1px solid $color-border-dark;
 }
 
 .extra__item {
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
+  padding-top: 13px;
   padding-bottom: 17px;
 
   border-bottom: 1px solid $color-border-dark;
@@ -27,7 +27,7 @@
 
 .extra__name {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   @include font-decorative-regular;
   @include font-sizing(16px, 16px);
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 }
 
 .extra-bonus {
@@ -46,19 +46,72 @@
   margin: 37px auto;
 }
 
+.extra__title {
+  width: $width-mobile;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+  margin-bottom: 34px;
+
+  @include title2-mini;
+}
+
+.extra__title span {
+  display: inline-block;
+  padding: 0 $size-offset-mobile;
+
+  @include primary-color-scheme;
+}
+
+.extra__title .container {
+  display: block;
+  background-color: $color-light;
+}
+
+.extra__price {
+  text-transform: uppercase;
+}
+
 @media (min-width: $width-tablet) {
+  .extra__title {
+    width: $width-tablet - 2 * $size-offset-tablet;
+    margin-bottom: 80px;
+  }
+
+  .extra__title span {
+    padding: 0 $form-offset-tablet;
+  }
+
   .extra__item {
     padding-left: 38px;
     padding-right: 38px;
+    padding-top: 20px;
+    padding-bottom: 28px;
 
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+
+    border-left: 1px solid $color-border-dark;
+    border-right: 1px solid $color-border-dark;
   }
 
   .extra__description {
     margin-left: auto;
+    margin-top: 7px;
+    padding-bottom: 0;
+
     flex-wrap: wrap;
+    align-items: flex-end;
+
+    @include font-sizing(16px, 20px);
+  }
+
+  .extra__name {
+    margin-bottom: 0;
+
+    @include font-sizing(20px, 20px);
   }
 
   .extra__price {
@@ -66,12 +119,33 @@
     text-align: right;
   }
 
-  .extra__order--extra {
+  .extra__order {
     width: 100%;
+    padding-bottom: 9px;
+    margin-top: 23px;
+
+    @include font-sizing(16px, 20px);
+  }
+
+  .extra__list {
+    margin-bottom: 68px;
+  }
+
+  .extra__bonus {
+    margin-bottom: 40px;
   }
 }
 
 @media (min-width: $width-desktop) {
+  .extra__title {
+    width: $width-desktop - 2 * $size-margin-desktop;
+    margin-bottom: 80px;
+  }
+
+  .extra__title span {
+    padding: 0 $size-offset-desktop;
+  }
+
   .extra__list {
     flex-grow: 1;
     margin-right: 80px;
@@ -80,10 +154,14 @@
   .extra__item {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 16px;
+    padding-bottom: 15px;
 
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    border-left: none;
+    border-right: none;
   }
 
   .extra__name {
@@ -92,11 +170,14 @@
 
   .extra__description {
     width: 285px;
+    margin-top: 4px;
+
     flex-wrap: wrap;
   }
 
-  .extra__order--extra {
+  .extra__order {
     width: 245px;
+    margin-top: 0;
     margin-left: 40px;
 
     flex-grow: 0;

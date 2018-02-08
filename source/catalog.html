@@ -9,26 +9,30 @@
 
   <body>
 
-    <header class="page-header container">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__image logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
-        <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
-      </a>
+    <header class="page-header">
+      <div class="page-header__container">
+        <a class="page-header__logo" href="index.html">
+          <div class="page-header__logo-container">
+            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
+            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+          </div>
+        </a>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active" >
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a>Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="main-nav main-nav--nojs">
+          <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item" >
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a>Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -48,22 +52,22 @@
                     <h3 class="catalogue__title">Cat Energy Pro 500 г</h3>
                   </a>
                   <div class="catalogue__stats">
-                    <div class="catalogue__stats-line">
-                      <span class="catalogue__stats-name">Объем</span>
-                      <span class="catalogue__stats-value">500 г</span>
+                    <div class="catalogue__line">
+                      <span class="catalogue__attribute">Объем</span>
+                      <span class="catalogue__value">500 г</span>
                     </div>
-                    <div class="catalogue__stats-line">
-                      <span class="catalogue__stats-name">Вкус</span>
-                      <span class="catalogue__stats-value">Курица</span>
+                    <div class="catalogue__line">
+                      <span class="catalogue__attribute">Вкус</span>
+                      <span class="catalogue__value">Курица</span>
                     </div>
-                    <div class="catalogue__stats-line">
-                      <span class="catalogue__stats-name">Цена</span>
-                      <span class="catalogue__stats-value">700 р.</span>
+                    <div class="catalogue__line">
+                      <span class="catalogue__attribute">Цена</span>
+                      <span class="catalogue__value catalogue__value--capitalised">700 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
 
@@ -88,15 +92,14 @@
                     </div>
                     <div class="catalogue__line">
                       <span class="catalogue__attribute">Цена</span>
-                      <span class="catalogue__value">1000 р.</span>
+                      <span class="catalogue__value catalogue__value--capitalised">1000 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
-
 
           <li class="catalogue_wrapper">
             <div class="catalogue__item">
@@ -119,12 +122,12 @@
                     </div>
                     <div class="catalogue__line">
                       <span class="catalogue__attribute">Цена</span>
-                      <span class="catalogue__value">700 р.</span>
+                      <span class="catalogue__value catalogue__value--capitalised">700 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
 
@@ -149,12 +152,12 @@
                     </div>
                     <div class="catalogue__line">
                       <span class="catalogue__attribute">Цена</span>
-                      <span class="catalogue__value">1000 р.</span>
+                      <span class="catalogue__value catalogue__value--capitalised">1000 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
 
@@ -179,12 +182,12 @@
                     </div>
                     <div class="catalogue__line">
                       <span class="catalogue__attribute">Цена</span>
-                      <span class="catalogue__value">400 р.</span>
+                      <span class="catalogue__value catalogue__value--capitalised">400 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
 
@@ -209,12 +212,12 @@
                     </div>
                     <div class="catalogue__line">
                       <span class="catalogue__attribute">Цена</span>
-                      <span class="catalogue__value">700 р.</span>
+                      <span class="catalogue__value catalogue__value--capitalised">700 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
 
@@ -239,40 +242,43 @@
                     </div>
                     <div class="catalogue__line">
                       <span class="catalogue__attribute">Цена</span>
-                      <span class="catalogue__value">500 р.</span>
+                      <span class="catalogue__value catalogue__value--capitalised">500 р.</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="extra__order button" href="#">Заказать</a>
+              <a class="catalogue__order button" href="#">Заказать</a>
             </div>
           </li>
 
           <li class="catalogue_wrapper">
-            <div class="catalogue__item">
+            <div class="catalogue__item catalogue__item--more">
               <div class="catalogue__description catalogue__description--more">
                 <h3 class="catalogue__title catalogue__title--center">Показать еще 100500 товаров</h3>
                 <p class="catalogue__text">На самом деле вкусов гораздо больше!</p>
               </div>
-              <a class="extra__order button button--secondary" href="#">Показать все</a>
+              <a class="catalogue__order button button--secondary" href="#">Показать все</a>
             </div>
           </li>
         </ul>
       </section>
 
       <section class="extra">
-        <h2 class="extra__title backline-title">
-          <span class="container">Дополнительные товары</span>
-        </h2>
+
+        <div class="backline">
+          <h2 class="extra__title backline">
+            <span>Дополнительные товары</span>
+          </h2>
+        </div>
         <div class="extra__wrapper container">
           <ul class="extra__list">
             <li class="extra__item">
               <h3 class="extra__name">Сахарозаменитель</h3>
               <div class="extra__description">
-                <span class="extra__amount">1 упаковка</span>
+                <span class="extra__amount">1 упаковка (100 г)</span>
                 <span class="extra__price">100 р.</span>
               </div>
-              <a class="extra__order extra__order--extra button" href="#">Заказать</a>
+              <a class="extra__order button" href="#">Заказать</a>
             </li>
             <li class="extra__item">
               <h3 class="extra__name">Питьевая вода</h3>
@@ -280,7 +286,7 @@
                 <span class="extra__amount">5 литров</span>
                 <span class="extra__price">50 р.</span>
               </div>
-              <a class="extra__order extra__order--extra button" href="#">Заказать</a>
+              <a class="extra__order button" href="#">Заказать</a>
             </li>
             <li class="extra__item">
               <h3 class="extra__name">Молоко</h3>
@@ -288,7 +294,7 @@
                 <span class="extra__amount">1 литр</span>
                 <span class="extra__price">100 р.</span>
               </div>
-              <a class="extra__order extra__order--extra button" href="#">Заказать</a>
+              <a class="extra__order button" href="#">Заказать</a>
             </li>
             <li class="extra__item">
               <h3 class="extra__name">Витамины</h3>
@@ -296,20 +302,20 @@
                 <span class="extra__amount">1 упаковка (30 г)</span>
                 <span class="extra__price">300 р.</span>
               </div>
-              <a class="extra__order extra__order--extra button" href="#">Заказать</a>
+              <a class="extra__order button" href="#">Заказать</a>
             </li>
           </ul>
           <section class="extra__bonus bonus">
             <h2 class="visually-hidden">Бонусы</h2>
-            <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="bonus__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
           </section>
         </div>
       </section>
 
       <section class="contacts">
         <div class="contacts__info container">
-          <b class="contacts__moto">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
+          <b class="contacts__moto">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+          <p class="contacts__text">ул. Большая Конюшенная, д.&nbsp;19/8, Санкт-Петербург</p>
         </div>
         <div class="contacts__map">Карта</div>
       </section>
@@ -339,5 +345,6 @@
       </div>
     </footer>
 
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-times: stretch;
-  padding-bottom: 37px;
 }
 
 .before-after__title-wrapper {
@@ -19,16 +18,21 @@
 }
 
 .before-after__compare-wrapper {
+  padding-bottom: 36px;
+
   @include secondary-color-scheme;
 }
 
-.before-after__title {
-  @include title2;
-  padding-bottom: 24px;
+.before-after__compare {
+  width: $width-mobile;
+  margin: 0 auto;
 }
 
-.before-after__description {
-  margin-bottom: 24px;
+.before-after__title {
+  margin-top: 18px;
+  margin-bottom: 10px;
+
+  @include title2;
 }
 
 .before-after__stats {
@@ -37,14 +41,17 @@
   align-items: stretch;
 }
 
-.before-after__stats .before-after__list {
+.before-after__list {
+  width: 280px;
+
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @include list-reset;
 }
 
-.before-after__stats .before-after__item {
+.before-after__item {
   position: relative;
   width: 122px;
   padding-top: 14px;
@@ -53,7 +60,7 @@
   margin-bottom: 20px;
 
   @include font-decorative-regular;
-  @include font-sizing(24px, 24px);
+  @include font-sizing(24px, 24px, 0.001em);
   text-align: center;
 
   border: 1px solid $color-border-stats;
@@ -61,8 +68,16 @@
   text-transform: uppercase;
 }
 
-.before-after__stats .before-after__description {
+.before-after__description {
+  margin-bottom: 24px;
+}
+
+.before-after__fact {
   position: absolute;
+  max-width: 60px;
+  padding-left: 19px;
+  padding-right: 19px;
+  margin-top: 18px;
 
   @include font-simple;
   @include font-sizing(12px, 12px);
@@ -70,9 +85,12 @@
   top: 50%;
   left: 50%;
   text-transform: lowercase;
+  transform: translateX(-50%);
+
+  @include secondary-color-scheme;
 }
 
-.before-after__stats .before-after__price {
+.before-after__price {
   align-self: center;
   margin-bottom: 32px;
 
@@ -82,14 +100,48 @@
   text-transform: uppercase;
 }
 
-.before-after__inner {
-  margin-bottom: 33px;
+.before-after__slides {
+  margin-bottom: 28px;
 }
 
 @media (min-width: $width-tablet) {
+  .before-after__title {
+    margin-top: 10px;
+    margin-bottom: 48px;
+  }
+
   .before-after__stats {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .before-after__list {
+    width: 366px;
+  }
+
+  .before-after__item {
+    padding-bottom: 18px;
+    padding-left: 19px;
+    padding-right: 19px;
+
+    @include font-sizing(30px, 37px);
+  }
+
+  .before-after__fact {
+    max-width: 120px;
+
+    display: block;
+
+    @include primary-color-scheme;
+    white-space: nowrap;
+  }
+
+  .before-after__price {
+    width: 192px;
+    margin-top: 6px;
+
+    @include font-sizing(20px, 30px);
+    text-align: end;
   }
 
   .before-after__title-wrapper {
@@ -98,25 +150,77 @@
 
   .before-after__info-wrapper {
     @include primary-color-scheme;
+
+    margin-bottom: 228px;
+  }
+
+  .before-after__compare {
+
+    width: $width-tablet;
+    margin: 0 auto;
+  }
+
+  .before-after__description {
+    margin-bottom: 53px;
+  }
+
+  .before-after__slides {
+    margin-top: -160px;
+    margin-bottom: 16px;
+  }
+
+  .before-after__compare-wrapper {
+    padding-bottom: 68px;
   }
 }
 
 @media (min-width: $width-desktop) {
   .before-after__wrapper {
+    @include container;
+
     flex-direction: row;
     justify-content: space-between;
 
     @include secondary-color-scheme;
-    @include container;
     display: flex;
+  }
+
+  .before-after__title {
+    margin-bottom: 75px;
   }
 
   .before-after__info {
     width: 455px;
+    margin-top: 71px;
+  }
+
+  .before-after__info-wrapper {
+    margin-bottom: 0;
+
+    @include secondary-color-scheme;
+  }
+
+  .before-after__wrapper-wrapper {
+    @include secondary-color-scheme;
   }
 
   .before-after__compare {
     width: 610px;
+  }
+
+  .before-after__description {
+    margin-bottom: 68px;
+  }
+
+  .before-after__item {
+    padding-bottom: 20px;
+  }
+
+  .before-after__fact {
+    margin-top: 26px;
+
+    @include font-sizing(14px, 14px);
+    @include secondary-color-scheme;
   }
 
   .before-after__stats {
@@ -124,18 +228,17 @@
     justify-content: space-between;
   }
 
-  .before-after__wrapper-wrapper {
-    @include secondary-color-scheme;
-  }
+  .before-after__price {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 0;
 
-  .before-after__info-wrapper {
-    @include secondary-color-scheme;
+    text-align: left;
   }
 }
 
 @media (max-width: $width-desktop) {
-  .before-after__info,
-  .before-after__compare {
+  .before-after__info {
     @include container;
   }
 }
