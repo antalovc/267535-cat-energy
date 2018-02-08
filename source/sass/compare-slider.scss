@@ -48,3 +48,13 @@
     height: 10px;
   }
 }
+
+@media (min-width: $width-desktop) {
+  .compare-slider__indication {
+    width: 410px;
+    height: 6px;
+
+    background-color: $color-border-dark;
+    border: none;
+  }
+}

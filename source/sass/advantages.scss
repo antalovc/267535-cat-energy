@@ -104,12 +104,13 @@
 }
 
 @media (min-width: $width-desktop) {
+  .advantages {
+    margin-bottom: 24px;
+  }
+
   .advantages__item {
     width: 245px;
     padding-left: 0;
-
-    /* tmp */
-    height: 230px;
-    background-color: gray;
+    margin-right: 0;
   }
 }

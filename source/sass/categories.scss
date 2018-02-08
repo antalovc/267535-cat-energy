@@ -91,6 +91,10 @@
 }
 
 @media (min-width: $width-desktop) {
+  .categories {
+    margin-bottom: 74px;
+  }
+
   .categories__list {
     flex-direction: row;
     justify-content: space-between;
@@ -101,5 +105,15 @@
     margin-bottom: 0;
     padding-left: 52px;
     padding-right: 52px;
+  }
+
+  .categories__title {
+    padding-left: 162px;
+    margin-bottom: 76px;
+  }
+
+  .categories__description {
+    width: 470px;
+    margin-bottom: 30px;
   }
 }

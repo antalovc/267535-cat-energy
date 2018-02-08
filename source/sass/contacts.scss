@@ -5,6 +5,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include secondary-color-scheme;
+
+  &--index {
+    @include primary-color-scheme;
+  }
 }
 
 .contacts__info {
@@ -14,10 +20,10 @@
   padding-top: 15px;
   padding-bottom: 12px;
 
-  @include primary-color-scheme;
+  @include secondary-color-scheme;
 
-  &--dark {
-    @include secondary-color-scheme;
+  &--index {
+    @include primary-color-scheme;
   }
 }
 
@@ -43,10 +49,6 @@
   font-size: 0;
   background: $color-light url("../img/map_tmp.png") no-repeat center;
   background-size: cover;
-
-  &--dark {
-    background: $color-middle url("../img/map_tmp.png") no-repeat center;
-  }
 }
 
 
@@ -79,16 +81,39 @@
 }
 
 @media (min-width: $width-desktop) {
+  .contacts {
+    @include primary-color-scheme;
+
+    &--index {
+      @include primary-color-scheme;
+    }
+  }
+
   .contacts__info {
     position: absolute;
     right: 50%;
     top: 95px;
+    margin-right: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-top: 26px;
+    padding-bottom: 30px;
 
-    width: 570px;
+    width: 490px;
     min-height: 150px;
+
+    @include primary-color-scheme;
+
+    &--index {
+      @include primary-color-scheme;
+    }
   }
 
   .contacts__map {
     height: 400px;
+  }
+
+  .contacts__text {
+    text-align: left;
   }
 }

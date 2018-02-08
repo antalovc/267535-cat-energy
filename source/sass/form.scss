@@ -21,6 +21,8 @@
 
 .form__textarea {
   padding-bottom: 11px;
+
+  align-self: stretch;
 }
 
 .form label {
@@ -166,10 +168,6 @@
 
 .form__radio + .form__label::before {
   border-radius: 50%;
-}
-
-.form__textarea {
-  align-self: stretch;
 }
 
 .form__submit {

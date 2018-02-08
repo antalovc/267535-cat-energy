@@ -53,7 +53,7 @@
   }
 
   .site-list__item a {
-    padding-bottom:7px;
+    padding-bottom: 7px;
     padding-top: 7px;
   }
 
@@ -68,15 +68,22 @@
   }
 
   .site-list__item {
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 36px;
-
-    border-bottom: none;
     background-color: transparent;
+    margin-right: 34px;
+
+    @include font-sizing(20px, 26px);
+
+    &--active {
+      border-bottom: 2px solid $color-light;
+    }
+
+    &--index {
+      color: $color-light;
+    }
   }
 
   .site-list__item:last-child {
     margin-right: 0;
   }
+
 }

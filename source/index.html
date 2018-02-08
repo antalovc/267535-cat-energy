@@ -21,13 +21,13 @@
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle " type="button">Открыть/закрыть меню</button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item site-list__item--index site-list__item--active">
               <a>Главная</a>
             </li>
-            <li class="site-list__item" >
+            <li class="site-list__item site-list__item--index" >
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--index">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -40,10 +40,12 @@
 
       <section class="intro">
         <div class="intro__container intro__container--content">
-          <div class="intro__content">
-            <h2 class="intro__title">Функциональное питание для котов</h2>
-            <p class="intro__moto">Занялся собой? Займись котом!</p>
-            <a class="intro__button button" href="#">Подобрать программу</a>
+          <div class="intro__wrapper">
+            <div class="intro__content">
+              <h2 class="intro__title">Функциональное питание для котов</h2>
+              <p class="intro__moto">Занялся собой? Займись котом!</p>
+              <a class="intro__button button" href="#">Подобрать программу</a>
+            </div>
           </div>
         </div>
         <div class="intro__container intro__container--picture">
@@ -96,7 +98,7 @@
           <div class="before-after__wrapper">
             <div class="before-after__info-wrapper">
               <div class="before-after__info">
-                <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.</p>
+                <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.</p>
                 <div class="before-after__stats">
                   <ul class="before-after__list">
                     <li class="before-after__item">
@@ -128,8 +130,8 @@
         </div>
       </section>
 
-      <section class="contacts">
-        <div class="contacts__info container">
+      <section class="contacts contacts--index">
+        <div class="contacts__info contacts__info--index container">
           <b class="contacts__moto">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
           <p class="contacts__text">ул. Большая Конюшенная, д.&nbsp;19/8, Санкт-Петербург</p>
         </div>

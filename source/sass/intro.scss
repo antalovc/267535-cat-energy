@@ -127,8 +127,8 @@
 
 @media (min-width: $width-desktop) {
   .intro {
-    margin-top: -80px;
-    margin-bottom: 50px;
+    margin-top: -160px;
+    margin-bottom: 80px;
 
     flex-direction: row;
     justify-content: center;
@@ -136,6 +136,8 @@
 
   .intro__container {
     width: auto;
+    margin-top: 7px;
+
     flex-direction: row;
     flex-grow: 1;
 
@@ -152,11 +154,15 @@
     }
   }
 
-  .intro__content {
-    padding-left: 200px;
-    width: 560px;
+  .intro__wrapper {
+    width: 760px;
+  }
 
-    justify-content: center;
+  .intro__content {
+    margin-left: 190px;
+    width: 435px;
+
+    justify-content: flex-start;
 
     background: $color-light;
     flex-grow: 0;
@@ -168,6 +174,7 @@
     height: 695px;
     width: 680px;
     margin-top: 0;
+
     flex-grow: 1;
 
     justify-content: center;
@@ -177,6 +184,21 @@
 
   .intro__image {
     position: relative;
+    width: 500px;
+    height: 500px;
     margin-left: -650px;
+  }
+
+  .intro__title {
+    margin-top: 34px;
+    margin-bottom: 41px;
+  }
+
+  .intro__moto {
+    margin-bottom: 53px;
+  }
+
+  .intro__button {
+    margin-left: 0;
   }
 }
