@@ -16,3 +16,10 @@
     padding-bottom: 23px;
   }
 }
+
+@media (min-width: $width-desktop) {
+  .page-main__header {
+    padding-top: 35px;
+    padding-bottom: 23px;
+  }
+}

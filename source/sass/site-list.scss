@@ -74,7 +74,7 @@
     @include font-sizing(20px, 26px);
 
     &--active {
-      border-bottom: 2px solid $color-light;
+      border-bottom: 2px solid $color-accent2;
     }
 
     &--index {
@@ -82,8 +82,11 @@
     }
   }
 
+  .site-list__item--active.site-list__item--index {
+    border-bottom: 2px solid $color-light;
+  }
+
   .site-list__item:last-child {
     margin-right: 0;
   }
-
 }

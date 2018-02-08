@@ -56,7 +56,6 @@
 
 .catalogue__info {
   padding-top: 21px;
-  width: 140px;
 }
 
 .catalogue__title {
@@ -184,7 +183,6 @@
   }
 
   .catalogue__info {
-    width: 100%;
     padding-top: 122px;
     margin-bottom: 26px;
 
@@ -223,7 +221,7 @@
 
 @media (min-width: $width-desktop) {
   .catalogue {
-    @include container;
+    margin-bottom: 76px;
   }
 
   .catalogue__list {
@@ -241,14 +239,21 @@
 
   .catalogue__item {
     margin-top: 140px;
-    padding: 40px;
+    padding: 40px 38px;
     width: 170px;
 
-    background-color: $color-middle;
+    &--more {
+      width: 245px;
+    }
+  }
+
+  .catalogue__line {
+    width: 170px;
   }
 
   .catalogue__description {
-    flex-direction: column;
-    align-items: stretch;
+    &--more {
+      width: 170px;
+    }
   }
 }
