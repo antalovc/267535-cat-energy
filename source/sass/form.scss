@@ -66,6 +66,14 @@
 .form__course {
   border-top: 1px solid $color-border-light2;
   border-bottom: 1px solid $color-border-light2;
+
+  &::before {
+    padding: 0;
+
+    flex-grow: 1;
+
+    content: "";
+  }
 }
 
 .form__course .form__line {
@@ -80,15 +88,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &--dummy {
-    padding: 0;
-  }
-
-  &--dummy::before {
-    width: 0;
-    height: 0;
-  }
 }
 
 .form__title {

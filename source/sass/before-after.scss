@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.before-after__wrapper {
+.before-after__container {
   display: flex;
   flex-direction: column;
   align-times: stretch;
@@ -155,9 +155,12 @@
   }
 
   .before-after__compare {
-
     width: $width-tablet;
-    margin: 0 auto;
+    margin: 0;
+    padding-bottom: 68px;
+
+
+    background-image: linear-gradient(to right, $color-middle 50%, $color-border-light 50%);
   }
 
   .before-after__description {
@@ -170,19 +173,49 @@
   }
 
   .before-after__compare-wrapper {
-    padding-bottom: 68px;
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 0;
+
+    &::after {
+      flex-grow: 1;
+
+      content: "";
+      background-color: $color-border-light;
+    }
+  }
+
+  .before-after__compare--container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
   }
 }
 
 @media (min-width: $width-desktop) {
   .before-after__wrapper {
-    @include container;
-
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    justify-content: flex-end;
 
     @include secondary-color-scheme;
+
+    &::after {
+      flex-grow: 1;
+
+      content: "";
+      background-color: $color-border-light;
+    }
+  }
+
+  .before-after__container {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    flex-grow: 1;
+
+    @include secondary-color-scheme;
   }
 
   .before-after__title {
@@ -192,6 +225,7 @@
   .before-after__info {
     width: 455px;
     margin-top: 71px;
+    padding-right: 155px;
   }
 
   .before-after__info-wrapper {
@@ -200,12 +234,17 @@
     @include secondary-color-scheme;
   }
 
-  .before-after__wrapper-wrapper {
-    @include secondary-color-scheme;
-  }
 
   .before-after__compare {
     width: 610px;
+
+    background-image: linear-gradient(to right, $color-middle 53%, $color-border-light 53%);
+  }
+
+  .before-after__compare-wrapper {
+    &::after {
+      content: none;
+    }
   }
 
   .before-after__description {

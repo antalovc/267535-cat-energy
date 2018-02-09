@@ -51,10 +51,13 @@
 
 @media (min-width: $width-desktop) {
   .compare-slider__indication {
-    width: 410px;
+    width: 428px;
     height: 6px;
 
     background-color: $color-border-dark;
-    border: none;
+  }
+
+  .compare-slider__controls {
+    justify-content: flex-end;
   }
 }
