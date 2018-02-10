@@ -5,11 +5,12 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="picturefill.min.js" async></script>
   </head>
 
   <body>
 
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <div class="page-header__container">
         <a class="page-header__logo">
           <div class="page-header__logo-container">
@@ -117,8 +118,22 @@
               <div class="before-after__compare--container">
                 <div class="before-after__compare compare-slider">
                   <div class="before-after__slides compare-slider__slides">
-                    <img class="compare-slider__image compare-slider__image--before" src="img/before-mobile@1x.png" width="320" height="240" alt="Бывший котик">
-                    <img class="compare-slider__image compare-slider__image--after" src="img/after-mobile@1x.png" width="320" height="240" alt="Ставший котик">
+                    <picture>
+                      <!--<source type="image/webp" media="(min-width: 1440px)" srcset="/img/before-desktop@1x.webp 1x, /img/before-desktop@2x.webp 2x">-->
+                      <source media="(min-width: 1440px)" srcset="/img/before-desktop@1x.png 1x, /img/before-desktop@2x.png 2x">
+                      <!--<source type="image/webp" media="(min-width: 768px)" srcset="/img/before-tablet@1x.webp 1x, /img/before-tablet@2x.webp 2x">-->
+                      <source media="(min-width: 768px)" srcset="/img/before-tablet@1x.png 1x, /img/before-tablet@2x.png 2x">
+                      <!--<source type="image/webp" srcset="/img/before-mobile@1x.webp 1x, /img/before-mobile@2x.webp 2x">-->
+                      <img class="compare-slider__image compare-slider__image--before" src="/img/before-mobile@1x.png" srcset="/img/before-mobile@2x.png 2x" width="320" height="240"  alt="Бывший котик">
+                    </picture>
+                    <picture>
+                      <!--<source type="image/webp" media="(min-width: 1440px)" srcset="/img/after-desktop@1x.webp 1x, /img/after-desktop@2x.webp 2x">-->
+                      <source media="(min-width: 1440px)" srcset="/img/after-desktop@1x.png 1x, /img/after-desktop@2x.png 2x">
+                      <!--<source type="image/webp" media="(min-width: 768px)" srcset="/img/after-tablet@1x.webp 1x, /img/after-tablet@2x.webp 2x">-->
+                      <source media="(min-width: 768px)" srcset="/img/after-tablet@1x.png 1x, /img/after-tablet@2x.png 2x">
+                      <!--<source type="image/webp" srcset="/img/after-mobile@1x.webp 1x, /img/after-mobile@2x.webp 2x">-->
+                      <img class="compare-slider__image compare-slider__image--after" src="../img/after-mobile@1x.png" srcset="../img/after-mobile@2x.png 2x" width="320" height="240"  alt="Ставший котик">
+                    </picture>
                   </div>
                   <div class="before-after__controls compare-slider__controls">
                     <span class="before-after__control compare-slider__control">Было</span>

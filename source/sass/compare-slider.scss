@@ -2,8 +2,13 @@
   position: relative;
 }
 
-.compare-slider__image--before {
-  position: absolute;
+.compare-slider__image {
+  width: 320px;
+  height: 240px;
+
+  &--before {
+    position: absolute;
+  }
 }
 
 .compare-slider__controls {
@@ -32,8 +37,8 @@
 
 @media (min-width: $width-tablet) {
   .compare-slider__image {
-    width: 670px;
-    height: 505px;
+    width: 690px;
+    height: 517px;
   }
 
   .compare-slider__control {
@@ -45,7 +50,11 @@
 
   .compare-slider__indication {
     width: 432px;
-    height: 10px;
+    height: 6px;
+    margin: 0 22px 0 22px;
+
+    border: none;
+    background-color: $color-border-dark;
   }
 }
 
@@ -53,8 +62,6 @@
   .compare-slider__indication {
     width: 428px;
     height: 6px;
-
-    background-color: $color-border-dark;
   }
 
   .compare-slider__controls {

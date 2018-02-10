@@ -137,6 +137,10 @@
 }
 
 @media (min-width: $width-desktop) {
+  .extra {
+    margin-bottom: 19px;
+  }
+
   .extra__title {
     width: $width-desktop - 2 * $size-margin-desktop;
     margin-bottom: 80px;

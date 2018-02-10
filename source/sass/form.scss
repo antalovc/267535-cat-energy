@@ -344,6 +344,10 @@
 }
 
 @media (min-width: $width-desktop) {
+  .form {
+    margin-bottom: 52px;
+  }
+
   .form__description {
     margin-bottom: 66px;
   }
@@ -362,12 +366,17 @@
 
   .form__data,
   .form__submit .form__button,
+  .form__course .form__content,
   .form__remark {
     width: 570px;
   }
 
   .form__data {
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .form__owner {
