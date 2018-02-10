@@ -206,7 +206,6 @@
   .before-after__wrapper {
     display: flex;
     justify-content: center;
-    padding-bottom: 68px;
 
     @include secondary-color-scheme;
 
@@ -234,6 +233,7 @@
 
   .before-after__info-wrapper {
     margin-bottom: 0;
+    padding-bottom: 68px;
 
     @include secondary-color-scheme;
   }
