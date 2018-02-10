@@ -59,6 +59,8 @@
   .page-header__logo {
     padding: 0;
 
+    align-self: flex-start;
+
     border-bottom: none;
   }
 
@@ -74,11 +76,18 @@
 
 @media (min-width: $width-desktop) {
   .page-header {
+    position: absolute;
+    left: 50%;
+    top: 0;
+
     border-bottom: none;
     background-color: transparent;
   }
 
   .page-header__container {
+    position: relative;
+    left: -50%;
+
     padding-top: 53px;
     padding-bottom: 34px;
   }

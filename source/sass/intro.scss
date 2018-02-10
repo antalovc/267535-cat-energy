@@ -30,7 +30,14 @@
   align-items: center;
 
   @include ternary-color-scheme;
-  background: $color-accent url("../img/index-background-mobile@1x.jpg") center bottom no-repeat;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__picture {
@@ -127,7 +134,6 @@
 
 @media (min-width: $width-desktop) {
   .intro {
-    margin-top: -160px;
     margin-bottom: 80px;
 
     flex-direction: row;
@@ -136,7 +142,6 @@
 
   .intro__container {
     width: auto;
-    margin-top: 7px;
 
     flex-direction: row;
     flex-grow: 1;
@@ -178,8 +183,16 @@
     flex-grow: 1;
 
     justify-content: center;
-    background: #5eaa2f url("../img/index-background-mobile@1x.jpg") left center no-repeat;
+
+    background-color: $color-accent;
+    background-repeat: no-repeat;
+    background-position: right bottom;
     background-size: contain;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .intro__image {

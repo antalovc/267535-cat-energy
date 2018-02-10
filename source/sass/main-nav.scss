@@ -20,18 +20,13 @@
   opacity: 1;
 }
 
-.main-nav__list {
-  display: flex;
-}
-
 @media (min-width: $width-tablet) {
   .main-nav__toggle {
     display: none;
   }
 
   .main-nav__list {
-    display: flex;
-    padding-tight: $size-offset-tablet;
+    width: 440px;
   }
 }
 
@@ -41,8 +36,7 @@
   }
 
   .main-nav__list {
-    display: flex;
-    padding-tight: $size-offset-desktop;
+    width: 480px;
   }
 }
 
