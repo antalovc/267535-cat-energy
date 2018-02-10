@@ -23,7 +23,7 @@
 .intro__content {
   position: relative;
   min-height: 305px;
-  width: 280px;
+  width:320px;
 
   display: flex;
   flex-direction: column;
@@ -67,6 +67,8 @@
 
 .intro__button {
   position: absolute;
+  margin-left: $size-offset-mobile;
+  margin-right: $size-offset-mobile;
   margin-top: 440px;
   right: 0;
   left: 0;
@@ -114,12 +116,12 @@
   }
 
   .intro__picture {
-    margin-top: -80px;
+    margin-top: -78px;
   }
 
   .intro__image {
-    width: $width-tablet - 2 * $size-offset-tablet;
-    height: 610px;
+    width: 709px;
+    height: 609px;
   }
 
   .intro__button {
@@ -196,10 +198,12 @@
   }
 
   .intro__image {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    margin-left: -650px;
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    top: 140px;
+    left: 0;
+    margin-left: -200px;
   }
 
   .intro__title {
