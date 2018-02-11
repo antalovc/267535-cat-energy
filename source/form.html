@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.js" async></script>
   </head>
 
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
       <div class="page-header__container">
-        <a class="page-header__logo" href="index.html">
+        <a href="index.html" class="page-header__logo" href="index.html">
           <div class="page-header__logo-container">
-            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
-            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Надпись логотипа Cat Energy">
           </div>
         </a>
 
@@ -61,7 +64,6 @@
           </div>
 
           <div class="form__course">
-            <div class="form__wrapper form__wrapper--dummy"></div>
             <div class="form__wrapper">
               <div class="form__content">
                 <div class="form__line">
@@ -155,7 +157,7 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="page-footer__logo">
-          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </div>
 
         <ul class="page-footer__social social">

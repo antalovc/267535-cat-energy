@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.js" async></script>
   </head>
 
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <div class="page-header__container">
         <a class="page-header__logo">
           <div class="page-header__logo-container">
-            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Cat Energy Logo">
-            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Надпись логотипа Cat Energy">
           </div>
         </a>
 
@@ -50,7 +53,14 @@
         </div>
         <div class="intro__container intro__container--picture">
           <div class="intro__picture">
-            <img class="intro__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Cat energy - Курица">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="/img/index-can-desktop@1x.webp 1x, /img/index-can-desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="/img/index-can-desktop@1x.png 1x, /img/index-can-desktop@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="/img/index-can-tablet@1x.webp 1x, .img/index-can-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="/img/index-can-tablet@1x.jpg 1x, /img/index-can-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="/img/index-can-mobile@1x.webp 1x, /img/index-can-mobile@2x.webp 2x">
+              <img class="intro__image" src="/img/index-can-mobile@1x.png" srcset="/img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Промо-изображение продукта">
+            </picture>
           </div>
         </div>
       </section>
@@ -94,8 +104,8 @@
           <h2 class=" before-after__title container">Живой пример</h2>
         </div>
 
-        <div class="before-after__wrapper-wrapper">
-          <div class="before-after__wrapper">
+        <div class="before-after__wrapper">
+          <div class="before-after__container">
             <div class="before-after__info-wrapper">
               <div class="before-after__info">
                 <p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.</p>
@@ -114,15 +124,31 @@
             </div>
 
             <div class="before-after__compare-wrapper">
-              <div class="before-after__compare compare-slider">
-                <div class="before-after__slides compare-slider__slides">
-                  <img class="compare-slider__image compare-slider__image--before" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
-                  <img class="compare-slider__image compare-slider__image--after" src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
-                </div>
-                <div class="before-after__controls compare-slider__controls">
-                  <span class="before-after__control compare-slider__control">Было</span>
-                  <div class="before-after__indication compare-slider__indication"></div>
-                  <span class="before-after__control compare-slider__control">Стало</span>
+              <div class="before-after__compare--container">
+                <div class="before-after__compare compare-slider">
+                  <div class="before-after__slides compare-slider__slides">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="/img/before-desktop@1x.webp 1x, /img/before-desktop@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="/img/before-desktop@1x.png 1x, /img/before-desktop@2x.png 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="/img/before-tablet@1x.webp 1x, /img/before-tablet@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="/img/before-tablet@1x.png 1x, /img/before-tablet@2x.png 2x">
+                      <source type="image/webp" srcset="/img/before-mobile@1x.webp 1x, /img/before-mobile@2x.webp 2x">
+                      <img class="compare-slider__image compare-slider__image--before" src="/img/before-mobile@1x.png" srcset="/img/before-mobile@2x.png 2x" width="320" height="240"  alt="Бывший котик">
+                    </picture>
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="/img/after-desktop@1x.webp 1x, /img/after-desktop@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="/img/after-desktop@1x.png 1x, /img/after-desktop@2x.png 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="/img/after-tablet@1x.webp 1x, /img/after-tablet@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="/img/after-tablet@1x.png 1x, /img/after-tablet@2x.png 2x">
+                      <source type="image/webp" srcset="/img/after-mobile@1x.webp 1x, /img/after-mobile@2x.webp 2x">
+                      <img class="compare-slider__image compare-slider__image--after" src="../img/after-mobile@1x.png" srcset="../img/after-mobile@2x.png 2x" width="320" height="240"  alt="Ставший котик">
+                    </picture>
+                  </div>
+                  <div class="before-after__controls compare-slider__controls">
+                    <span class="before-after__control compare-slider__control">Было</span>
+                    <div class="before-after__indication compare-slider__indication"></div>
+                    <span class="before-after__control compare-slider__control">Стало</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -142,7 +168,7 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="page-footer__logo">
-          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </div>
 
         <ul class="social page-footer__social ">

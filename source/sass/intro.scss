@@ -23,14 +23,21 @@
 .intro__content {
   position: relative;
   min-height: 305px;
-  width: 280px;
+  width: 320px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include ternary-color-scheme;
-  background: $color-accent url("../img/index-background-mobile@1x.jpg") center bottom no-repeat;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__picture {
@@ -60,6 +67,8 @@
 
 .intro__button {
   position: absolute;
+  margin-left: $size-offset-mobile;
+  margin-right: $size-offset-mobile;
   margin-top: 440px;
   right: 0;
   left: 0;
@@ -107,12 +116,12 @@
   }
 
   .intro__picture {
-    margin-top: -80px;
+    margin-top: -78px;
   }
 
   .intro__image {
-    width: $width-tablet - 2 * $size-offset-tablet;
-    height: 610px;
+    width: 709px;
+    height: 609px;
   }
 
   .intro__button {
@@ -127,7 +136,6 @@
 
 @media (min-width: $width-desktop) {
   .intro {
-    margin-top: -160px;
     margin-bottom: 80px;
 
     flex-direction: row;
@@ -136,7 +144,6 @@
 
   .intro__container {
     width: auto;
-    margin-top: 7px;
 
     flex-direction: row;
     flex-grow: 1;
@@ -178,15 +185,25 @@
     flex-grow: 1;
 
     justify-content: center;
-    background: #5eaa2f url("../img/index-background-mobile@1x.jpg") left center no-repeat;
+
+    background-color: $color-accent;
+    background-repeat: no-repeat;
+    background-position: right bottom;
     background-size: contain;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .intro__image {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    margin-left: -650px;
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    top: 140px;
+    left: 0;
+    margin-left: -200px;
   }
 
   .intro__title {
