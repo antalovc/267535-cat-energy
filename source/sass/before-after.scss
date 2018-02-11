@@ -105,7 +105,7 @@
 }
 
 .before-after__slides {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 @media (min-width: $width-tablet) {
@@ -177,8 +177,7 @@
 
   .before-after__slides {
     margin-top: -168px;
-    margin-left: 44px;
-    margin-bottom: 9px;
+    margin-bottom: 17px;
   }
 
   .before-after__compare-wrapper {
@@ -245,6 +244,7 @@
   }
 
   .before-after__compare {
+    position: relative;
     width: 690px;
     padding-bottom: 0;
 
@@ -259,8 +259,7 @@
 
   .before-after__slides {
     margin-top: -189px;
-    margin-bottom: 30px;
-    margin-left: 0;
+    margin-bottom: 40px;
   }
 
   .before-after__description {
@@ -294,7 +293,7 @@
   }
 
   .before-after__controls {
-    padding-right: $size-offset-desktop;
+    margin-left: 40px;
   }
 }
 

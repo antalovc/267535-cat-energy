@@ -1,13 +1,46 @@
+.compare-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .compare-slider__slides {
   position: relative;
+  width: 320px;
+  height: 240px;
+}
+
+.compare-slider__slide-wrapper {
+  position: absolute;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  &--before {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &--after {
+    width: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .compare-slider__image {
+  position: absolute;
   width: 320px;
   height: 240px;
+  max-width: none;
 
-  &--before {
-    position: absolute;
+  &--after {
+    top: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -36,6 +69,21 @@
 }
 
 @media (min-width: $width-tablet) {
+  .compare-slider__slides {
+    width: 690px;
+    height: 517px;
+  }
+
+  .compare-slider__slide-wrapper {
+    &--before {
+      width: 53%;
+    }
+
+    &--after {
+      width: 47%;
+    }
+  }
+
   .compare-slider__image {
     width: 690px;
     height: 517px;
