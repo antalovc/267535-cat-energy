@@ -2,7 +2,7 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var normalize = require('node-normalize-scss');
+var normalize = require("node-normalize-scss");
 var plumber = require("gulp-plumber");
 var postCss = require("gulp-postcss");
 var autoPrefixer = require("autoprefixer");
@@ -13,8 +13,8 @@ var webp = require("gulp-webp");
 var svgStore = require("gulp-svgstore");
 var postHtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-const sourceMaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+const sourceMaps = require("gulp-sourcemaps");
+const uglify = require("gulp-uglify");
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
