@@ -26,17 +26,17 @@ gulp.task("images", function() {
       imageMin.jpegtran({progressive: true}),
       imageMin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("webp", function() {
-  return gulp.src("source/img/**/*.{png,jpg}")
+gulp.task("webp", ["images"], function() {
+  return gulp.src("build/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("sprite", function() {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("build/img/icon-*.svg")
     .pipe(svgStore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
@@ -78,6 +78,7 @@ gulp.task("build", function(done) {
     "clean",
     "copy",
     "style",
+    "webp",
     "sprite",
     "html",
     "scripts",
