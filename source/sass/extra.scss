@@ -41,6 +41,12 @@
   padding-bottom: 13px;
 }
 
+.extra__order {
+  padding-bottom: 9px;
+
+  @include font-sizing(16px, 20px);
+}
+
 .extra-bonus {
   width: 280px;
   margin: 37px auto;
@@ -121,10 +127,7 @@
 
   .extra__order {
     width: 100%;
-    padding-bottom: 9px;
     margin-top: 23px;
-
-    @include font-sizing(16px, 20px);
   }
 
   .extra__list {

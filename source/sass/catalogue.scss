@@ -41,16 +41,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    &::before {
-      position: absolute;
-      top: -54px;
-      width: 30px;
-      height: 30px;
-
-      content: "";
-      background: transparent url("../img/icon-plus-mobile.svg") no-repeat center;
-    }
   }
 }
 
@@ -168,13 +158,6 @@
     &--more {
       margin-top: 124px;
       margin-bottom: 60px;
-
-      &::before {
-        position: absolute;
-        top: -110px;
-        width: 60px;
-        height: 60px;
-      }
     }
   }
 
