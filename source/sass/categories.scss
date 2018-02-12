@@ -34,11 +34,38 @@
 
   &::before {
     position: absolute;
-    display: block;
-    width: 16px;
-    height: 16px;
+    width: 50px;
+    height: 50px;
+    left: 2px;
+    top: -6px;
+
+    content: "";
     background-color: $color-accent2;
     border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim::after {
+    width: 36px;
+    height: 50px;
+    left: 10px;
+    top: -9px;
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::after {
+    width: 67px;
+    height: 28px;
+    left: -7px;
+    top: 5px;
+    background-image: url("../img/icon-cat-pro.svg");
   }
 }
 
@@ -50,10 +77,20 @@
 }
 
 .categories__link {
+  position: relative;
+
   @include font-decorative-regular;
   @include font-sizing(16px, 16px);
   text-transform: uppercase;
   text-decoration: none;
+
+  vertical-align: center;
+}
+
+.categories__arrow {
+  position: relative;
+  top: -2px;
+  right: -7px;
 }
 
 @media (min-width: $width-tablet) {
@@ -66,14 +103,47 @@
     margin-bottom: 25px;
 
     @include font-sizing(36px, 37px);
+
+    &::before {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      left: 393px;
+      top: 16px;
+
+      content: "";
+      background-color: $color-accent2;
+      border-radius: 50%;
+    }
+
+    &--slim::after {
+      width: 140px;
+      height: 194px;
+      left: 423px;
+      top: 4px;
+    }
+
+    &--pro::after {
+      width: 268px;
+      height: 112px;
+      left: 359px;
+      top: 59px;
+    }
   }
 
   .categories__description {
-    width: 375px;
     padding-bottom: 0;
     margin-bottom: 56px;
 
     border: none;
+
+    &--slim {
+      width: 375px;
+    }
+
+    &--pro {
+      width: 344px;
+    }
   }
 
   .categories__item {
@@ -87,6 +157,11 @@
 
   .categories__link {
     @include font-sizing(20px, 20px);
+  }
+
+  .categories__arrow {
+    top: -3px;
+    right: -19px;
   }
 }
 
@@ -110,6 +185,32 @@
   .categories__title {
     padding-left: 162px;
     margin-bottom: 76px;
+
+    &::before {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 0;
+      top: -28px;
+
+      content: "";
+      background-color: $color-accent2;
+      border-radius: 50%;
+    }
+
+    &--slim::after {
+      width: 70px;
+      height: 97px;
+      left: 14px;
+      top: -34px;
+    }
+
+    &--pro::after {
+      width: 134px;
+      height: 56px;
+      left: -18px;
+      top: -6px;
+    }
   }
 
   .categories__description {

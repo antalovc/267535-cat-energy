@@ -24,7 +24,7 @@
 }
 
 .before-after__info {
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 .before-after__compare {
@@ -81,12 +81,11 @@
   max-width: 60px;
   padding-left: 19px;
   padding-right: 19px;
-  margin-top: 18px;
+  bottom: -16px;
 
   @include font-simple;
   @include font-sizing(12px, 12px);
 
-  top: 50%;
   left: 50%;
   text-transform: lowercase;
   transform: translateX(-50%);
@@ -94,7 +93,7 @@
   @include secondary-color-scheme;
 }
 
-.before-after__price {
+.before-after__costs {
   align-self: center;
   margin-bottom: 32px;
 
@@ -117,6 +116,7 @@
   .before-after__stats {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .before-after__list {
@@ -124,7 +124,7 @@
   }
 
   .before-after__item {
-    padding-bottom: 18px;
+    padding-bottom: 19px;
     padding-left: 19px;
     padding-right: 19px;
 
@@ -132,15 +132,17 @@
   }
 
   .before-after__fact {
+    bottom: -6px;
     max-width: 120px;
 
     display: block;
 
     @include primary-color-scheme;
+    @include font-sizing(14px, 14px);
     white-space: nowrap;
   }
 
-  .before-after__price {
+  .before-after__costs {
     width: 192px;
     margin-top: 6px;
 
@@ -284,12 +286,16 @@
     justify-content: space-between;
   }
 
-  .before-after__price {
+  .before-after__costs {
     width: 100%;
     margin-top: 35px;
     margin-bottom: 0;
 
     text-align: left;
+  }
+
+  .before-after__price {
+    margin-left: 60px;
   }
 
   .before-after__controls {

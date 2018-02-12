@@ -16,8 +16,18 @@
       <div class="page-header__container">
         <a class="page-header__logo">
           <div class="page-header__logo-container">
-            <img class="page-header__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
-            <img class="page-header__title" src="img/logo-mobile-header.svg" width="101" height="18" alt="Надпись логотипа Cat Energy">
+            <svg class="page-header__image" width="33" height="38">
+              <use xlink:href="img/sprite.svg#icon-logo-mobile"></use>
+            </svg>
+            <svg class="page-header__title page-header__title--mobile" width="101" height="18">
+              <use xlink:href="img/sprite.svg#logo-mobile-header"></use>
+            </svg>
+            <svg class="page-header__title page-header__title--tablet" width="172" height="57">
+              <use xlink:href="img/sprite.svg#logo-tablet"></use>
+            </svg>
+            <svg class="page-header__title page-header__title--desktop" width="202" height="60">
+              <use xlink:href="img/sprite.svg#logo-desktop"></use>
+            </svg>
           </div>
         </a>
 
@@ -47,7 +57,7 @@
             <div class="intro__content">
               <h2 class="intro__title">Функциональное питание для котов</h2>
               <p class="intro__moto">Занялся собой? Займись котом!</p>
-              <a class="intro__button button" href="#">Подобрать программу</a>
+              <a class="intro__button button" href="form.html">Подобрать программу</a>
             </div>
           </div>
         </div>
@@ -70,13 +80,21 @@
         <ul class="categories__list">
           <li class="categories__item">
             <h3 class="categories__title categories__title--slim">Похудение</h3>
-            <p class="categories__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="categories__link" href="catalog.html">Каталог Slim</a>
+            <p class="categories__description categories__description--slim">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="categories__link" href="catalog.html">Каталог Slim
+              <svg class="categories__arrow" width="24" height="11">
+                <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+              </svg>
+            </a>
           </li>
           <li class="categories__item">
             <h3 class="categories__title categories__title--pro">Набор массы</h3>
-            <p class="categories__description">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="categories__link" href="catalog.html">Каталог Pro</a>
+            <p class="categories__description categories__description--pro">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="categories__link" href="catalog.html">Каталог Pro
+              <svg class="categories__arrow" width="24" height="11">
+                <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </section>
@@ -118,7 +136,9 @@
                       <span class="before-after__fact">Затрачено времени</span>60 дней
                     </li>
                   </ul>
-                  <p class="before-after__price">Затраты на питание: 15 000 руб.</p>
+                  <p class="before-after__costs">
+                    Затраты на питание: <span class="before-after__price">15 000 руб.</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -163,7 +183,10 @@
       <section class="contacts contacts--index">
         <div class="contacts__info contacts__info--index container">
           <b class="contacts__moto">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
-          <p class="contacts__text">ул. Большая Конюшенная, д.&nbsp;19/8, Санкт-Петербург</p>
+          <p class="contacts__text">
+            <span class="contacts__street">ул. Большая Конюшенная, д.&nbsp;19/8,</span>
+            Санкт-Петербург
+          </p>
         </div>
         <div class="contacts__map">Карта</div>
       </section>

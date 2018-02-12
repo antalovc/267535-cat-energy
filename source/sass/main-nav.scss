@@ -1,5 +1,7 @@
 .main-nav {
   position: relative;
+
+  @include primary-color-scheme;
 }
 
 .main-nav__toggle {
@@ -31,6 +33,11 @@
 }
 
 @media (min-width: $width-desktop) {
+  .main-nav {
+    background-color: transparent;
+    margin-top: 5px;
+  }
+
   .main-nav__toggle {
     display: none;
   }

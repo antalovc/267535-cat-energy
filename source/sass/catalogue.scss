@@ -55,7 +55,17 @@
 }
 
 .catalogue__info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
   padding-top: 21px;
+
+
+  & a {
+    text-decoration: none;
+    align-self: flex-start;
+  }
 }
 
 .catalogue__title {
@@ -77,10 +87,6 @@
 .catalogue__text {
   margin: 0;
   margin-bottom: 20px;
-}
-
-.catalogue__info a {
-  text-decoration: none;
 }
 
 .catalogue__stats {
@@ -199,11 +205,11 @@
     margin-right: 37px;
     margin-bottom: 26px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     align-self: stretch;
+
+    & a {
+      align-self: center;
+    }
   }
 
   .catalogue__title {
