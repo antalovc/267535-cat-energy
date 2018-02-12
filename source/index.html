@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="">
     <script src="js/picturefill.js" async></script>
   </head>
 
@@ -16,17 +17,17 @@
       <div class="page-header__container">
         <a class="page-header__logo">
           <div class="page-header__logo-container">
-            <svg class="page-header__image" width="33" height="38">
-              <use xlink:href="img/sprite.svg#icon-logo-mobile"></use>
+            <svg title="Логотип Cat Energy" class="page-header__image" width="33" height="38">
+              <use xlink:href="#icon-logo-mobile"></use>
             </svg>
-            <svg class="page-header__title page-header__title--mobile" width="101" height="18">
-              <use xlink:href="img/sprite.svg#logo-mobile-header"></use>
+            <svg title="Надпись Cat Energy" class="page-header__title page-header__title--mobile" width="101" height="18">
+              <use xlink:href="#logo-mobile-header"></use>
             </svg>
-            <svg class="page-header__title page-header__title--tablet" width="172" height="57">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
+            <svg title="Логотип Cat Energy" class="page-header__title page-header__title--tablet" width="172" height="57">
+              <use xlink:href="#logo-tablet"></use>
             </svg>
-            <svg class="page-header__title page-header__title--desktop" width="202" height="60">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
+            <svg title="Логотип Cat Energy" class="page-header__title page-header__title--desktop" width="202" height="60">
+              <use xlink:href="#logo-desktop"></use>
             </svg>
           </div>
         </a>
@@ -83,7 +84,7 @@
             <p class="categories__description categories__description--slim">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="categories__link" href="catalog.html">Каталог Slim
               <svg class="categories__arrow" width="24" height="11">
-                <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+                <use xlink:href="#icon-right-arrow-long"></use>
               </svg>
             </a>
           </li>
@@ -92,7 +93,7 @@
             <p class="categories__description categories__description--pro">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="categories__link" href="catalog.html">Каталог Pro
               <svg class="categories__arrow" width="24" height="11">
-                <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+                <use xlink:href="#icon-right-arrow-long"></use>
               </svg>
             </a>
           </li>
@@ -195,23 +196,49 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="page-footer__logo">
-          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+          <svg title="Логотип Cat Energy" width="128" height="23">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
         </div>
 
         <ul class="social page-footer__social ">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <svg title="Мы в Вконтакте" class="social__image social__image--mobile" width="22" height="12">
+                <use xlink:href="#icon-vk-mobile"></use>
+              </svg>
+              <svg title="Мы в Вконтакте" class="social__image" width="30" height="16">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <svg title="Мы в Инстаграме" class="social__image social__image--mobile" width="16" height="16">
+                <use xlink:href="#icon-insta-mobile"></use>
+              </svg>
+              <svg title="Мы в Инстаграме" class="social__image" width="23" height="23">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <svg title="Мы в Фейсбуке" class="social__image social__image--mobile" width="10" height="19">
+                <use xlink:href="#icon-fb-mobile"></use>
+              </svg>
+              <svg title="Мы в Фейсбуке" class="social__image" width="14" height="28">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
           </li>
         </ul>
 
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <svg title="Логотип HTML Academy" class="copyright__image" width="60" height="60">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </div>
       </div>
     </footer>

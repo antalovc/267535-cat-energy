@@ -1,17 +1,13 @@
 .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   @include font-simple;
   @include font-sizing(16px, 16px);
 }
 
-.copyright__link {
-  position: relative;
-  text-decoration: none;
-
-  &::after {
-    position: absolute;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background: $color-border-light2 url("../img/htmlacademy.svg") no-repeat center;
-  }
+.copyright__image {
+  width: 28px;
+  height: 34px;
 }
