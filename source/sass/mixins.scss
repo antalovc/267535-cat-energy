@@ -88,7 +88,7 @@
   padding: 12px 0 13px 12px;
 
   @include font-decorative-regular;
-  @include font-sizing(16px, 18px, 0.01em);
+  @include font-sizing(16px, 18px, 0.001em);
   text-transform: uppercase;
 
   background-color: rgba(203, 203, 203, 0.5);

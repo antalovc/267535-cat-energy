@@ -78,7 +78,7 @@ img {
 
   &::after {
     position: absolute;
-    top: 50%;
+    top: 12px;
     left: 0;
     right: 0;
     height: 3px;
@@ -86,5 +86,11 @@ img {
     background-color: $color-accent;
     content: "";
     z-index: -1;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .backline::after {
+    top: 20px;
   }
 }

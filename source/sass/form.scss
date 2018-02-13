@@ -18,7 +18,6 @@
   @include text-input;
 }
 
-
 .form__textarea {
   padding-bottom: 11px;
 
@@ -33,6 +32,17 @@
   display: flex;
   align-items: center;
   margin-bottom: 14px;
+
+  &--checkbox,
+  &--fieldicon {
+    position: relative;
+  }
+}
+
+.form__line--fieldicon .form__icon {
+  position: absolute;
+
+  right: 14px;
 }
 
 .form__line:last-child {
@@ -40,7 +50,7 @@
 }
 
 .form__label {
-  margin-right: 18px;
+  margin-right: 16px;
 }
 
 .form__textinput {
@@ -169,15 +179,43 @@
   border-radius: 50%;
 }
 
+.form__radio:checked + .form__label::after {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 8px;
+  top: 3px;
+
+  content: "";
+
+  border-radius: 50%;
+  background-color: $color-accent2;
+}
+
+.form__line--checkbox .form__icon {
+  display: none;
+}
+
+.form__checkbox:checked ~ .form__icon {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+
+  display: block;
+}
+
 .form__submit {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .form__submit .form__button {
   margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include font-sizing(16px, 20px);
 }
 
 .form__remark {
@@ -188,7 +226,7 @@
 @media (min-width: $width-tablet) {
   .form {
     margin-top: 32px;
-    margin-bottom: 42px;
+    margin-bottom: 44px;
   }
 
   .form__description {
@@ -226,6 +264,18 @@
     &::before {
       left: 0;
     }
+  }
+
+
+  .form__radio:checked + .form__label::after {
+    width: 18px;
+    height: 18px;
+    left: 40px;
+    top: 2px;
+  }
+
+  .form__checkbox:checked ~ .form__icon {
+    left: 10px;
   }
 
   .form__cat {
@@ -271,12 +321,13 @@
   }
 
   .form__comment {
-    margin-bottom: 37px;
+    margin-bottom: 34px;
   }
 
   .form__textarea {
     margin-top: 42px;
     height: 152px;
+    padding-left: 18px;
 
     @include font-sizing(20px, 30px);
   }
@@ -303,6 +354,7 @@
   .form__submit {
     flex-direction: row;
     align-items: center;
+    margin-bottom: 28px;
   }
 
   .form__submit .form__button {
@@ -345,7 +397,7 @@
 
 @media (min-width: $width-desktop) {
   .form {
-    margin-bottom: 52px;
+    margin-bottom: 54px;
   }
 
   .form__description {
@@ -425,9 +477,14 @@
 
   .form__additional .form__content {
     margin-bottom: 19px;
+    margin-top: 59px;
   }
 
   .form__additional .form__line {
     width: 250px;
+  }
+
+  .form__line--fieldicon .form__icon {
+    right: 18px;
   }
 }
