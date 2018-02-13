@@ -24,7 +24,7 @@
 }
 
 .before-after__info {
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 .before-after__compare {
@@ -67,7 +67,7 @@
   @include font-sizing(24px, 24px, 0.001em);
   text-align: center;
 
-  border: 1px solid $color-border-stats;
+  border: 1px solid $color-gray3;
   border-radius: 3px;
   text-transform: uppercase;
 }
@@ -81,12 +81,11 @@
   max-width: 60px;
   padding-left: 19px;
   padding-right: 19px;
-  margin-top: 18px;
+  bottom: -16px;
 
   @include font-simple;
   @include font-sizing(12px, 12px);
 
-  top: 50%;
   left: 50%;
   text-transform: lowercase;
   transform: translateX(-50%);
@@ -94,7 +93,7 @@
   @include secondary-color-scheme;
 }
 
-.before-after__price {
+.before-after__costs {
   align-self: center;
   margin-bottom: 32px;
 
@@ -105,7 +104,7 @@
 }
 
 .before-after__slides {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 @media (min-width: $width-tablet) {
@@ -117,6 +116,7 @@
   .before-after__stats {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .before-after__list {
@@ -124,7 +124,7 @@
   }
 
   .before-after__item {
-    padding-bottom: 18px;
+    padding-bottom: 19px;
     padding-left: 19px;
     padding-right: 19px;
 
@@ -132,15 +132,17 @@
   }
 
   .before-after__fact {
+    bottom: -6px;
     max-width: 120px;
 
     display: block;
 
     @include primary-color-scheme;
+    @include font-sizing(14px, 14px);
     white-space: nowrap;
   }
 
-  .before-after__price {
+  .before-after__costs {
     width: 192px;
     margin-top: 6px;
 
@@ -168,7 +170,7 @@
     padding-bottom: 69px;
 
 
-    background-image: linear-gradient(to right, $color-middle 50%, $color-border-light 50%);
+    background-image: linear-gradient(to right, $color-middle 50%, $color-gray1 50%);
   }
 
   .before-after__description {
@@ -177,8 +179,7 @@
 
   .before-after__slides {
     margin-top: -168px;
-    margin-left: 44px;
-    margin-bottom: 9px;
+    margin-bottom: 17px;
   }
 
   .before-after__compare-wrapper {
@@ -191,7 +192,7 @@
       flex-grow: 1;
 
       content: "";
-      background-color: $color-border-light;
+      background-color: $color-gray1;
     }
   }
 
@@ -213,7 +214,7 @@
       flex-grow: 1;
 
       content: "";
-      background-color: $color-border-light;
+      background-color: $color-gray1;
     }
   }
 
@@ -245,10 +246,11 @@
   }
 
   .before-after__compare {
+    position: relative;
     width: 690px;
     padding-bottom: 0;
 
-    background-image: linear-gradient(to right, $color-middle 53%, $color-border-light 53%);
+    background-image: linear-gradient(to right, $color-middle 53%, $color-gray1 53%);
   }
 
   .before-after__compare-wrapper {
@@ -259,8 +261,7 @@
 
   .before-after__slides {
     margin-top: -189px;
-    margin-bottom: 30px;
-    margin-left: 0;
+    margin-bottom: 40px;
   }
 
   .before-after__description {
@@ -285,7 +286,7 @@
     justify-content: space-between;
   }
 
-  .before-after__price {
+  .before-after__costs {
     width: 100%;
     margin-top: 35px;
     margin-bottom: 0;
@@ -293,8 +294,12 @@
     text-align: left;
   }
 
+  .before-after__price {
+    margin-left: 60px;
+  }
+
   .before-after__controls {
-    padding-right: $size-offset-desktop;
+    margin-left: 40px;
   }
 }
 

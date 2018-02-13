@@ -12,9 +12,11 @@
   text-transform: uppercase;
 
   text-align: center;
+  border-bottom: 1px solid $color-gray1;
 
-  @include primary-color-scheme;
-  border-bottom: 1px solid $color-border-light;
+  & a {
+    @include primary-color-scheme;
+  }
 }
 
 .site-list__item a {
@@ -65,16 +67,18 @@
   }
 
   .site-list__item {
-    background-color: transparent;
-
     @include font-sizing(20px, 26px);
 
     &--active {
       border-bottom: 2px solid $color-accent2;
     }
 
-    &--index {
+    &--index a {
       color: $color-light;
+    }
+
+    & a {
+      background-color: transparent;
     }
   }
 

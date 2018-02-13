@@ -13,7 +13,7 @@
   @include font-simple;
 
   margin-bottom: 39px;
-  border-top: 1px solid $color-border-dark;
+  border-top: 1px solid $color-gray3;
 }
 
 .extra__item {
@@ -22,7 +22,7 @@
   padding-top: 13px;
   padding-bottom: 17px;
 
-  border-bottom: 1px solid $color-border-dark;
+  border-bottom: 1px solid $color-gray3;
 }
 
 .extra__name {
@@ -39,6 +39,12 @@
   justify-content: space-between;
 
   padding-bottom: 13px;
+}
+
+.extra__order {
+  padding-bottom: 9px;
+
+  @include font-sizing(16px, 20px);
 }
 
 .extra-bonus {
@@ -93,8 +99,8 @@
     align-items: center;
     flex-wrap: wrap;
 
-    border-left: 1px solid $color-border-dark;
-    border-right: 1px solid $color-border-dark;
+    border-left: 1px solid $color-gray3;
+    border-right: 1px solid $color-gray3;
   }
 
   .extra__description {
@@ -121,10 +127,7 @@
 
   .extra__order {
     width: 100%;
-    padding-bottom: 9px;
     margin-top: 23px;
-
-    @include font-sizing(16px, 20px);
   }
 
   .extra__list {
@@ -141,9 +144,14 @@
     margin-bottom: 19px;
   }
 
+  .extra__price {
+    min-width: 40px;
+    text-align: left;
+  }
+
   .extra__title {
     width: $width-desktop - 2 * $size-margin-desktop;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
   }
 
   .extra__title span {
