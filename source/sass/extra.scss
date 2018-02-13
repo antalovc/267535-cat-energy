@@ -144,9 +144,14 @@
     margin-bottom: 19px;
   }
 
+  .extra__price {
+    min-width: 40px;
+    text-align: left;
+  }
+
   .extra__title {
     width: $width-desktop - 2 * $size-margin-desktop;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
   }
 
   .extra__title span {
