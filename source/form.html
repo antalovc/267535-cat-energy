@@ -79,15 +79,15 @@
             <div class="form__wrapper">
               <div class="form__content">
                 <div class="form__line">
-                  <input class="form__radio" type="radio" id="form-course-loss" name="form-course" checked>
+                  <input class="form__radio visually-hidden" type="radio" id="form-course-loss" name="form-course" tabindex="0" checked>
                   <label class="form__label" for="form-course-loss">Похудение</label>
                 </div>
                 <div class="form__line">
-                  <input class="form__radio" type="radio" id="form-course-get" name="form-course">
+                  <input class="form__radio visually-hidden" type="radio" id="form-course-get" name="form-course" tabindex="0">
                   <label class="form__label" for="form-course-get">Набор массы</label>
                 </div>
                 <div class="form__line">
-                  <input class="form__radio" type="radio" id="form-course-advice" name="form-course">
+                  <input class="form__radio visually-hidden" type="radio" id="form-course-advice" name="form-course" tabindex="0">
                   <label class="form__label" for="form-course-advice">Не знаю (нужен ваш совет)</label>
                 </div>
               </div>
@@ -138,21 +138,21 @@
           </div>
           <div class="form__content container-form-tablet">
             <div class="form__line form__line--checkbox">
-              <input class="form__checkbox" type="checkbox" name="form-sugar-substitute" id="form-sugar-substitute" checked>
+              <input class="form__checkbox visually-hidden" type="checkbox" name="form-sugar-substitute" id="form-sugar-substitute" checked>
               <label class="form__label" for="form-sugar-substitute">Сахарозаменитель</label>
               <svg class="form__icon" width="21" height="16">
                 <use xlink:href="#icon-tick"></use>
               </svg>
             </div>
             <div class="form__line form__line--checkbox">
-              <input class="form__checkbox" type="checkbox" name="form-water" id="form-water">
+              <input class="form__checkbox visually-hidden" type="checkbox" name="form-water" id="form-water">
               <label class="form__label" for="form-water">Питьевая вода</label>
               <svg class="form__icon" width="21" height="16">
                 <use xlink:href="#icon-tick"></use>
               </svg>
             </div>
             <div class="form__line form__line--checkbox">
-              <input class="form__checkbox" type="checkbox" name="form-milk" id="form-milk">
+              <input class="form__checkbox visually-hidden" type="checkbox" name="form-milk" id="form-milk">
               <label class="form__label" for="form-milk">Молоко</label>
               <svg class="form__icon" width="21" height="16">
                 <use xlink:href="#icon-tick"></use>
@@ -179,11 +179,14 @@
         <div class="contacts__info container">
           <b class="contacts__moto">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
           <p class="contacts__text">
-            <span class="contacts__street">ул. Большая Конюшенная, д.&nbsp;19/8,</span>
+            <span class="contacts__street">ул. Большая Конюшенная, д.&nbsp;19/8</span>
             Санкт-Петербург
           </p>
         </div>
-        <div class="contacts__map">Карта</div>
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424177542!2d30.320889251642047!3d59.938796868959045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1518540073125"
+                  width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>Карта</iframe>
+        </div>
       </section>
     </main>
 
