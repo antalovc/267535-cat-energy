@@ -79,12 +79,13 @@
 .categories__link {
   position: relative;
 
+  vertical-align: center;
+
   @include font-decorative-regular;
   @include font-sizing(16px, 16px);
   text-transform: uppercase;
   text-decoration: none;
-
-  vertical-align: center;
+  color: black;
 }
 
 .categories__arrow {
