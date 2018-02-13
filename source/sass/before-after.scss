@@ -67,7 +67,7 @@
   @include font-sizing(24px, 24px, 0.001em);
   text-align: center;
 
-  border: 1px solid $color-border-stats;
+  border: 1px solid $color-gray3;
   border-radius: 3px;
   text-transform: uppercase;
 }
@@ -170,7 +170,7 @@
     padding-bottom: 69px;
 
 
-    background-image: linear-gradient(to right, $color-middle 50%, $color-border-light 50%);
+    background-image: linear-gradient(to right, $color-middle 50%, $color-gray1 50%);
   }
 
   .before-after__description {
@@ -192,7 +192,7 @@
       flex-grow: 1;
 
       content: "";
-      background-color: $color-border-light;
+      background-color: $color-gray1;
     }
   }
 
@@ -214,7 +214,7 @@
       flex-grow: 1;
 
       content: "";
-      background-color: $color-border-light;
+      background-color: $color-gray1;
     }
   }
 
@@ -250,7 +250,7 @@
     width: 690px;
     padding-bottom: 0;
 
-    background-image: linear-gradient(to right, $color-middle 53%, $color-border-light 53%);
+    background-image: linear-gradient(to right, $color-middle 53%, $color-gray1 53%);
   }
 
   .before-after__compare-wrapper {

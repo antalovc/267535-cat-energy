@@ -5,7 +5,7 @@
 
   @include list-reset;
   margin-top: 2px;
-  border-top: 1px solid $color-border-light2;
+  border-top: 1px solid $color-gray2;
 }
 
 .catalogue__image {
@@ -27,7 +27,7 @@
 }
 
 .catalogue_wrapper {
-  border-bottom: 1px solid $color-border-light2;
+  border-bottom: 1px solid $color-gray2;
 }
 
 .catalogue__description {
@@ -154,7 +154,7 @@
       width: 324px;
 
       background-color: $color-light;
-      border: 1px solid $color-border-stats;
+      border: 1px solid $color-gray3;
     }
   }
 
@@ -229,7 +229,7 @@
     margin-bottom: 8px;
 
     @include font-sizing(16px, 16px);
-    border-bottom: 1px solid $color-border-stats;
+    border-bottom: 1px solid $color-gray3;
   }
 
   .catalogue__text {

@@ -65,7 +65,7 @@
   height: 12px;
 
   @include primary-color-scheme;
-  border: 1px solid $color-border-stats;
+  border: 1px solid $color-gray3;
   border-radius: 7px;
 
   &::after {
@@ -106,7 +106,7 @@
     padding-bottom: 7px;
 
     @include font-sizing(20px, 20px);
-    border-bottom: 1px dotted $color-border-dark;
+    border-bottom: 1px dotted $color-gray3;
   }
 
   .compare-slider__indication {
@@ -115,7 +115,7 @@
     margin: -5px 22px 0 22px;
 
     border: none;
-    background-color: $color-border-dark;
+    background-color: $color-gray3;
 
     &::before {
       position: absolute;
@@ -128,7 +128,7 @@
       content: "";
       border-radius: 50%;
       background-color: $color-light;
-      border: 1px solid $color-border-stats;
+      border: 1px solid $color-gray3;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     }
 

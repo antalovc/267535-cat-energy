@@ -74,8 +74,8 @@
 }
 
 .form__course {
-  border-top: 1px solid $color-border-light2;
-  border-bottom: 1px solid $color-border-light2;
+  border-top: 1px solid $color-gray2;
+  border-bottom: 1px solid $color-gray2;
 
   &::before {
     padding: 0;
@@ -171,7 +171,7 @@
 
     content: "";
 
-    border: 1px solid $color-border-stats;
+    border: 1px solid $color-gray3;
   }
 }
 
@@ -370,9 +370,9 @@
     flex-grow: 1;
 
     align-content: flex-start;
-    border-left: 1px solid $color-border-light2;
-    border-top: 1px solid $color-border-light2;
-    border-bottom: 1px solid $color-border-light2;
+    border-left: 1px solid $color-gray2;
+    border-top: 1px solid $color-gray2;
+    border-bottom: 1px solid $color-gray2;
 
     &--dummy {
       align-content: flex-end;
@@ -451,7 +451,7 @@
   .form__wrapper {
     flex-grow: 0;
 
-    border: 1px solid $color-border-light2;
+    border: 1px solid $color-gray2;
 
     &--dummy {
       border: none;

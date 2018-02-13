@@ -14,7 +14,7 @@
   text-align: center;
 
   @include primary-color-scheme;
-  border-bottom: 1px solid $color-border-light;
+  border-bottom: 1px solid $color-gray1;
 }
 
 .site-list__item a {
