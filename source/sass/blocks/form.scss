@@ -157,13 +157,16 @@
   margin-bottom: 24px;
 }
 
-.form__checkbox {
-  display: none;
-}
-
 .form__comment .container-form-tablet {
   display: flex;
   flex-direction: column;
+}
+
+
+.form__checkbox,
+.form__radio {
+  clip: auto;
+  clip-path: none;
 }
 
 .form__radio + .form__label,
