@@ -93,11 +93,13 @@
 .form__course {
   border-top: 1px solid $color-gray2;
   border-bottom: 1px solid $color-gray2;
-}
 
-.form__dummy {
-  padding: 0;
-  flex-grow: 1;
+  &::before {
+    padding: 0;
+    flex-grow: 1;
+
+    content: "";
+  }
 }
 
 .form__course .form__line {
