@@ -12,6 +12,7 @@ var imageMin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgStore = require("gulp-svgstore");
 var postHtml = require("gulp-posthtml");
+var htmlMin = require("gulp-htmlmin");
 var include = require("posthtml-include");
 const sourceMaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
@@ -45,6 +46,10 @@ gulp.task("sprite", function() {
 gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(postHtml([include()]))
+    .pipe(htmlMin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest("build"));
 });
 
