@@ -11,10 +11,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-image: url("../../img/gift-photo-mobile@2x.jpg");
   }
 }
 
@@ -42,10 +42,10 @@
     align-items: center;
     justify-content: space-around;
 
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-image: url("../../img/gift-photo-tablet@2x.jpg");
     }
   }
 
@@ -69,10 +69,10 @@
     align-items: center;
     justify-content: space-around;
 
-    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
     }
   }
 
