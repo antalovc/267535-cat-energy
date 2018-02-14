@@ -53,6 +53,7 @@
   text-align: center;
   margin-top: 27px;
   margin-bottom: 25px;
+  max-width: $width-mobile - 2 * $size-offset-mobile;
 
   @include font-sizing(36px, 36px, 0.001em);
   font-weight: 400;
@@ -104,6 +105,7 @@
   }
 
   .intro__title {
+    max-width: 487px;
     margin-bottom: 41px;
 
     @include font-sizing(60px, 60px);

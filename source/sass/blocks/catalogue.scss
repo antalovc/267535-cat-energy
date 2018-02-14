@@ -195,6 +195,7 @@
     position: absolute;
     height: auto;
     top: -86px;
+    left: 0;
 
     & img {
       width: 324px;
@@ -212,10 +213,8 @@
   }
 
   .catalogue__info {
-    width: 250px;
+    width: 324px;
     padding-top: 122px;
-    margin-left: 37px;
-    margin-right: 37px;
     margin-bottom: 26px;
 
     align-self: stretch;
@@ -251,8 +250,8 @@
   }
 
   .catalogue__order {
-    margin-left: 37px;
-    margin-right: 37px;
+    margin-left: 38px;
+    margin-right: 38px;
   }
 }
 
@@ -277,8 +276,8 @@
   }
 
   .catalogue__item {
-    padding: 40px 38px 41px 38px;
-    width: 170px;
+    padding: 40px 0 41px 0;
+    width: 245px;
 
     &--more {
       width: 245px;
@@ -286,6 +285,9 @@
   }
 
   .catalogue__info {
+    width: 245px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 123px;
     margin-bottom: 25px;
   }
@@ -310,10 +312,5 @@
     &--more {
       width: 170px;
     }
-  }
-
-  .catalogue__order {
-    margin-left: 0;
-    margin-right: 0;
   }
 }
