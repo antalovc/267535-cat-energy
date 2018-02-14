@@ -65,7 +65,7 @@
   height: 12px;
 
   @include primary-color-scheme;
-  border: 1px solid $color-gray3;
+  border: 1px solid $color-gray4;
   border-radius: 7px;
 
   &::after {
@@ -106,7 +106,15 @@
     padding-bottom: 7px;
 
     @include font-sizing(20px, 20px);
-    border-bottom: 1px dotted $color-gray3;
+    border-bottom: 1px dotted rgba(#111111, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid rgba(#111111, 0.4);
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
   }
 
   .compare-slider__indication {
@@ -119,25 +127,36 @@
 
     &::before {
       position: absolute;
-      width: 33px;
-      height: 33px;
+      box-sizing: border-box;
+      width: 34px;
+      height: 34px;
       left: 50%;
       top: -15px;
-      margin-left: -17px;
+      margin-left: -15px;
 
       content: "";
       border-radius: 50%;
       background-color: $color-light;
-      border: 1px solid $color-gray3;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      border: 1px solid $color-gray4;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+
+
+    &:hover::before {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active::before {
+      border: 2px solid $color-accent2;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
 
     &::after {
       width: 8px;
       height: 8px;
       left: 50%;
-      top: -1px;
-      margin-left: -4px;
+      top: -2px;
+      margin-left: -2px;
 
       content: "";
       border-radius: 50%;

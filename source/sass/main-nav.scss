@@ -23,6 +23,10 @@
 }
 
 @media (min-width: $width-tablet) {
+  .main-nav {
+    padding-top: 4px;
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -35,7 +39,6 @@
 @media (min-width: $width-desktop) {
   .main-nav {
     background-color: transparent;
-    margin-top: 5px;
   }
 
   .main-nav__toggle {

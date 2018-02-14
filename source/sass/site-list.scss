@@ -15,19 +15,18 @@
   border-bottom: 1px solid $color-gray1;
 
   & a {
+    display: block;
+
+    padding-bottom: 22px;
+    padding-top: 22px;
+
+    text-decoration: none;
+
     @include primary-color-scheme;
   }
+
+  @include interaction-opacity($opacity-hover, $opacity-active, ":not(.site-list__item--active)");
 }
-
-.site-list__item a {
-  display: block;
-
-  padding-bottom: 22px;
-  padding-top: 22px;
-
-  text-decoration: none;
-}
-
 
 @media (max-width: $width-tablet) {
   @include container;

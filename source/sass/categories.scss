@@ -86,6 +86,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+
+  @include interaction-opacity($opacity-hover, $opacity-active);
 }
 
 .categories__arrow {

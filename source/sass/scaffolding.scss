@@ -66,8 +66,24 @@ img {
   @include font-decorative-regular;
   @include color-theme($color-light, $color-accent2);
 
+  &:hover {
+    @include color-theme($color-light, $color-accent);
+  }
+
+  &:active {
+    @include color-theme($color-light, $color-accent, $opacity-active);
+  }
+
   &--secondary {
     @include secondary-color-scheme;
+
+    &:hover {
+      @include color-theme($color-dark, $color-gray5);
+    }
+
+    &:active {
+      @include color-theme($color-dark, $color-gray5, $opacity-active);
+    }
   }
 }
 

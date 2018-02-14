@@ -1,5 +1,5 @@
-@mixin color-theme ($fg-color, $bg-color) {
-  color: $fg-color;
+@mixin color-theme ($fg-color, $bg-color, $fg-color-opacity: 1) {
+  color: rgba($fg-color, $fg-color-opacity);
   background-color: $bg-color;
 }
 
@@ -91,15 +91,39 @@
   @include font-sizing(16px, 18px, 0.001em);
   text-transform: uppercase;
 
-  background-color: rgba(203, 203, 203, 0.5);
-  border: 1px solid $color-gray3;
-
   @include primary-color-scheme;
+  border: 1px solid rgba($color-gray4, 0.5);
+
+  &:hover {
+    border-color: $color-gray4;
+  }
+
+  &:focus {
+    padding-top: 11px;
+    padding-bottom: 12px;
+
+    border-color: $color-input-active;
+    border-width: 2px;
+  }
+
+  &:invalid {
+    padding-top: 11px;
+    padding-bottom: 12px;
+
+    border-color: $color-input-error;
+    border-width: 2px;
+  }
 
   @media (min-width: $width-tablet) {
     padding: 9px 0 11px 20px;
 
     @include font-sizing(20px, 20px);
+
+    &:focus,
+    &:invalid {
+      padding-top: 9px;
+      padding-bottom: 10px;
+    }
   }
 }
 
@@ -140,5 +164,15 @@
     padding-right: $size-offset-tablet + $form-offset-tablet;
     padding-left: $size-offset-tablet + $form-offset-tablet;
     width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet - 2 * $form-offset-tablet;
+  }
+}
+
+@mixin interaction-opacity($opacity-hover, $opacity-active, $additional-selector: "") {
+  &:hover#{$additional-selector} {
+    opacity: $opacity-hover;
+  }
+
+  &:active#{$additional-selector} {
+    opacity: $opacity-active;
   }
 }

@@ -10,6 +10,8 @@
 
 .catalogue__image {
   height: 144px;
+
+  @include interaction-opacity($opacity-hover, $opacity-active);
 }
 
 .catalogue__item {
@@ -47,6 +49,8 @@
   & a {
     text-decoration: none;
     color: black;
+
+    @include interaction-opacity($opacity-hover, $opacity-active);
   }
 }
 
@@ -70,6 +74,8 @@
 
   & a {
     align-self: flex-start;
+
+    @include interaction-opacity($opacity-hover, $opacity-active);
   }
 }
 
@@ -159,7 +165,7 @@
       width: 324px;
 
       background-color: $color-light;
-      border: 1px solid $color-gray3;
+      border: 1px solid $color-gray4;
     }
   }
 
@@ -234,7 +240,7 @@
     margin-bottom: 8px;
 
     @include font-sizing(16px, 16px);
-    border-bottom: 1px solid $color-gray3;
+    border-bottom: 1px solid $color-gray4;
   }
 
   .catalogue__text {

@@ -15,12 +15,14 @@
   padding-top: 36px;
   padding-bottom: 27px;
   border-bottom: 1px solid $color-gray1;
+
+  @include interaction-opacity($opacity-hover--header, $opacity-active--header);
 }
 
 .page-footer__social {
   width: 130px;
   padding-top: 22px;
-  padding-bottom: 14px;
+  padding-bottom: 18px;
   padding-left: 75px;
   padding-right: 75px;
   margin: 0 auto;
@@ -30,7 +32,7 @@
 
 .page-footer__copyright {
   padding-top: 21px;
-  padding-bottom: 26px;
+  padding-bottom: 22px;
   text-align: left;
 }
 
