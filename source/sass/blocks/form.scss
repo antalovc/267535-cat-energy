@@ -79,7 +79,10 @@
 }
 
 .form__data {
-  @include container-form-tablet;
+  margin: 0 auto;
+  padding-right: $size-offset-mobile;
+  padding-left: $size-offset-mobile;
+  width: $width-mobile - 2 * $size-margin-mobile - 2 * $size-offset-mobile;
   margin-bottom: 23px;
 
   display: flex;
@@ -289,7 +292,6 @@
     }
   }
 
-
   .form__radio:checked + .form__label::after {
     width: 18px;
     height: 18px;
@@ -306,6 +308,9 @@
   }
 
   .form__data {
+    padding-right: $size-offset-tablet + $form-offset-tablet;
+    padding-left: $size-offset-tablet + $form-offset-tablet;
+    width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet - 2 * $form-offset-tablet;
     margin-bottom: 72px;
   }
 
@@ -428,7 +433,10 @@
   }
 
   .form__cat {
-    @include container-form-tablet;
+    margin: 0 auto;
+    padding-right: $size-offset-desktop;
+    padding-left: $size-offset-desktop;
+    width: $width-desktop - 2 * $size-margin-desktop - 2 * $size-offset-desktop;
     margin-bottom: 41px;
 
     flex-direction: row;
