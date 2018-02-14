@@ -9,6 +9,7 @@
 .social__image {
   display: none;
   width: 22px;
+  stroke: $color-gray-social;
 
   &--mobile {
     display: block;
@@ -18,6 +19,15 @@
 .social__link {
   display: inline-block;
   font-size: 0;
+
+  &:hover .social__image {
+    stroke: $color-accent2;
+  }
+
+  &:active .social__image {
+    opacity: $opacity-active;
+    stroke: $color-accent2;
+  }
 }
 
 .social__item {

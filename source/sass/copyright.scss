@@ -1,18 +1,33 @@
 .copyright {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   @include font-simple;
   @include font-sizing(16px, 16px);
 }
 
 .copyright__image {
+  margin-left: auto;
   width: 28px;
   height: 34px;
 }
 
 .copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   text-decoration: none;
   color: black;
+
+  &:hover .copyright__image {
+    stroke: $color-accent2;
+    fill: $color-accent2;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+
+    & .copyright__image {
+      stroke: $color-accent2;
+      fill: $color-accent2;
+    }
+  }
 }

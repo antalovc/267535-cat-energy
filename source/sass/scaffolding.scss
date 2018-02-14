@@ -34,7 +34,7 @@ img {
   @include container-form-tablet;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -66,8 +66,24 @@ img {
   @include font-decorative-regular;
   @include color-theme($color-light, $color-accent2);
 
+  &:hover {
+    @include color-theme($color-light, $color-accent);
+  }
+
+  &:active {
+    @include color-theme($color-light, $color-accent, $opacity-active);
+  }
+
   &--secondary {
     @include secondary-color-scheme;
+
+    &:hover {
+      @include color-theme($color-dark, $color-gray5);
+    }
+
+    &:active {
+      @include color-theme($color-dark, $color-gray5, $opacity-active);
+    }
   }
 }
 

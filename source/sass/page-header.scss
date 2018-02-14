@@ -17,6 +17,8 @@
   display: flex;
 
   border-bottom: 1px solid $color-gray1;
+
+  @include interaction-opacity($opacity-hover--header, $opacity-active--header);
 }
 
 .page-header__image {
