@@ -47,6 +47,7 @@
 .form__line--fieldicon .form__icon {
   position: absolute;
 
+  top: 17px;
   right: 14px;
 }
 
@@ -507,6 +508,7 @@
   }
 
   .form__line--fieldicon .form__icon {
+    top: 20px;
     right: 18px;
   }
 }
