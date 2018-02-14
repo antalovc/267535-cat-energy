@@ -33,10 +33,10 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/index-background-mobile@2x.jpg");
+    background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
 
@@ -193,10 +193,10 @@
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: contain;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
+    background-image: url("../img/index-background-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/index-background-desktop@2x.jpg");
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }
 

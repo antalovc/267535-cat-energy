@@ -93,14 +93,11 @@
 .form__course {
   border-top: 1px solid $color-gray2;
   border-bottom: 1px solid $color-gray2;
+}
 
-  &::before {
-    padding: 0;
-
-    flex-grow: 1;
-
-    content: "";
-  }
+.form__dummy {
+  padding: 0;
+  flex-grow: 1;
 }
 
 .form__course .form__line {
@@ -166,13 +163,6 @@
   flex-direction: column;
 }
 
-
-.form__checkbox,
-.form__radio {
-  clip: auto;
-  clip-path: none;
-}
-
 .form__radio + .form__label,
 .form__checkbox + .form__label {
   position: relative;
@@ -193,6 +183,11 @@
   &:hover::before {
     border-color: $color-gray6;
   }
+}
+
+.form__radio:focus + .form__label::before,
+.form__checkbox:focus + .form__label::before {
+  border-color: $color-gray6;
 }
 
 .form__radio:disabled + .form__label,

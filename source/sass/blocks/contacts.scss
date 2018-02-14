@@ -51,10 +51,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-image: url("../img/bg-map-mobile@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/bg-map-mobile@2x.png");
+    background-image: url("../img/bg-map-mobile@2x.png");
   }
 
   & iframe {
@@ -69,10 +69,10 @@
   .contacts__map {
     height: 396px;
 
-    background-image: url("../../img/bg-map-tablet@1x.png");
+    background-image: url("../img/bg-map-tablet@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-map-tablet@2x.png");
+      background-image: url("../img/bg-map-tablet@2x.png");
     }
   }
 
@@ -136,10 +136,10 @@
 
   .contacts__map {
     height: 400px;
-    background-image: url("../../img/bg-map-desktop@1x.png");
+    background-image: url("../img/bg-map-desktop@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-map-desktop@2x.png");
+      background-image: url("../img/bg-map-desktop@2x.png");
     }
   }
 
