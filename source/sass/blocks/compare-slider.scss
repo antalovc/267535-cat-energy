@@ -106,10 +106,10 @@
     padding-bottom: 7px;
 
     @include font-sizing(20px, 20px);
-    border-bottom: 1px dotted rgba(#111111, 0.23);
+    border-bottom: 1px dotted opacify(#111111, 0.23);
 
     &:hover {
-      border-bottom: 1px solid rgba(#111111, 0.4);
+      border-bottom: 1px solid opacify(#111111, 0.4);
     }
 
     &:active {
