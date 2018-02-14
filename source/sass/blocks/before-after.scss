@@ -209,12 +209,13 @@
     justify-content: center;
 
     @include secondary-color-scheme;
-  }
 
-  .before-after__dummmy {
-    flex-grow: 1;
+    &::after {
+      flex-grow: 1;
 
-    background-color: $color-gray1;
+      content: "";
+      background-color: $color-gray1;
+    }
   }
 
   .before-after__container {
