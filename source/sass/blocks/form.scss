@@ -193,7 +193,9 @@
 }
 
 .form__radio:disabled + .form__label,
-.form__checkbox:disabled + .form__label {
+.form__checkbox:disabled + .form__label,
+.form__radio:active + .form__label,
+.form__checkbox:active + .form__label {
   opacity: 0.3;
 }
 

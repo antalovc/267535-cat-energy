@@ -106,10 +106,10 @@
     padding-bottom: 7px;
 
     @include font-sizing(20px, 20px);
-    border-bottom: 1px dotted opacify(#111111, 0.23);
+    border-bottom: 1px dotted transparentize(#111111, 0.77);
 
     &:hover {
-      border-bottom: 1px solid opacify(#111111, 0.4);
+      border-bottom: 1px solid transparentize(#111111, 0.6);
     }
 
     &:active {
@@ -138,17 +138,17 @@
       border-radius: 50%;
       background-color: $color-light;
       border: 1px solid $color-gray4;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 5px 0 transparentize(#000000, 0.85);
     }
 
 
     &:hover::before {
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 5px 0 transparentize(#000000, 0.75);
     }
 
     &:active::before {
       border: 2px solid $color-accent2;
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 transparentize(#000000, 0.7);
     }
 
     &::after {

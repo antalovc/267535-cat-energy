@@ -203,6 +203,12 @@
   }
 }
 
+@media (max-width: $width-desktop) {
+  .before-after__info {
+    @include container;
+  }
+}
+
 @media (min-width: $width-desktop) {
   .before-after__wrapper {
     display: flex;
@@ -300,11 +306,5 @@
 
   .before-after__controls {
     margin-left: 40px;
-  }
-}
-
-@media (max-width: $width-desktop) {
-  .before-after__info {
-    @include container;
   }
 }

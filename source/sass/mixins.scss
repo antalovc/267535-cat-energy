@@ -1,5 +1,5 @@
 @mixin color-theme ($fg-color, $bg-color, $fg-color-opacity: 1) {
-  color: opacify($fg-color, $fg-color-opacity);
+  color: transparentize($fg-color, 1 - $fg-color-opacity);
   background-color: $bg-color;
 }
 
@@ -92,7 +92,7 @@
   text-transform: uppercase;
 
   @include primary-color-scheme;
-  border: 1px solid opacify($color-gray4, 0.5);
+  border: 1px solid transparentize($color-gray4, 0.5);
 
   &:hover {
     border-color: $color-gray4;

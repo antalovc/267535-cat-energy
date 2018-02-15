@@ -1,4 +1,7 @@
 .page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   @include primary-color-scheme;
 }
 
