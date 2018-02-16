@@ -197,6 +197,7 @@
 .form__radio:focus + .form__label::before,
 .form__checkbox:focus + .form__label::before {
   border-color: $color-gray6;
+  outline: auto 2px Highlight;
 }
 
 .form__radio:disabled + .form__label,
