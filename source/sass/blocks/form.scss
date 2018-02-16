@@ -46,9 +46,16 @@
 
 .form__line--fieldicon .form__icon {
   position: absolute;
-
-  top: 17px;
+  top: 50%;
   right: 14px;
+
+  &--mail {
+    margin-top: -6px;
+  }
+
+  &--phone {
+    margin-top: -10px;
+  }
 }
 
 .form__line:last-child {
@@ -517,7 +524,6 @@
   }
 
   .form__line--fieldicon .form__icon {
-    top: 20px;
     right: 18px;
   }
 }
