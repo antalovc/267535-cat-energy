@@ -93,14 +93,14 @@
 
     &--index {
       position: absolute;
-      left: 50%;
       top: 0;
+      right: 0;
+      left: 0;
     }
   }
 
   .page-header--index .page-header__container {
-    position: relative;
-    left: -50%;
+    margin: 0 auto;
   }
 
   .page-header__container {

@@ -46,9 +46,16 @@
 
 .form__line--fieldicon .form__icon {
   position: absolute;
-
-  top: 17px;
+  top: 50%;
   right: 14px;
+
+  &--mail {
+    margin-top: -6px;
+  }
+
+  &--phone {
+    margin-top: -10px;
+  }
 }
 
 .form__line:last-child {
@@ -82,7 +89,7 @@
   margin: 0 auto;
   padding-right: $size-offset-mobile;
   padding-left: $size-offset-mobile;
-  width: $width-mobile - 2 * $size-margin-mobile - 2 * $size-offset-mobile;
+  width: $width-mobile - 2 * $size-offset-mobile;
   margin-bottom: 23px;
 
   display: flex;
@@ -190,10 +197,13 @@
 .form__radio:focus + .form__label::before,
 .form__checkbox:focus + .form__label::before {
   border-color: $color-gray6;
+  outline: auto 2px Highlight;
 }
 
 .form__radio:disabled + .form__label,
-.form__checkbox:disabled + .form__label {
+.form__checkbox:disabled + .form__label,
+.form__radio:active + .form__label,
+.form__checkbox:active + .form__label {
   opacity: 0.3;
 }
 
@@ -218,12 +228,14 @@
   display: none;
 }
 
-.form__checkbox:checked ~ .form__icon {
+.form__checkbox:checked ~ .form__label .form__icon {
   position: absolute;
   left: 5px;
   top: 2px;
 
   display: block;
+
+  fill: $color-accent2;
 }
 
 .form__submit {
@@ -296,7 +308,7 @@
     top: 2px;
   }
 
-  .form__checkbox:checked ~ .form__icon {
+  .form__checkbox:checked ~ .form__label .form__icon {
     left: 10px;
   }
 
@@ -307,7 +319,7 @@
   .form__data {
     padding-right: $size-offset-tablet + $form-offset-tablet;
     padding-left: $size-offset-tablet + $form-offset-tablet;
-    width: $width-tablet - 2 * $size-margin-tablet - 2 * $size-offset-tablet - 2 * $form-offset-tablet;
+    width: $width-tablet - 2 * $size-offset-tablet - 2 * $form-offset-tablet;
     margin-bottom: 72px;
   }
 
@@ -433,7 +445,7 @@
     margin: 0 auto;
     padding-right: $size-offset-desktop;
     padding-left: $size-offset-desktop;
-    width: $width-desktop - 2 * $size-margin-desktop - 2 * $size-offset-desktop;
+    width: $width-desktop - 2 * $size-offset-desktop;
     margin-bottom: 41px;
 
     flex-direction: row;
@@ -487,7 +499,7 @@
   }
 
   .form__title {
-    width: $width-desktop - 2 * $size-margin-desktop;
+    width: $width-desktop;
     margin-bottom: 0;
   }
 
@@ -513,7 +525,6 @@
   }
 
   .form__line--fieldicon .form__icon {
-    top: 20px;
     right: 18px;
   }
 }
